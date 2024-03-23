@@ -1,4 +1,4 @@
-{% load static %} {% load i18n %} {% extends 'base.html' %} {% block body %}
+{% extends 'base.html' %} {% load static %} {% load i18n %} {% block body %}
 
 <!-- display data -->
 {%for course_data in data %} {% for section_data in course_data.sections %}
@@ -32,4 +32,4 @@
     {% endfor %}
   </div>
 </div>
-{% endfor %} {% endfor %} {% endfor %} {% endblock body %}
+{% endfor %} {% endfor %} {% endblock body %}

@@ -2,7 +2,6 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
 from .models import Course, Section, Level, News
-from django.http import HttpResponse
 
 
 def home_page(request):

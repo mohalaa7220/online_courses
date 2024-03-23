@@ -1,5 +1,7 @@
-{% load static %} {% load i18n %} {% extends 'base.html' %} {% block body %} {%
-for course_data in data %} {% for section_data in course_data.sections %}
+{% load static %} {% load i18n %} {% extends 'base.html' %} {% block body %}
+
+<!-- display data -->
+{%for course_data in data %} {% for section_data in course_data.sections %}
 <div class="contin">
   <div class="service-section">
     <div class="skewed">

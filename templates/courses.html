@@ -1,0 +1,33 @@
+{% load static %} {% load i18n %} {% extends 'base.html' %} {% block body %} {%
+for course_data in data %} {% for section_data in course_data.sections %}
+<div class="contin">
+  <div class="service-section">
+    <div class="skewed">
+      <div class="txt">
+        <h1>{{ section.sectiontitle }}</h1>
+        <p>{{ section.description }}</p>
+      </div>
+      <div class="imgback">
+        <img src="{% static 'images/Thinking face-cuate.svg' %}" alt="img" />
+      </div>
+    </div>
+    {% for level in levels %}
+    <div class="cards">
+      <div class="card">
+        <div class="content">
+          <h3>{{ level.levelTitle }}</h3>
+          <p>{{ level.levelDescription }}</p>
+          <a href="#" class="btn has-before">
+            <span class="span">Discover more</span>
+            <ion-icon
+              name="arrow-forward-outline"
+              aria-hidden="true"
+            ></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %} {% endfor %} {% endfor %} {% endblock body %}

@@ -1,0 +1,133 @@
+{% extends 'base.html' %} {% load i18n %}{% block body %} {% load static %}
+
+<main>
+    <article>
+
+        <section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('{% static 'images/hero-bg.svg' %}')">
+            <div class="container">
+
+                <div class="hero-content">
+                    <h2 class="section-title">Up To Date</h2>
+
+                    <p class="hero-text">
+                        <h5 class="h2 section-title">update your <span class="span">skills</span></h5>
+                        <h1 class="h2 section-title">update your <span class="span">reality</span></h1>
+                    </p>
+                </div>
+
+                <figure class="hero-banner">
+
+                    <div class="img-holder one" style="--width: 270; --height: 300;">
+                        <img src="{% static 'images/hero-banner-1.jpg' %}" width="270" height="300" alt="hero banner" class="img-cover">
+                    </div>
+
+                    <div class="img-holder two" style="--width: 240; --height: 370;">
+                        <img src="{% static 'images/hero-banner-2.jpg' %}" width="240" height="370" alt="hero banner" class="img-cover">
+                    </div>
+
+                    <img src="{% static 'images/hero-shape-2.png' %}" width="622" height="551" alt="" class="shape hero-shape-2">
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- #ABOUT -->
+        <section class="section about" id="about" aria-label="about">
+            <div class="container">
+
+                <figure class="about-banner">
+                    <div class="img-holder" style="--width: 520; --height: 370;">
+                        <img src="{% static 'images/about-banner.svg' %}" width="520" height="370" loading="lazy" alt="about banner" class="img-cover">
+                    </div>
+
+                    <img src="{% static 'images/WhatsApp.png' %}" width="150" height="80" loading="lazy" alt="call us " class="shape about-shape-2">
+
+                    <img src="{% static 'images/about-shape-3.png' %}" width="722" height="528" loading="lazy" alt="" class="shape about-shape-3">
+                </figure>
+
+                <div class="about-content">
+                    <p class="section-subtitle">About Us</p>
+
+                    <h2 class="h2 section-title">Our curricula are effective cuz We consider our student and our teachers smart</h2>
+
+                    <ul class="about-list">
+                        <li class="about-item">
+                            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                            <span class="span">More free time </span>
+                        </li>
+                        <li class="about-item">
+                            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                            <span class="span">Online Remote Learning</span>
+                        </li>
+                        <li class="about-item">
+                            <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+                            <span class="span">Lifetime Access</span>
+                        </li>
+                    </ul>
+
+                    <img src="{% static 'images/bose.png' %}" width="100" height="100" loading="lazy" alt="" class="shape about-shape-4">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- #VIDEO -->
+        <section class="video has-bg-image" aria-label="video" style="background-image: url('{% static 'images/video-bg.png' %}')">
+            <h2 class="h2 section-title">Online <span class="span">Classes</span> For Remote Learning</h2>
+            <div class="container">
+
+                <div class="video-card">
+                    <div class="video-banner img-holder has-after" style="--width: ; --height: ;">
+                        <img src="{% static 'images/video-banner.jpg' %}" width="970" height="550" loading="lazy" alt="video banner" class="img-cover">
+                        <button class="play-btn" aria-label="play video">
+                            <ion-icon name="play" aria-hidden="true"></ion-icon>
+                        </button>
+                    </div>
+                    <img src="{% static 'images/video-shape-1.png' %}" width="1089" height="605" loading="lazy" alt="" class="shape video-shape-1">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section class="section news has-bg-image" id="news" aria-label="news" style="background-image: url('{% static 'images/blog-bg.svg' %}')">
+            <div class="container">
+                <h2 class="h2 section-title">Our Blog</h2>
+                <ul class="grid-list">
+                    {% for item in news %}
+                    <li>
+                        <div class="news-card">
+                            <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                <img src={{item.newsImage.url}} width="370" height="370" loading="lazy" alt="new course" class="img-cover">
+                            </figure>
+                            <div class="card-content">
+                                <h3 class="h3">
+                                    <a href="#" class="card-title">{{ item.news_title }}</a>
+                                </h3>
+                                <p class="card-text">
+                                    {{ item.news_desc }}
+                                </p>
+                                <ul class="card-meta-list">
+                                    <li class="card-meta-item">
+                                        <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                                        <span class="span">{{ item.news_date }}</span>
+                                    </li>
+                                    <li class="card-meta-item">
+                                        <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                                        <span class="span">{{ item.lessonsNum }}</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+                <img src="{% static 'images/bose.png' %}" width="186" height="186" loading="lazy" alt="" class="Sticker">
+            </div>
+        </section>
+
+    </article>
+</main>
+
+{% endblock body %}

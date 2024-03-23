@@ -760,7 +760,7 @@ body {
 .video {
     background-size: contain;
     background-position: center top;
-    padding-block: 7rem;
+    padding-block: 10rem;
 }
 
 .section-Videotitle {
@@ -1456,6 +1456,7 @@ li.card-meta-item {
     border: none;
     margin-block: 10px;
     padding-inline: 1.3rem;
+    padding-bottom: 2rem;
 }
 
 ul.card-meta-list {

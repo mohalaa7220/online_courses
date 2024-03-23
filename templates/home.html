@@ -90,7 +90,7 @@
         </section>
 
         <!-- NEWS -->
-        <section class="section news has-bg-image" id="news" aria-label="news" style="background-image: url('{% static 'images/blog-bg.svg' %}')">
+        <section class="section news has-bg-image" id="news" aria-label="news">
             <div class="container">
                 <h2 class="h2 section-title">Our Blog</h2>
                 <ul class="grid-list">
@@ -107,6 +107,8 @@
                                 <p class="card-text">
                                     {{ item.news_desc }}
                                 </p>
+                            </div>
+                            <div class="card-footer">
                                 <ul class="card-meta-list">
                                     <li class="card-meta-item">
                                         <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
@@ -117,7 +119,6 @@
                                         <span class="span">{{ item.lessonsNum }}</span>
                                     </li>
                                 </ul>
-
                             </div>
                         </div>
                     </li>

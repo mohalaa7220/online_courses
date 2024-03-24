@@ -52,8 +52,8 @@ class Level(models.Model):
     level_description_en = models.TextField(
         verbose_name=_("Level Description"))
     level_description_ar = models.TextField(verbose_name=_("وصف المستوي"))
-    image_level = models.ImageField(
-        upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Level"))
+   # image_level = models.ImageField(
+     #   upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Level"))
    # video = models.FileField(null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)

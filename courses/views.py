@@ -19,9 +19,9 @@ def section_detail(request, section_slug):
         Section.objects.select_related('course').prefetch_related('level_set'),
         section_Slug=section_slug
     )
-
+    levels=Level.objects.filter(section=section)
     context = {
         'section': section,
-        'levels': section.level_set.all()
+        'levels': levels
     }
     return render(request, 'courses.html', context)

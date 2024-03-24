@@ -1,0 +1,39 @@
+{% load static %} {% load i18n %}
+
+<section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('{% static 'images/hero-bg.svg' %}')">
+    <div class="container">
+
+        <div class="hero-content">
+            <h2 class="section-title">{% trans "Up To Date" %}</h2>
+
+            <p class="hero-text">
+                <h5 class="h2 section-title">
+                    {% trans "update your" %}
+                    <span class="span">
+                        {% trans "skills"%}
+                    </span>
+                </h5>
+                <h1 class="h2 section-title">
+                    {% trans "update your"%}
+                    <span class="span">
+                        {% trans "reality"%} 
+                    </span>
+                </h1>
+            </p>
+        </div>
+
+        <figure class="hero-banner">
+
+            <div class="img-holder one" style="--width: 270; --height: 300;">
+                <img src="{% static 'images/hero-banner-1.jpg' %}" width="270" height="300" alt="hero banner" class="img-cover">
+            </div>
+
+            <div class="img-holder two" style="--width: 240; --height: 370;">
+                <img src="{% static 'images/hero-banner-2.jpg' %}" width="240" height="370" alt="hero banner" class="img-cover">
+            </div>
+
+            <img src="{% static 'images/hero-shape-2.png' %}" width="622" height="551" alt="" class="shape hero-shape-2">
+        </figure>
+
+    </div>
+</section>

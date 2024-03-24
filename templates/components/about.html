@@ -1,0 +1,69 @@
+{% load static %} {% load i18n %}
+
+<section class="section about" id="about" aria-label="about">
+  <div class="container">
+    <figure class="about-banner">
+      <div class="img-holder" style="--width: 520; --height: 370">
+        <img
+          src="{% static 'images/about-banner.svg' %}"
+          width="520"
+          height="370"
+          loading="lazy"
+          alt="about banner"
+          class="img-cover"
+        />
+      </div>
+
+      <img
+        src="{% static 'images/WhatsApp.png' %}"
+        width="150"
+        height="80"
+        loading="lazy"
+        alt="call us "
+        class="shape about-shape-2"
+      />
+
+      <img
+        src="{% static 'images/about-shape-3.png' %}"
+        width="722"
+        height="528"
+        loading="lazy"
+        alt=""
+        class="shape about-shape-3"
+      />
+    </figure>
+
+    <div class="about-content">
+      <p class="section-subtitle">About Us</p>
+
+      <h2 class="h2 section-title">
+        {% trans "Our curricula are effective cuz We consider our student and
+        our teachers smart" %}
+      </h2>
+
+      <ul class="about-list">
+        <li class="about-item">
+          <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+          <span class="span">{% trans "More free time" %} </span>
+        </li>
+        <li class="about-item">
+          <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+          <span class="span">{% trans "Online Remote Learning" %}</span>
+        </li>
+        <li class="about-item">
+          <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+          <span class="span">{% trans "Lifetime Access" %}</span>
+        </li>
+      </ul>
+
+      <img
+        src="{% static 'images/bose.png' %}"
+        width="100"
+        height="100"
+        loading="lazy"
+        alt=""
+        class="shape about-shape-4"
+      />
+    </div>
+  </div>
+</section>

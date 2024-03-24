@@ -1,0 +1,98 @@
+{% load static %} {% load i18n %}
+
+<header class="header" data-header>
+  <div class="container">
+    <a href="#" class="logo">
+      <img
+        src="{% static 'assets/images/logo.png' %}"
+        width="83"
+        height="10"
+        alt="{% trans 'Up2Date logo' %}"
+      />
+    </a>
+    <nav class="navbar" data-navbar>
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img
+            src="{% static 'assets/images/logo.png' %}"
+            width="83"
+            height="10"
+            alt="{% trans 'EduWeb logo' %}"
+          />
+        </a>
+
+        <button
+          class="nav-close-btn"
+          aria-label="{% trans 'close menu' %}"
+          data-nav-toggler
+        >
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#" class="navbar-link" data-nav-link> {% trans "Home" %} </a>
+        </li>
+
+        {% for course_data in data %}
+        <li class="navbar-item">
+          <a href="#" class="navbar-link" data-nav-link>
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <!-- display arabic -->
+            {{course_data.course.course_name_ar }} {% else %}
+            <!-- display english -->
+            {{course_data.course.course_name_en }} {% endif %}
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+
+          <div class="dropdown">
+            <ul class="dropdown_list">
+              {% for section_data in course_data.sections %}
+              <!-- ======== check for section_Slug ========= -->
+              {% if section_data.section.section_Slug %}
+              <li class="dropdown_item">
+                <a
+                  href="{% url 'section-detail' section_slug=section_data.section.section_Slug %}"
+                  class="navbar-link"
+                  data-nav-link
+                >
+                  {% if request.LANGUAGE_CODE == 'ar' %}
+                  <!-- display arabic -->
+                  {{section_data.section.section_title_ar }} {% else %}
+                  <!-- display english -->
+                  {{section_data.section.section_title_en }} {% endif %}
+                </a>
+              </li>
+              {% endif %} {% endfor %}
+            </ul>
+          </div>
+        </li>
+        {% endfor %}
+
+        <!-- =========== check for language ========== -->
+        {% if request.LANGUAGE_CODE == 'en' %}
+        <li class="navbar-item">
+          <a href="/ar/" class="navbar-link">
+            <i class="fa-solid fa-globe"></i> {% trans 'العربية' %}</a
+          >
+        </li>
+        {% elif request.LANGUAGE_CODE == 'ar' %}
+        <li class="navbar-item">
+          <a href="/en/" class="navbar-link">
+            <i class="fa-solid fa-globe"></i> {% trans 'English' %}</a
+          >
+        </li>
+        {% endif %}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="header-action-btn" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+</header>

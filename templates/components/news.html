@@ -1,0 +1,65 @@
+{% load static %} {% load i18n %}
+
+<section class="section news has-bg-image" id="news" aria-label="news">
+  <div class="container">
+    <h2 class="h2 section-title">Our Blog</h2>
+    <ul class="grid-list">
+      {% for item in news %}
+      <li>
+        <div class="news-card">
+          <figure class="card-banner img-holder has-after">
+            <img
+              src="{{item.newsImage.url}}"
+              width="370"
+              height="370"
+              loading="lazy"
+              alt="new course"
+              class="img-cover"
+            />
+          </figure>
+          <div class="card-content">
+            <h3 class="h3">
+              {% if request.LANGUAGE_CODE == 'ar' %}
+              <!-- display arabic -->
+              <a href="#" class="card-title">{{ item.news_title_ar }}</a>
+              <!-- display english -->
+              {% else %}
+              <a href="#" class="card-title">{{ item.news_title_en }}</a>
+              <!-- end check -->
+              {% endif %}
+            </h3>
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <!-- display arabic -->
+            <p class="card-text">{{ item.news_desc_ar }}</p>
+            <!-- display english -->
+            {% else %}
+            <p class="card-text">{{ item.news_desc_en }}</p>
+            <!-- end check -->
+            {% endif %}
+          </div>
+          <div class="card-footer">
+            <ul class="card-meta-list">
+              <li class="card-meta-item">
+                <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+                <span class="span">{{ item.news_date }}</span>
+              </li>
+              <li class="card-meta-item">
+                <ion-icon name="library-outline" aria-hidden="true"></ion-icon>
+                <span class="span">{{ item.lessonsNum }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <img
+      src="{% static 'images/bose.png' %}"
+      width="186"
+      height="186"
+      loading="lazy"
+      alt=""
+      class="Sticker"
+    />
+  </div>
+</section>

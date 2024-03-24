@@ -5,22 +5,27 @@ from django.utils.translation import gettext_lazy as _
 
 # ============ course model ================
 class Course(models.Model):
-    coursename = models.CharField(
+    course_name_en = models.CharField(
         max_length=100, verbose_name=_("Course Name"))
+    course_name_ar = models.CharField(
+        max_length=100, verbose_name=_("اسم الكورس"))
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
-        return self.coursename
+        return self.course_name_en
 
 
 # ============ section model ================
 class Section(models.Model):
     course = models.ForeignKey(
         Course, on_delete=models.CASCADE, verbose_name=_("Course"))
-    sectiontitle = models.CharField(
+    section_title_en = models.CharField(
         max_length=1000, verbose_name=_("Section Title"))
-    description = models.TextField(verbose_name=_("Description"))
+    section_title_ar = models.CharField(
+        max_length=1000, verbose_name=_("اسم القسم"))
+    description_en = models.TextField(verbose_name=_("Description"))
+    description_ar = models.TextField(verbose_name=_("وصف القسم"))
     pictureSection = models.ImageField(
         upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Section"))
     section_Slug = models.SlugField(null=True, blank=True)
@@ -28,21 +33,25 @@ class Section(models.Model):
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
-        return self.sectiontitle
+        return self.section_title_en
 
     def save(self, *args, **kwargs):
         if not self.section_Slug:
-            self.section_Slug = slugify(self.sectiontitle)
+            self.section_Slug = slugify(self.section_title_en)
         super(Section, self).save()
 
 
 # ============ level model ================
 class Level(models.Model):
-    levelTitle = models.CharField(
+    level_title_en = models.CharField(
         max_length=100, null=True, verbose_name=_("Level Title"))
+    level_title_ar = models.CharField(
+        max_length=100, null=True, verbose_name=_("عنوان المستوي"))
     section = models.ForeignKey(
         Section, on_delete=models.CASCADE, verbose_name=_("Section"))
-    levelDescription = models.TextField(verbose_name=_("Level Description"))
+    level_description_en = models.TextField(
+        verbose_name=_("Level Description"))
+    level_description_ar = models.TextField(verbose_name=_("وصف المستوي"))
     image_level = models.ImageField(
         upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Level"))
    # video = models.FileField(null=True,blank=True)
@@ -50,14 +59,18 @@ class Level(models.Model):
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
-        return self.levelTitle
+        return self.level_title_en
 
 
 # ============ news model ================
 class News(models.Model):
 
-    news_title = models.CharField(max_length=100, verbose_name=_("News Title"))
-    news_desc = models.TextField(verbose_name=_("News Description"))
+    news_title_en = models.CharField(
+        max_length=100, verbose_name=_("News Title"))
+    news_desc_en = models.TextField(verbose_name=_("News Description"))
+    news_title_ar = models.CharField(
+        max_length=100, verbose_name=_("عنوان الخبر"))
+    news_desc_ar = models.TextField(verbose_name=_("وصف الخبر"))
     news_date = models.DateField(null=True, blank=True)
     lessonsNum = models.IntegerField(verbose_name=_("Lesson Number"))
     newsImage = models.ImageField(
@@ -67,3 +80,6 @@ class News(models.Model):
 
     class Meta:
         verbose_name_plural = "News"
+
+    def __str__(self):
+        return self.news_title_en

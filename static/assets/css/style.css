@@ -1,3 +1,6 @@
+/* ========= main font =========== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 :root {
     /**
    * colors
@@ -22,6 +25,8 @@
     --white-orange: #FFC685;
     --sec-bag: #F2F6F7;
     --gradient-color-1: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 70%);
+    --sec-opacity-color: #FFEFEC;
+    --main-color: #FF5A3C;
     /**
    * gradient color
    */
@@ -67,6 +72,7 @@
     --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
     --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
     --paragraph-color: #5c727d;
+    --main-font: "Cairo", sans-serif;
 }
 
 *,
@@ -139,6 +145,7 @@ body {
     color: var(--gray-web);
     font-size: 1.6rem;
     line-height: 1.75;
+    font-family: var(--main-font);
 }
 
 :focus-visible {
@@ -258,7 +265,8 @@ body {
     transition: var(--transition-2);
 }
 
-.btn:is(:hover, :focus)::before {
+.btn:is(:hover,
+ :focus)::before {
     transform: translateX(0);
 }
 
@@ -300,7 +308,8 @@ body {
     background-color: hsla(var(--color), 0.1);
 }
 
-:is(.course, .blog) .section-title {
+:is(.course,
+.blog) .section-title {
     margin-block-end: 40px;
 }
 
@@ -314,7 +323,7 @@ body {
 }
 
 .header {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -347,7 +356,8 @@ body {
     transition: var(--transition-1);
 }
 
-.header-action-btn:is(:hover, :focus) {
+.header-action-btn:is(:hover,
+ :focus) {
     color: var(--kappel);
 }
 
@@ -393,7 +403,8 @@ body {
     border-radius: var(--radius-circle);
 }
 
-.nav-close-btn:is(:hover, :focus) {
+.nav-close-btn:is(:hover,
+ :focus) {
     background-color: var(--kappel);
     color: var(--white);
 }
@@ -436,7 +447,8 @@ body {
 
 /*--.navbar-item :hover.dropdown{*/
 
-.navbar-link:is(:hover, :focus) {
+.navbar-link:is(:hover,
+ :focus) {
     color: var(--kappel);
 }
 
@@ -586,7 +598,9 @@ body {
     }
 }
 
-.about :is(.section-subtitle, .section-title, .section-text) {
+.about :is(.section-subtitle,
+.section-title,
+.section-text) {
     text-align: left;
 }
 
@@ -837,11 +851,13 @@ body {
     transition: var(--transition-1);
 }
 
-.blog-card:is(:hover, :focus-within) .card-banner .img-cover {
+.blog-card:is(:hover,
+ :focus-within) .card-banner .img-cover {
     transform: scale(1.1);
 }
 
-.blog-card:is(:hover, :focus-within) .card-banner::after {
+.blog-card:is(:hover,
+ :focus-within) .card-banner::after {
     opacity: 1;
 }
 
@@ -869,16 +885,20 @@ body {
     opacity: 0;
 }
 
-.blog-card .card-btn:is(:hover, :focus) {
+.blog-card .card-btn:is(:hover,
+ :focus) {
     background-color: var(--radical-red);
 }
 
-.blog-card:is(:hover, :focus-within) .card-btn {
+.blog-card:is(:hover,
+ :focus-within) .card-btn {
     opacity: 1;
     transform: translateY(10px);
 }
 
-.blog-card :is(.card-meta-item, .card-text, .card-subtitle) {
+.blog-card :is(.card-meta-item,
+.card-text,
+.card-subtitle) {
     font-size: var(--fs-5);
 }
 
@@ -891,11 +911,13 @@ body {
     transition: var(--transition-1);
 }
 
-.blog-card .card-title:is(:hover, :focus) {
+.blog-card .card-title:is(:hover,
+ :focus) {
     color: var(--kappel);
 }
 
-.blog-card :is(.card-meta-list, .card-meta-item) {
+.blog-card :is(.card-meta-list,
+.card-meta-item) {
     display: flex;
 }
 
@@ -951,7 +973,8 @@ body {
     transition: var(--transition-1);
 }
 
-.footer-link:is(:hover, :focus) {
+.footer-link:is(:hover,
+ :focus) {
     color: var(--kappel);
 }
 
@@ -1053,7 +1076,8 @@ body {
     .grid-list {
         grid-template-columns: 1fr 1fr;
     }
-     :is(.course, .blog) .grid-list {
+     :is(.course,
+    .blog) .grid-list {
         grid-template-columns: 1fr;
     }
     /**
@@ -1125,7 +1149,8 @@ body {
     .btn {
         padding: 15px 30px;
     }
-     :is(.course, .blog) .grid-list {
+     :is(.course,
+    .blog) .grid-list {
         grid-template-columns: 1fr 1fr;
     }
     /**
@@ -1223,7 +1248,8 @@ body {
     .grid-list {
         grid-template-columns: repeat(3, 1fr);
     }
-     :is(.course, .blog) .grid-list {
+     :is(.course,
+    .blog) .grid-list {
         grid-template-columns: repeat(3, 1fr);
     }
     /**
@@ -1419,8 +1445,8 @@ li.card-meta-item {
 }
 
 .about .about-content h2 {
-    font-size: 3.5rem;
-    line-height: 1.2;
+    font-size: 3rem;
+    line-height: 1.35;
 }
 
 .news {
@@ -1489,4 +1515,39 @@ ul.card-meta-list {
     max-width: 100%;
     overflow: hidden;
     white-space: nowrap;
+}
+
+
+/* =============== about =========== */
+
+.breadcrumb-parent {
+    background-color: #F4F3F8;
+}
+
+.breadcrumb-parent h2 {
+    font-weight: 800;
+    margin-bottom: 15px;
+    font-family: var(--heading-font);
+    color: #000;
+    font-size: 2.5rem;
+}
+
+.breadcrumb-item a {
+    color: var(--paragraph-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--main-color);
+    font-weight: 800;
+}
+
+.sec-heading {
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 25px;
+    color: var(--main-color);
+    background-color: var(--sec-opacity-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.7rem;
 }

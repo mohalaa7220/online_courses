@@ -304,7 +304,7 @@ body {
 }
 
 .header {
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     left: 0;
     width: 100%;
@@ -1374,4 +1374,11 @@ li.card-meta-item {
 
 .pt-7 {
     padding-block: 7rem;
+}
+
+
+/* =============== about =========== */
+
+.breadcrumb-parent {
+    background-color: #F4F3F8;
 }

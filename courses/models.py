@@ -57,7 +57,9 @@ class Level(models.Model):
 class News(models.Model):
 
     news_title = models.CharField(max_length=100, verbose_name=_("News Title"))
+    news_titleinA = models.CharField(max_length=100, verbose_name=_(" Arabic News Title"))
     news_desc = models.TextField(verbose_name=_("News Description"))
+    news_descinA = models.TextField(verbose_name=_("News Description"))
     news_date = models.DateField(null=True, blank=True)
     lessonsNum = models.IntegerField(verbose_name=_("Lesson Number"))
     newsImage = models.ImageField(

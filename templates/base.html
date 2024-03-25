@@ -1,7 +1,7 @@
 {% load static %} {% load i18n %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% get_current_language as LANGUAGE_CODE %}">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
     {% block css_style %} {% endblock css_style %}
 </head>
 
-<body id="top">
+<body id="top" {% if 'ar' in LANGUAGE_CODE %} dir="rtl" {% else %} dir="ltr" {% endif %}>
 
     <!-- ======== navbar ========= -->
     {% include 'components/navbar.html' %}

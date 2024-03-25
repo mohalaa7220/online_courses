@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Course, Section, Level, News
-from django.utils.translation import get_language
+from .models import (Course, Section, Level, News, Contact_inf)
 from django.utils.html import format_html
 from django import forms
 
@@ -78,3 +77,11 @@ class NewsAdmin(admin.ModelAdmin):
             return 'No Image'
 
     image.short_description = 'Display Image'
+
+
+# =============== Contact Model =================
+@admin.register(Contact_inf)
+class Contact_infAdmin(admin.ModelAdmin):
+    list_display = ('Phone_Num', 'Email_url', 'Facebook_url', 'Instgram_url',
+                    'X_url', 'TikTok_url', 'Telgram_url', 'WhatsUp_url', 'LinkeIN_url')
+    search_fields = ('Phone_Num',)

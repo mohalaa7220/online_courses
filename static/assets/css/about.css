@@ -57,7 +57,6 @@
 .services_card .content {
     display: flex;
     flex-direction: column;
-    padding-left: 2rem;
 }
 
 .services_card .content h4 {
@@ -97,4 +96,8 @@
     .services .col-lg-4 {
         width: 100%;
     }
+}
+
+.icon {
+    padding-inline-end: 1rem;
 }

@@ -77,19 +77,40 @@
         {% endfor %}
 
         <!-- =========== check for language ========== -->
-        {% if request.LANGUAGE_CODE == 'en' %}
-        <li class="navbar-item">
-          <a href="/ar/" class="navbar-link">
-            <i class="fa-solid fa-globe"></i> {% trans 'العربية' %}</a
-          >
-        </li>
-        {% elif request.LANGUAGE_CODE == 'ar' %}
-        <li class="navbar-item">
-          <a href="/en/" class="navbar-link">
-            <i class="fa-solid fa-globe"></i> {% trans 'English' %}</a
-          >
-        </li>
-        {% endif %}
+        <form action="{% url 'set_language' %}" method="post">
+          {% csrf_token %} {% get_current_language as LANGUAGE_CODE %}
+          <input
+            name="next"
+            type="hidden"
+            value="{{ request.get_full_path|slice:'3:' }}"
+          />
+          {% if LANGUAGE_CODE == 'ar' %}
+          <li class="navbar-item">
+            <button
+              type="submit"
+              name="language"
+              value="en"
+              class="navbar-link"
+            >
+              <i class="fa-solid fa-globe"></i>
+              English
+            </button>
+          </li>
+
+          {% else %}
+          <li class="navbar-item">
+            <button
+              type="submit"
+              name="language"
+              value="ar"
+              class="navbar-link"
+            >
+              <i class="fa-solid fa-globe"></i>
+              العربية
+            </button>
+          </li>
+          {% endif %}
+        </form>
       </ul>
     </nav>
 

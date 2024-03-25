@@ -53,7 +53,7 @@ class Level(models.Model):
         verbose_name=_("Level Description"))
     level_description_ar = models.TextField(verbose_name=_("وصف المستوي"))
    # image_level = models.ImageField(
-     #   upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Level"))
+    #   upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Level"))
    # video = models.FileField(null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -83,19 +83,23 @@ class News(models.Model):
 
     def __str__(self):
         return self.news_title_en
-    
-    # ============ course model =============
+
+
+# ============ course model =============
 class Contact_inf(models.Model):
-    Phone_Num=models.CharField(max_length=40, verbose_name=_("phone number"))
-    Email_url=models.URLField(null=True, blank=True)
-    Facebook_url=models.URLField(null=True, blank=True)
-    Instgram_url=models.URLField(null=True, blank=True)
-    X_url=models.URLField(null=True, blank=True)
-    TikTok_url=models.URLField(null=True, blank=True)
-    Telgram_url=models.URLField(null=True, blank=True)
-    WhatsUp_url=models.URLField(null=True, blank=True)
-    LinkeIN_url=models.URLField(null=True, blank=True)
+    Phone_Num = models.CharField(max_length=40, verbose_name=_("phone number"))
+    Email_url = models.URLField(null=True, blank=True)
+    Facebook_url = models.URLField(null=True, blank=True)
+    Instgram_url = models.URLField(null=True, blank=True)
+    X_url = models.URLField(null=True, blank=True)
+    TikTok_url = models.URLField(null=True, blank=True)
+    Telgram_url = models.URLField(null=True, blank=True)
+    WhatsUp_url = models.URLField(null=True, blank=True)
+    LinkeIN_url = models.URLField(null=True, blank=True)
 
+    def __str__(self):
+        return self.Phone_Num
 
-    
-    
+    class Meta:
+        verbose_name = "Contact Information"
+        verbose_name_plural = "Contact Information"

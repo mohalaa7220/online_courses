@@ -1,7 +1,7 @@
 {% load static %} {% load i18n %}
 
 <!DOCTYPE html>
-<html lang="{% get_current_language as LANGUAGE_CODE %}">
+<html {% if 'ar' in LANGUAGE_CODE %} lang="ar" {% else %} lang="en" {% endif %}>
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,12 @@
     <!-- custom css link -->
     <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    <!-- check for arabic -->
+    {% get_current_language as LANGUAGE_CODE %}
+    <!-- display css ar -->
+    {% if LANGUAGE_CODE == 'ar' %}
+    <link rel="stylesheet" href="{% static 'assets/css/style_ar.css' %}"> {% endif %}
 
     <!-- ======== css_style ========= -->
     {% block css_style %} {% endblock css_style %}

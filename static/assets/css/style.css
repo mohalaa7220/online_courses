@@ -30,6 +30,7 @@
    * gradient color
    */
     --gradient: linear-gradient(-90deg, hsl(42, 94%, 53%) 0%, hsl(40, 96%, 52%) 100%);
+    --sec-opacity-color: #fbe8e5;
     /**
    * typography
    */
@@ -319,20 +320,18 @@ body {
 }
 
 .header {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: var(--white);
     padding-block: 12px;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     z-index: 4;
-    padding-block: 1.75rem;
+    padding-block: 2.5rem;
 }
 
 .header.active {
     position: fixed;
     box-shadow: 0 10px 50px 0 rgba(46, 55, 220, 0.178);
+    padding-block: 1.75rem;
 }
 
 .header .container,
@@ -393,10 +392,14 @@ body {
 }
 
 .nav-close-btn {
-    background-color: var(--white);
+    background-color: var(--platinum);
     box-shadow: var(--shadow-2);
     padding: 8px;
     border-radius: var(--radius-circle);
+}
+
+.nav-close-btn .hydrated {
+    margin-right: 0 !important;
 }
 
 .nav-close-btn:is(:hover,
@@ -503,6 +506,26 @@ body {
 .navbar-list {
     display: flex;
     justify-content: flex-end;
+}
+
+
+/* ========== responsive navbar ========= */
+
+@media screen and (max-width: 1199px) {
+    .navbar.active .wrapper {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        margin-top: 3rem;
+    }
+    .navbar.active .navbar-list {
+        flex-direction: column;
+        width: 100%;
+    }
+    .navbar.active .navbar-list li {
+        line-height: 4;
+        padding-left: 1rem;
+    }
 }
 
 
@@ -796,6 +819,10 @@ body {
     color: var(--color);
 }
 
+.video .section-title {
+    text-align: center;
+}
+
 .video-banner {
     position: relative;
     border-top-right-radius: 80px;
@@ -835,6 +862,14 @@ body {
 /*-----------------------------------*\
 #news-section
 \*-----------------------------------*/
+
+.news .section-title {
+    margin-bottom: 3rem;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 1.2px;
+    color: #1a1818;
+}
 
 .news-card .card-banner {
     border-radius: var(--radius-10);

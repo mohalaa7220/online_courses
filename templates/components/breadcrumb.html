@@ -1,0 +1,15 @@
+{% load static %} {% load i18n %}
+
+<section class="breadcrumb-parent pt-7">
+  <div class="container">
+    <h2>{% trans page_title %}</h2>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">{% trans "Home" %}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+          {% trans page_title %}
+        </li>
+      </ol>
+    </nav>
+  </div>
+</section>

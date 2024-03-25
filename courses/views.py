@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from .models import Course, Section, Level, News
 
 
+# ============ home page =============
 def home_page(request):
     news = News.objects.all()
     context = {
@@ -12,7 +13,14 @@ def home_page(request):
     return render(request, 'home.html', context)
 
 
+# ============ about page =============
+def about(request):
+    return render(request, 'about.html')
+
+# ============ course page =============
+
 # ============ get section and related levels =============
+
 def section_detail(request, section_slug):
 
     section = get_object_or_404(

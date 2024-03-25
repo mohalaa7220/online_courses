@@ -1,0 +1,124 @@
+{% extends 'base.html' %} {% load i18n %} {% load static %}
+
+<!-- ======== css_style ========= -->
+{% block css_style %}
+<link rel="stylesheet" href="{% static 'assets/css/about.css' %}" />
+<!-- ==== -->
+{% endblock css_style %}
+
+<!-- ======= content ========= -->
+{% block body %}
+
+<main>
+  <!-- ======= set page in breadcrumb ========= -->
+  {% with page_title="About" %}
+  <!-- ======= breadcrumb ========= -->
+  {% include 'components/breadcrumb.html' %} {% endwith %}
+
+  <!-- ======= about us ========= -->
+  {% include 'components/about.html' %}
+
+  <!-- ======= content ========= -->
+  <section class="services pt-7 text-center">
+    <div class="container">
+      <h6 class="sec-heading">{% trans "Services" %}</h6>
+      <h3>{% trans "Services" %}</h3>
+      <div class="services_content">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="services_card">
+              <div class="icon">
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+              <div class="content">
+                <h4>{% trans "Courses Offered" %}</h4>
+                <p>
+                  {% trans "Advanced courses in English language and,"%}
+                  <!-- ========== -->
+                  {%trans "advanced courses in German language."%}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="services_card">
+              <div class="icon">
+                <i class="fa-regular fa-handshake"></i>
+              </div>
+              <div class="content">
+                <h4>{% trans "Consultancy Services" %}</h4>
+                <p>
+                  {% trans "Consultancy services to assess language needs "%}
+                  {%trans "and develop personalized learning programs."%}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="services_card">
+              <div class="icon">
+                <i class="fa-regular fa-comment"></i>
+              </div>
+              <div class="content">
+                <h4>{% trans "Language Enhancement" %}</h4>
+                <p>
+                  {% trans "Workshops and events to boost language skills"%}
+                  {%trans "through social interaction."%}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="services_card">
+              <div class="icon">
+                <ion-icon name="layers-outline"></ion-icon>
+              </div>
+              <div class="content">
+                <h4>{% trans "skills" %}</h4>
+                <p>
+                  {% trans "Improved language skills enable you to"%}
+                  <!-- =======  -->
+                  {% trans "effectively communicate with your audience."%}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="services_card">
+              <div class="icon">
+                <ion-icon name="book-outline"></ion-icon>
+              </div>
+              <div class="content">
+                <h4>{% trans "Knowledge" %}</h4>
+                <p>
+                  {% trans "shared communication channels such as books,"%}
+                  <!-- =======  -->
+                  {% trans "lectures, conversations, and digital media."%}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="services_card">
+              <div class="icon">
+                <i class="fa fa-regular fa-bell"></i>
+              </div>
+              <div class="content">
+                <h4>{% trans "Discussion" %}</h4>
+                <p>
+                  {% trans "valuable communication tools that facilitate the"%}
+                  {% trans "exchange of ideas, promote critical thinking."%}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock body %}

@@ -32,7 +32,13 @@
 
       <ul class="navbar-list">
         <li class="navbar-item">
-          <a href="#" class="navbar-link" data-nav-link> {% trans "Home" %} </a>
+          <a href="/" class="navbar-link" data-nav-link> {% trans "Home" %} </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="/about" class="navbar-link" data-nav-link>
+            {% trans "About" %}
+          </a>
         </li>
 
         {% for course_data in data %}

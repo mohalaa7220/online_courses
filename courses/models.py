@@ -83,3 +83,19 @@ class News(models.Model):
 
     def __str__(self):
         return self.news_title_en
+    
+    # ============ course model =============
+class Contact_inf(models.Model):
+    Phone_Num=models.CharField(max_length=40, verbose_name=_("phone number"))
+    Email_url=models.URLField(null=True, blank=True)
+    Facebook_url=models.URLField(null=True, blank=True)
+    Instgram_url=models.URLField(null=True, blank=True)
+    X_url=models.URLField(null=True, blank=True)
+    TikTok_url=models.URLField(null=True, blank=True)
+    Telgram_url=models.URLField(null=True, blank=True)
+    WhatsUp_url=models.URLField(null=True, blank=True)
+    LinkeIN_url=models.URLField(null=True, blank=True)
+
+
+    
+    

@@ -324,10 +324,15 @@ body {
 }
 
 :is(.course,
-.blog) .section-title {
+.news) .section-title {
     margin-block-end: 40px;
 }
 
+<<<<<<< HEAD
+.Sticker{
+margin-top: 80px;
+}
+=======
 .sub_heading {
     font-size: 14px;
     line-height: 15px;
@@ -343,6 +348,7 @@ body {
 }
 
 
+>>>>>>> 854c1874cfb2879cee2ea453112eb283650919b9
 /*-----------------------------------*\
 #HEADER
 \*-----------------------------------*/
@@ -423,7 +429,9 @@ body {
 .navbar .wrapper {
     padding: 15px 20px;
     border-block-end: 1px solid var(--platinum);
+    
 }
+
 
 .nav-close-btn {
     background-color: var(--platinum);
@@ -631,7 +639,7 @@ body {
     align-items: flex-start;
     gap: 30px;
 }
-
+.section-title
 .hero-banner .img-holder.one {
     border-top-right-radius: 70px;
     border-bottom-left-radius: 110px;
@@ -1518,11 +1526,15 @@ padding-inline: 30px;
     .hero-banner .img-holder.two {
         margin-block-start: 100px;
     }
+
     .hero-shape-1 {
         display: block;
         position: absolute;
         bottom: -40px;
         left: -10px;
+    }
+    .Sticker{
+        margin-top: -100;
     }
     /**
 * ABOUT
@@ -1713,7 +1725,7 @@ padding-inline: 30px;
     }
     .about-shape-4 {
         top: 30px;
-        right: -60px;
+        right: 500px;
         z-index: -1;
     }
     /**

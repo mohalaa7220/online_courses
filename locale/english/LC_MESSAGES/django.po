@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-26 14:28+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\courses\models.py:9
+msgid "Course Name"
+msgstr ""
+
+#: .\courses\models.py:11
+msgid "اسم الكورس"
+msgstr ""
+
+#: .\courses\models.py:22
+msgid "Course"
+msgstr ""
+
+#: .\courses\models.py:24
+msgid "Section Title"
+msgstr ""
+
+#: .\courses\models.py:26
+msgid "اسم القسم"
+msgstr ""
+
+#: .\courses\models.py:27
+msgid "Description"
+msgstr ""
+
+#: .\courses\models.py:28
+msgid "وصف القسم"
+msgstr ""
+
+#: .\courses\models.py:30
+msgid "Image Section"
+msgstr ""
+
+#: .\courses\models.py:50
+msgid "Level Title"
+msgstr ""
+
+#: .\courses\models.py:52
+msgid "عنوان المستوي"
+msgstr ""
+
+#: .\courses\models.py:54
+msgid "Section"
+msgstr ""
+
+#: .\courses\models.py:56
+msgid "Level Description"
+msgstr ""
+
+#: .\courses\models.py:57
+msgid "وصف المستوي"
+msgstr ""
+
+#: .\courses\models.py:75
+msgid "News Title"
+msgstr ""
+
+#: .\courses\models.py:76
+msgid "News Description"
+msgstr ""
+
+#: .\courses\models.py:78
+msgid "عنوان الخبر"
+msgstr ""
+
+#: .\courses\models.py:79
+msgid "وصف الخبر"
+msgstr ""
+
+#: .\courses\models.py:81
+msgid "Lesson Number"
+msgstr ""
+
+#: .\courses\models.py:83
+msgid "News Image"
+msgstr ""
+
+#: .\courses\models.py:97
+msgid "phone number"
+msgstr ""
+
+#: .\project\settings.py:112
+msgid "Arabic"
+msgstr ""
+
+#: .\project\settings.py:113
+msgid "English"
+msgstr ""
+
+#: .\templates\components\about.html:39
+msgid "About Us"
+msgstr ""
+
+#: .\templates\components\about.html:42
+msgid ""
+"Our methods are effective cuz we write lessons to be taught by skilful "
+"teachers to smart students"
+msgstr ""
+
+#: .\templates\components\about.html:48
+msgid "More free time"
+msgstr ""
+
+#: .\templates\components\about.html:52
+msgid "Online Remote Learning"
+msgstr ""
+
+#: .\templates\components\about.html:56
+msgid "Lifetime Access"
+msgstr ""
+
+#: .\templates\components\about.html:60
+msgid ""
+"it's possible that our methods are regarded by some  to be as challenging,"
+"but cerainly ,it is more effective"
+msgstr ""
+
+#: .\templates\components\breadcrumb.html:8
+#: .\templates\components\navbar.html:35
+msgid "Home"
+msgstr ""
+
+#: .\templates\components\hero.html:9
+msgid "Start Better Languages Future From Here"
+msgstr ""
+
+#: .\templates\components\hero.html:14 .\templates\components\hero.html:20
+msgid "update your"
+msgstr ""
+
+#: .\templates\components\hero.html:16 .\templates\components\services.html:61
+msgid "skills"
+msgstr ""
+
+#: .\templates\components\hero.html:22
+msgid "reality"
+msgstr ""
+
+#: .\templates\components\navbar.html:10
+msgid "Up2Date logo"
+msgstr ""
+
+#: .\templates\components\navbar.html:20
+msgid "EduWeb logo"
+msgstr ""
+
+#: .\templates\components\navbar.html:26
+msgid "close menu"
+msgstr ""
+
+#: .\templates\components\navbar.html:40
+msgid "About"
+msgstr ""
+
+#: .\templates\components\navbar.html:45
+msgid "Contact us"
+msgstr ""
+
+#: .\templates\components\news.html:6 .\templates\components\news.html:7
+msgid "Our Blog"
+msgstr ""
+
+#: .\templates\components\services.html:5
+#: .\templates\components\services.html:6
+msgid "Services"
+msgstr ""
+
+#: .\templates\components\services.html:15
+msgid "Courses Offered"
+msgstr ""
+
+#: .\templates\components\services.html:17
+msgid "Advanced courses in English language and,"
+msgstr ""
+
+#: .\templates\components\services.html:19
+msgid "advanced courses in German language."
+msgstr ""
+
+#: .\templates\components\services.html:31
+msgid "Consultancy Services"
+msgstr ""
+
+#: .\templates\components\services.html:33
+msgid "Consultancy services to assess language needs "
+msgstr ""
+
+#: .\templates\components\services.html:34
+msgid "and develop personalized learning programs."
+msgstr ""
+
+#: .\templates\components\services.html:46
+msgid "Language Enhancement"
+msgstr ""
+
+#: .\templates\components\services.html:48
+msgid "Workshops and events to boost language skills"
+msgstr ""
+
+#: .\templates\components\services.html:49
+msgid "through social interaction."
+msgstr ""
+
+#: .\templates\components\services.html:63
+msgid "Improved language skills enable you to"
+msgstr ""
+
+#: .\templates\components\services.html:65
+msgid "effectively communicate with your audience."
+msgstr ""
+
+#: .\templates\components\services.html:76
+msgid "Knowledge"
+msgstr ""
+
+#: .\templates\components\services.html:78
+msgid "shared communication channels such as books,"
+msgstr ""
+
+#: .\templates\components\services.html:80
+msgid "lectures, conversations, and digital media."
+msgstr ""
+
+#: .\templates\components\services.html:91
+msgid "Discussion"
+msgstr ""
+
+#: .\templates\components\services.html:93
+msgid "valuable communication tools that facilitate the"
+msgstr ""
+
+#: .\templates\components\services.html:95
+msgid "exchange of ideas, promote critical thinking."
+msgstr ""
+
+#: .\templates\contact_us.html:29
+msgid "Follow Us"
+msgstr ""
+
+#: .\templates\contact_us.html:59
+msgid "HERE IS MORE INFORMATION"
+msgstr ""
+
+#: .\templates\contact_us.html:60
+msgid " Feal free to get in touch with us..."
+msgstr ""
+
+#: .\templates\courses.html:45 .\templates\courses.html:46
+msgid "Levels "
+msgstr ""

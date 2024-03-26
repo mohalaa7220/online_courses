@@ -1,3 +1,25 @@
+/*============= Main Font Arabic ==========*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+:root {
+    --main-font: "Noto Kufi Arabic", sans-serif;
+    --heading-font: "Noto Kufi Arabic", sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+
+/* ========== responsive navbar ========= */
+
+@media screen and (max-width: 1399px) {
+    .navbar .navbar-link {
+        font-size: 1.4rem;
+    }
+}
+
+
 /* ===== about ====== */
 
 @media (min-width: 1200px) {

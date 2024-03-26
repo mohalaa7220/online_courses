@@ -650,10 +650,6 @@ body {
 }
 
 @media screen and (max-width: 980px) {
-    .hero {
-        padding: 0;
-        padding-block-start: 6rem !important;
-    }
     .hero-content .section-n {
         font-size: 4.5rem;
     }
@@ -665,6 +661,21 @@ body {
     }
     .hero-content .section-title {
         font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .hero {
+        padding-top: 15rem;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .hero-content .section-n {
+        font-size: 2rem;
+    }
+    .hero-content .section-title {
+        font-size: 1.3rem;
     }
 }
 

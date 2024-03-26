@@ -6,12 +6,9 @@ from .models import Course, Section, Level, News
 
 # ============ home page =============
 def home_page(request):
-  
-    if request.LANGUAGE_CODE == 'en':
-        news = News.objects.all().values('news_title', 'news_desc', 'news_date', 'newsImage', 'lessonsNum')
-    else:
-        news = News.objects.all().values('news_titleinA', 'news_descinA', 'news_date', 'newsImage', 'lessonsNum')
-    
+
+    news = News.objects.all()
+
     context = {
         'news': news,
     }
@@ -26,13 +23,14 @@ def about(request):
 
 # ============ get section and related levels =============
 
+
 def section_detail(request, section_slug):
 
     section = get_object_or_404(
         Section.objects.select_related('course').prefetch_related('level_set'),
         section_Slug=section_slug
     )
-    levels=Level.objects.filter(section=section)
+    levels = Level.objects.filter(section=section)
     context = {
         'section': section,
         'levels': levels

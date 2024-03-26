@@ -40,6 +40,9 @@ class Section(models.Model):
             self.section_Slug = slugify(self.section_title_en)
         super(Section, self).save()
 
+    class Meta:
+        ordering = ('-created_at', '-update_at')
+
 
 # ============ level model ================
 class Level(models.Model):
@@ -61,6 +64,9 @@ class Level(models.Model):
     def __str__(self):
         return self.level_title_en
 
+    class Meta:
+        ordering = ('-created_at', '-update_at')
+
 
 # ============ news model ================
 class News(models.Model):
@@ -80,6 +86,7 @@ class News(models.Model):
 
     class Meta:
         verbose_name_plural = "News"
+        ordering = ('-created_at', '-update_at')
 
     def __str__(self):
         return self.news_title_en

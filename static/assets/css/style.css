@@ -349,7 +349,11 @@ body {
 .Sticker {
     margin-top: 80px;
 }
-
+.sticker1 {
+    position: absolute;
+    max-width: 100%;
+    margin-top: 400px;
+}
 .sub_heading {
     font-size: 14px;
     line-height: 15px;
@@ -584,6 +588,7 @@ body {
         line-height: 4;
         padding-left: 1rem;
     }
+    
 }
 
 
@@ -679,7 +684,6 @@ body {
 .hero-content .section-title {
     font-size: 4rem;
 }
-
 
 /* ============ responsive =============== */
 
@@ -862,6 +866,7 @@ body {
     .imgback img {
         width: 100%;
     }
+   
 }
 
 .service-section h2 {
@@ -994,6 +999,7 @@ body {
     .service-section h2 {
         margin-top: 30px;
     }
+ 
 }
 
 .levels_parent {
@@ -1034,6 +1040,7 @@ body {
     .cards .card .content p {
         font-size: 1.1rem;
     }
+
 }
 
 
@@ -1481,6 +1488,8 @@ body {
     .hero-banner {
         grid-template-columns: 1fr 0.9fr;
     }
+ 
+ 
     /**
 * VIDEO
 */

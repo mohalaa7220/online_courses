@@ -57,7 +57,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.template.context_processors.i18n',
                 'django.contrib.messages.context_processors.messages',
-                'courses.courses_list.courses_list'
+                'courses.courses_list.courses_list',
+                'courses.contact_info.contact_info',
             ],
         },
     },

@@ -16,13 +16,14 @@
       </a>
       <div class="footer-brand">
         <p class="footer-brand-text">{% trans "Always up to date with us" %}</p>
+        {%for contact in contact_info %}
         <div class="wrapper">
           <span class="span">{% trans "Call:" %}</span>
-          <a href="tel:++963 09938  890" class="footer-link">+963 09938 890</a>
+          <a href="tel:++963 09938  890" class="footer-link">{{contact.Phone_Num}}  </a>
         </div>
         <div class="wrapper">
           <span class="span"> {% trans "Email:" %}</span>
-          <a href="mailto:info@eweb.com" class="footer-link">info@web.com</a>
+          <a href="mailto:info@eweb.com" class="footer-link">{{contact.Email_url}}</a>
         </div>
       </div>
       <ul class="footer-list">
@@ -41,33 +42,51 @@
         <p class="footer-list-text">
           {% trans "Subscribe our socialmedia links" %}
         </p>
+       
         <ul class="social-list">
           <li>
-            <a href="#" class="social-link">
+            <a href="{{contact.Facebbok_url}}" class="social-link">
               <i class="bx bxl-facebook-circle"></i>
             </a>
           </li>
           <li>
-            <a href="#" class="social-link">
+            <a href="{{contact.LinkeIN_url}}" class="social-link">
               <i class="bx bxl-linkedin-square"></i>
             </a>
           </li>
           <li>
-            <a href="#" class="social-link">
+            <a href="{{contact.Instgram_url}}" class="social-link">
               <i class="bx bxl-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="#" class="social-link">
-              <i class="bx bxl-twitter"></i>
+            <a href="{{contact.X_url}}" class="social-link">
+              <i class="bx bxl-twitter"> </i>
             </a>
           </li>
           <li>
-            <a href="#" class="social-link">
+            <a href="{{contact.Telgram_url}}" class="social-link">
+              <i class="bx bxl-telegram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{{contact.Youtube_url}}" class="social-link">
               <i class="bx bxl-youtube"></i>
             </a>
           </li>
+          <li>
+            <a href="{{contact.WhatsApp_url}}" class="social-link">
+              <i class="bx bxl-whatsapp"></i>
+            </a>
+          </li>
+          <li>
+            <a href="{{contact.TikTok_url}}"  class="social-link">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </li>
+      
         </ul>
+        {%endfor %}
       </div>
     </div>
   </div>

@@ -103,6 +103,7 @@ class Contact_inf(models.Model):
     Telgram_url = models.URLField(null=True, blank=True)
     WhatsUp_url = models.URLField(null=True, blank=True)
     LinkeIN_url = models.URLField(null=True, blank=True)
+    Youtube_url = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.Phone_Num

@@ -10,7 +10,11 @@ body {
     font-family: var(--main-font);
 }
 
-
+.moreInfo {
+    right: 500px;
+   
+    
+}
 /* ========== responsive navbar ========= */
 
 @media screen and (max-width: 1399px) {
@@ -36,3 +40,4 @@ body {
     padding-right: 1rem;
     padding-left: 0;
 }
+

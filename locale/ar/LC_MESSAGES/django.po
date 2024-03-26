@@ -263,15 +263,15 @@ msgstr "تبادل الأفكار وتعزز التفكير النقدي."
 
 #: .\templates\contact_us.html:29
 msgid "Follow Us"
-msgstr ""
+msgstr "تابعنا "
 
 #: .\templates\contact_us.html:59
 msgid "HERE IS MORE INFORMATION"
-msgstr ""
+msgstr "معلومات الاتصال الخاصة بنا"
 
 #: .\templates\contact_us.html:60
 msgid " Feal free to get in touch with us..."
-msgstr ""
+msgstr "تواصل معنا وسوف نرد في أقرب وقت"
 
 #: .\templates\courses.html:54 .\templates\courses.html:55
 msgid "Levels "

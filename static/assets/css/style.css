@@ -1525,9 +1525,7 @@ body {
     /**
 * HEADER
 */
-    /* .header .container {
-padding-inline: 30px;
-} */
+  
     .header .btn {
         display: flex;
         padding: 10px 30px;

@@ -20,26 +20,19 @@
             />
           </div>
           <div class="col-md-8">
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <!-- display ar -->
             <div class="card-body">
-              {% if request.LANGUAGE_CODE == 'ar' %}
-              <!-- display arabic -->
               <h1>{{ section.section_title_ar}}</h1>
-              <!-- display english -->
-              {% else %}
-              <h1>{{ section.section_title_en}}</h1>
-
-              <!-- end check -->
-
-              {% endif %} {% if request.LANGUAGE_CODE == 'ar' %}
-              <!-- display arabic -->
               <p>{{ section.description_ar }}</p>
-              <!-- display english -->
-
-              {% else %}
-              <p>{{ section.description_en }}</p>
-              <!-- end check -->
-              {% endif %}
             </div>
+            {% else %}
+            <!-- display en -->
+            <div class="card-body">
+              <h1>{{ section.section_title_en}}</h1>
+              <p>{{ section.description_en }}</p>
+            </div>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -58,37 +51,35 @@
       {% for level in levels %}
       <div class="col-lg-4 cards">
         <div class="card">
+          {% if request.LANGUAGE_CODE == 'ar' %}
+          <!-- display ar -->
           <div class="content">
-            {% if request.LANGUAGE_CODE == 'ar' %}
-            <!-- display arabic -->
             <h3>{{ level.level_title_ar }}</h3>
-            <!-- display english -->
-            {% else %}
-
-            <h3>{{ level.level_title_en }}</h3>
-
-            <!-- end check -->
-
-            {% endif %}
             <div class="scroll-bg">
               <div class="scroll-div">
-                {% if request.LANGUAGE_CODE == 'ar' %}
-                <!-- display arabic -->
                 <p>{{ level.level_description_ar }}</p>
-                <!-- display english -->
-                {% else %}
-
-                <p>{{ level.level_description_en }}</p>
-                <!-- end check -->
-
-                {% endif %}
               </div>
             </div>
-            <a href="# " class="btn has-before">
+            <a href="#" class="btn has-before">
               <span class="span">{% trans "Video" %}</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>
+          {% else %}
+          <!-- display en -->
+          <div class="content">
+            <h3>{{ level.level_title_en }}</h3>
+            <div class="scroll-bg">
+              <div class="scroll-div">
+                <p>{{ level.level_description_en }}</p>
+              </div>
+            </div>
+            <a href="#" class="btn has-before">
+              <span class="span">{% trans "Video" %}</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+          {% endif %}
         </div>
       </div>
       {% endfor %}

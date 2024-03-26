@@ -1,10 +1,13 @@
 {% load static %} {% load i18n %}
 
-<section class="section hero has-bg-image" id="home" aria-label="home" style="background-image: url('{% static 'images/hero-bg.svg' %}')">
+<section class="section hero has-bg-image" id="home" aria-label="home">
     <div class="container">
 
         <div class="hero-content">
-            <h2 class="section-n">{% trans "Up To Date" %}</h2>
+            <span class="sub_heading">EXCELLENCE IN EDUCATION</span>
+            <h2 class="section-n">
+                {% trans "Start Better Languages Future From Here" %}
+            </h2>
 
             <p class="hero-text">
                 <h5 class="h2 section-title">
@@ -13,12 +16,12 @@
                         {% trans "skills"%}
                     </span>
                 </h5>
-                <h1 class="h2 section-title">
+                <h5 class="h2 section-title">
                     {% trans "update your"%}
                     <span class="span">
                         {% trans "reality"%} 
                     </span>
-                </h1>
+                </h5>
             </p>
         </div>
 

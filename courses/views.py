@@ -6,12 +6,7 @@ from .models import Course, Section, Level, News
 
 # ============ home page =============
 def home_page(request):
-  
-    if request.LANGUAGE_CODE == 'en':
-        news = News.objects.all().values('news_title', 'news_desc', 'news_date', 'newsImage', 'lessonsNum')
-    else:
-        news = News.objects.all().values('news_titleinA', 'news_descinA', 'news_date', 'newsImage', 'lessonsNum')
-    
+    news = News.objects.all()
     context = {
         'news': news,
     }

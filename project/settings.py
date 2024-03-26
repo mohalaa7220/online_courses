@@ -165,6 +165,7 @@ JAZZMIN_SETTINGS = {
         "courses.course": "fas fa-solid fa-book-open",
         "courses.level": "fas fa-solid fa-layer-group",
         "courses.section": "fas fa-solid fa-puzzle-piece",
+        "courses.Contact_inf": "fas fa-solid fa-phone-volume",
     },
     "theme": "darkly",
     "dark_mode_theme": "darkly",

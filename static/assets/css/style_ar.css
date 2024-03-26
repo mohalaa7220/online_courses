@@ -1,0 +1,10 @@
+/* ===== about ====== */
+
+@media (min-width: 1200px) {
+    .about-shape-3 {
+        top: -20px;
+        right: -100px;
+        z-index: -1;
+        transform: translate(100px, 0);
+    }
+}

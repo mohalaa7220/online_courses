@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from .models import Course, Section, Level, News
 
 
+# ============ home page =============
 def home_page(request):
   
     if request.LANGUAGE_CODE == 'en':
@@ -16,16 +17,24 @@ def home_page(request):
     }
     return render(request, 'home.html', context)
 
+
+# ============ about page =============
+def about(request):
+    return render(request, 'about.html')
+
+# ============ course page =============
+
 # ============ get section and related levels =============
+
 def section_detail(request, section_slug):
 
     section = get_object_or_404(
         Section.objects.select_related('course').prefetch_related('level_set'),
         section_Slug=section_slug
     )
-
+    levels=Level.objects.filter(section=section)
     context = {
         'section': section,
-        'levels': section.level_set.all()
+        'levels': levels
     }
     return render(request, 'courses.html', context)

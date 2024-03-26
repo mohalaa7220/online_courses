@@ -1,0 +1,38 @@
+{% load static %} {% load i18n %}
+<section
+  class="video has-bg-image"
+  aria-label="video"
+  style="background-image: url('{% static 'images/video-bg.webp' %}')"
+>
+  <h2 class="h2 section-title">
+    Online <span class="span">Classes</span> For Remote Learning
+  </h2>
+  <div class="container">
+    <div class="video-card">
+      <div
+        class="video-banner img-holder has-after"
+        style="--width: ; --height: "
+      >
+        <img
+          src="{% static 'images/video-banner.webp' %}"
+          width="970"
+          height="550"
+          loading="lazy"
+          alt="video banner"
+          class="img-cover"
+        />
+        <button class="play-btn" aria-label="play video">
+          <ion-icon name="play" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+      <img
+        src="{% static 'images/video-shape-1.webp' %}"
+        width="1089"
+        height="605"
+        loading="lazy"
+        alt=""
+        class="shape video-shape-1"
+      />
+    </div>
+  </div>
+</section>

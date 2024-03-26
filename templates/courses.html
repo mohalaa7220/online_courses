@@ -1,13 +1,34 @@
 {% extends 'base.html' %} {% load static %} {% load i18n %} {% block body %}
 
 <!-- display data -->
-{%for course_data in data %} {% for section_data in course_data.sections %}
-<div class="contin">
+
+<!-- ======= set page in breadcrumb ========= -->
+{% with page_title=section.section_title_en %}
+<!-- ======= breadcrumb ========= -->
+{% include 'components/breadcrumb.html' %} {% endwith %}
+
+<div class="container">
   <div class="service-section">
     <div class="skewed">
       <div class="txt">
-        <h1>{{ section.sectiontitle }}</h1>
-        <p>{{ section.description }}</p>
+        {% if request.LANGUAGE_CODE == 'ar' %}
+        <!-- display arabic -->
+        <h1>{{ section.section_title_ar}}</h1>
+        <!-- display english -->
+        {% else %}
+        <h1>{{ section.section_title_en}}</h1>
+
+        <!-- end check -->
+
+        {% endif %} {% if request.LANGUAGE_CODE == 'ar' %}
+        <!-- display arabic -->
+        <p>{{ section.description_ar }}</p>
+        <!-- display english -->
+
+        {% else %}
+        <p>{{ section.description_en }}</p>
+        <!-- end check -->
+        {% endif %}
       </div>
       <div class="imgback">
         <img src="{% static 'images/Thinking face-cuate.svg' %}" alt="img" />
@@ -17,10 +38,33 @@
     <div class="cards">
       <div class="card">
         <div class="content">
-          <h3>{{ level.levelTitle }}</h3>
-          <p>{{ level.levelDescription }}</p>
+          {% if request.LANGUAGE_CODE == 'ar' %}
+          <!-- display arabic -->
+          <h3>{{ level.level_title_ar }}</h3>
+          <!-- display english -->
+          {% else %}
+
+          <h3>{{ level.level_title_en }}</h3>
+
+          <!-- end check -->
+
+          {% endif %}
+          <div class="scroll-bg">
+            <div class="scroll-div">
+              {% if request.LANGUAGE_CODE == 'ar' %}
+              <!-- display arabic -->
+              <p>{{ level.level_description_ar }}</p>
+              <!-- display english -->
+              {% else %}
+
+              <p>{{ level.level_description_en }}</p>
+              <!-- end check -->
+
+              {% endif %}
+            </div>
+          </div>
           <a href="#" class="btn has-before">
-            <span class="span">Discover more</span>
+            <span class="span">video</span>
             <ion-icon
               name="arrow-forward-outline"
               aria-hidden="true"
@@ -28,8 +72,8 @@
           </a>
         </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </div>
-{% endfor %} {% endfor %} {% endblock body %}
+{% endblock body %}

@@ -1,51 +1,52 @@
-.back{
+.back {
     margin: 0;
     margin-top: -20px;
     height: 800px;
     padding: 0;
-    font-family: 'Segoe UI', sans-serif;
     background-position: center center;
     background-size: 100%;
     width: 100%;
-  
-  }
-  
-  #container {
+}
+
+#container {
     width: 60%;
     margin: 80px auto 150px auto;
     background-position: center center;
     background-size: 100%;
-   
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 25px;
     color: #000000;
     font-weight: bold;
-  }
-  a{
+}
+
+a {
     text-decoration: none;
     color: #f4f4f4;
-  }
-  
-  /* === CONTACTFORM === */
-  .contactForm {
+}
+
+
+/* === CONTACTFORM === */
+
+.contactForm {
     background-color: #ffa11d;
     width: 80%;
     padding: 20px;
     border-radius: 10px;
     position: relative;
     box-shadow: 0 0 0 #777777, 0 0 10px #777777;
-  
-  }
-  .contactForm form {
+}
+
+.contactForm form {
     width: 60%;
     padding: 50px 30px 70px 30px;
-  }
-  
-  
-  /* === MOREINFO === */
-  .moreInfo {
+}
+
+
+/* === MOREINFO === */
+
+.moreInfo {
     background-color: #3cb3ad;
     width: 300px;
     height: 450px;
@@ -56,113 +57,123 @@
     top: 100px;
     right: -150px;
     box-shadow: 0 0 0 #777777, 0 0 20px #777777;
-  }
-  .moreInfo h1  {
+}
+
+.moreInfo h1 {
     font-size: 20px;
     color: #000000;
     font-weight: bold;
-  }
-  
-  .moreInfo p{
+}
+
+.moreInfo p {
     margin-top: 14px;
-    font-size:  18px;
-   
-  }
-  .moreInfo p i  {
+    font-size: 18px;
+}
+
+.moreInfo p i {
     margin-right: 10px;
     color: #505251;
-  }
-  .moreInfo .city {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  .moreInfo .cityText {
-    margin-left: 23px;
-  }
-  .moreInfo .email{
-    margin-left: 23px;
-  }
-  .moreInfo  span{
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  /* === MEDIA QUERIES 1000PX === */
-  @media only screen and (max-width: 1000px) {
-    #container {width: 90%;}
-    .contactForm {width: 70%;}
-  }
-  
-  /* === MEDIA QUERIES 700PX === */
-  @media only screen and (max-width: 700px) {
-    .back{
-      height: 1200px;
-    }
-  
-    .moreInfo {
-    top: 0; 
-    right: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
+}
 
+.moreInfo .city {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.moreInfo .cityText {
+    margin-left: 23px;
+}
+
+.moreInfo .email {
+    margin-left: 23px;
+}
+
+.moreInfo span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* === MEDIA QUERIES 1000PX === */
+
+@media only screen and (max-width: 1000px) {
+    #container {
+        width: 90%;
+    }
     .contactForm {
-      width: 100%;
-      box-sizing: border-box;
+        width: 70%;
+    }
+}
+
+
+/* === MEDIA QUERIES 700PX === */
+
+@media only screen and (max-width: 700px) {
+    .back {
+        height: 1200px;
+    }
+    .moreInfo {
+        top: 0;
+        right: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .contactForm {
+        width: 100%;
+        box-sizing: border-box;
     }
     .contactForm form {
-      width: 100%;
-      box-sizing: border-box;
+        width: 100%;
+        box-sizing: border-box;
     }
     .moreInfo {
-      top: 550px;
-      left: 0;
-      width: 100%;
-      box-sizing: border-box;
+        top: 550px;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
     }
-   
-  }
-  
-  .social-icons{
-      padding:15px;
-       display: flex;
-       justify-content: space-around;  
-        align-items: center;  
-       
-  }
-  .social-icons a{
-      color:#fff;
-    line-height:38px;
+}
+
+.social-icons {
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #fff;
+    line-height: 38px;
     margin-top: 4px;
-    font-size:45px;
+    font-size: 45px;
     margin: 0 1px;
-    text-decoration:none;
-    
-  }
-  .social-icons a i{
-   
+    text-decoration: none;
+}
+
+.social-icons a i {
     margin: 0 10px;
-    line-height:30px;
-    font-size:35px;
+    line-height: 30px;
+    font-size: 35px;
     -webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1); 
+    -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1); 
+    -ms-transform: scale(1);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
     transform: scale(1);
-  }
-  .social-icons a:hover i{
+}
+
+.social-icons a:hover i {
     box-shadow: 0px 0px 150px #000000;
     z-index: 2;
     -webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.5);   
+    -ms-transform: scale(1.5);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1.5);
     transition: all 200ms ease-in;
     transform: scale(1.5);
     color: #000000;
-  }
+}

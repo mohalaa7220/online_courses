@@ -849,17 +849,9 @@ body {
     border-radius: 10px;
 }
 
-.imgback {
-    width: 25%;
-    border-radius: 2em;
-    position: relative;
-    overflow: hidden;
-}
-
 @media screen and (max-width: 1050px) {
     .skewed {
         display: block;
-        width: 20em;
     }
     .imgback,
     .txt {
@@ -877,6 +869,35 @@ body {
     position: relative;
 }
 
+.service-section .card_section {
+    border: none !important;
+    background-color: transparent !important;
+    ;
+}
+
+.service-section .section_img {
+    width: 100%;
+}
+
+.service-section .card-body {
+    padding-inline-start: 4rem;
+    padding-top: 2rem;
+}
+
+.service-section .card-body h1 {
+    font-family: var(--heading-font);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 3rem;
+    margin-block: 2rem;
+}
+
+.service-section .card-body p {
+    color: var(--paragraph-color);
+    line-height: 1.7;
+    font-size: 2rem;
+}
+
 .cards {
     z-index: 1;
 }
@@ -888,11 +909,12 @@ body {
     background: var(--white);
     position: relative;
     border: none !important;
+    margin-top: 20px;
 }
 
 .cards .card::before {
     position: absolute;
-    content: " ";
+    content: "";
     height: 2px;
     width: 0%;
     bottom: 0;
@@ -911,20 +933,11 @@ body {
 }
 
 .cards .card h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--color-primary);
-    margin-top: 40px;
+    margin-top: 10px;
     font-weight: 800;
     text-transform: capitalize;
-}
-
-.cards .card,
-.cards .card .content {
-    margin-top: 20px;
-    color: rgb(11, 11, 8);
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: 500;
 }
 
 .cards .card .content p {
@@ -939,6 +952,21 @@ body {
     margin-bottom: 30px;
     font-weight: 500;
     max-height: 200px;
+}
+
+
+/* ========== responsive section ========= */
+
+@media screen and (max-width: 850px) {
+    .service-section .card-body p {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .service-section .card-body {
+        padding-left: 1rem;
+    }
 }
 
 
@@ -1402,7 +1430,6 @@ body {
     @media screen and (max-width: 1050px) {
         .skewed {
             display: block;
-            width: 20em;
         }
         .imgback,
         .txt {
@@ -1417,27 +1444,6 @@ body {
         font-size: 2rem;
         margin-bottom: 20px;
         position: relative;
-    }
-    .cards .card {
-        min-height: 250px;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 0 8%;
-        position: relative;
-    }
-    .cards .card h3 {
-        font-size: 2rem;
-        margin-top: 40px;
-        font-weight: 800;
-    }
-    .cards .card,
-    .cards .card .content {
-        margin-top: 20px;
-        color: rgb(11, 11, 8);
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        font-weight: 500;
     }
     .cards .card .content p {
         height: 100%;

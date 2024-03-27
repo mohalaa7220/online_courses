@@ -10,29 +10,38 @@
 <div class="container">
   <div class="service-section pt-7">
     <div class="skewed">
-      <div class="txt">
-        {% if request.LANGUAGE_CODE == 'ar' %}
-        <!-- display arabic -->
-        <h1>{{ section.section_title_ar}}</h1>
-        <!-- display english -->
-        {% else %}
-        <h1>{{ section.section_title_en}}</h1>
+      <div class="card card_section mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="{{ section.pictureSection.url }}"
+              alt="{{ section.section_title_en }}"
+              class="section_img"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              {% if request.LANGUAGE_CODE == 'ar' %}
+              <!-- display arabic -->
+              <h1>{{ section.section_title_ar}}</h1>
+              <!-- display english -->
+              {% else %}
+              <h1>{{ section.section_title_en}}</h1>
 
-        <!-- end check -->
+              <!-- end check -->
 
-        {% endif %} {% if request.LANGUAGE_CODE == 'ar' %}
-        <!-- display arabic -->
-        <p>{{ section.description_ar }}</p>
-        <!-- display english -->
+              {% endif %} {% if request.LANGUAGE_CODE == 'ar' %}
+              <!-- display arabic -->
+              <p>{{ section.description_ar }}</p>
+              <!-- display english -->
 
-        {% else %}
-        <p>{{ section.description_en }}</p>
-        <!-- end check -->
-        {% endif %}
-      </div>
-      
-      <div class="imgback">
-        <img src="{{ section.pictureSection.url }}" alt="{{ section.section_title_en }}" style="height:200px; width:300px;">
+              {% else %}
+              <p>{{ section.description_en }}</p>
+              <!-- end check -->
+              {% endif %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -76,7 +85,7 @@
               </div>
             </div>
             <a href="# " class="btn has-before">
-              <span class="span">video</span>
+              <span class="span">{% trans "Video" %}</span>
               <i class="fa-solid fa-arrow-right"></i>
             </a>
           </div>

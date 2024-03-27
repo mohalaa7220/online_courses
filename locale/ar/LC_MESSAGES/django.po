@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 22:08+0200\n"
+"POT-Creation-Date: 2024-03-27 22:22+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,33 +107,37 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: .\templates\components\about.html:39
+#: .\templates\components\about.html:18
 msgid "About Us"
-msgstr ""
+msgstr "عننا"
 
-#: .\templates\components\about.html:42
+#: .\templates\components\about.html:21
 msgid ""
 "Our methods are effective cuz we write lessons to be taught by skilful "
 "teachers to smart students"
 msgstr ""
+"أساليبنا فعالة لأننا نكتب دروسًا ليتم تدريسها على يد معلمين ماهرين للطلاب "
+"الأذكياء"
 
-#: .\templates\components\about.html:48
+#: .\templates\components\about.html:27
 msgid "More free time"
-msgstr ""
+msgstr "المزيد من وقت الفراغ"
 
-#: .\templates\components\about.html:52
+#: .\templates\components\about.html:31
 msgid "Online Remote Learning"
-msgstr ""
+msgstr "التعلم عن بعد"
 
-#: .\templates\components\about.html:56
+#: .\templates\components\about.html:35
 msgid "Lifetime Access"
-msgstr ""
+msgstr "الوصول مدى الحياة"
 
-#: .\templates\components\about.html:60
-msgid ""
-"it's possible that our methods are regarded by some  to be as challenging,"
-"but cerainly ,it is more effective"
-msgstr ""
+#: .\templates\components\about.html:39
+msgid "it's possible that our methods are regarded by some to"
+msgstr "من الممكن أن يعتبر البعض أساليبنا كذلك"
+
+#: .\templates\components\about.html:41
+msgid "be as challenging,but cerainly ,it is more effective"
+msgstr "يكون بنفس القدر من التحدي، ولكن من المؤكد أنه أكثر فعالية"
 
 #: .\templates\components\breadcrumb.html:8
 #: .\templates\components\navbar.html:35
@@ -191,71 +195,71 @@ msgstr "الخدمات"
 
 #: .\templates\components\services.html:15
 msgid "Courses Offered"
-msgstr ""
+msgstr "الدورات المقدمة"
 
 #: .\templates\components\services.html:17
 msgid "Advanced courses in English language and,"
-msgstr ""
+msgstr "دورات متقدمة في اللغة الإنجليزية"
 
 #: .\templates\components\services.html:19
 msgid "advanced courses in German language."
-msgstr ""
+msgstr "ودورات متقدمة في اللغة الألمانية."
 
 #: .\templates\components\services.html:31
 msgid "Consultancy Services"
-msgstr ""
+msgstr "خدمات استشارية"
 
 #: .\templates\components\services.html:33
 msgid "Consultancy services to assess language needs "
-msgstr ""
+msgstr "خدمات استشارية لتقييم الاحتياجات اللغوية"
 
 #: .\templates\components\services.html:34
 msgid "and develop personalized learning programs."
-msgstr ""
+msgstr "وتطوير برامج تعليمية مخصصة."
 
 #: .\templates\components\services.html:46
 msgid "Language Enhancement"
-msgstr ""
+msgstr "تعزيز اللغة"
 
 #: .\templates\components\services.html:48
 msgid "Workshops and events to boost language skills"
-msgstr ""
+msgstr "ورش عمل وفعاليات لتعزيز المهارات اللغوية"
 
 #: .\templates\components\services.html:49
 msgid "through social interaction."
-msgstr ""
+msgstr "من خلال التفاعل الاجتماعي."
 
 #: .\templates\components\services.html:63
 msgid "Improved language skills enable you to"
-msgstr ""
+msgstr "تمكنك المهارات اللغوية المحسنة"
 
 #: .\templates\components\services.html:65
 msgid "effectively communicate with your audience."
-msgstr ""
+msgstr "من التواصل بفعالية مع جمهورك."
 
 #: .\templates\components\services.html:76
 msgid "Knowledge"
-msgstr ""
+msgstr "المعرفة"
 
 #: .\templates\components\services.html:78
 msgid "shared communication channels such as books,"
-msgstr ""
+msgstr "قنوات الاتصال المشتركة مثل الكتب،"
 
 #: .\templates\components\services.html:80
 msgid "lectures, conversations, and digital media."
-msgstr ""
+msgstr "المحاضرات والمحادثات والوسائط الرقمية."
 
 #: .\templates\components\services.html:91
 msgid "Discussion"
-msgstr ""
+msgstr "المناقشة"
 
 #: .\templates\components\services.html:93
 msgid "valuable communication tools that facilitate the"
-msgstr ""
+msgstr "أدوات اتصال قيمة تسهل"
 
 #: .\templates\components\services.html:95
 msgid "exchange of ideas, promote critical thinking."
-msgstr ""
+msgstr "تبادل الأفكار وتعزز التفكير النقدي."
 
 #: .\templates\contact_us.html:29
 msgid "Follow Us"
@@ -271,8 +275,8 @@ msgstr ""
 
 #: .\templates\courses.html:54 .\templates\courses.html:55
 msgid "Levels "
-msgstr ""
+msgstr "المستويات"
 
 #: .\templates\courses.html:88
 msgid "Video"
-msgstr ""
+msgstr "فيديو"

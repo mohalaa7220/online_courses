@@ -30,3 +30,9 @@ body {
         transform: translate(100px, 0);
     }
 }
+
+.services_card .content {
+    text-align: right;
+    padding-right: 1rem;
+    padding-left: 0;
+}

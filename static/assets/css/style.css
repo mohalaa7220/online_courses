@@ -792,12 +792,6 @@ body {
     }
 }
 
-.about :is(.section-subtitle,
-.section-title,
-.section-text) {
-    text-align: left;
-}
-
 .about-item {
     margin-block: 15px;
     display: flex;
@@ -813,7 +807,6 @@ body {
 
 .about-item .span {
     color: var(--eerie-black-1);
-    font-family: var(--ff-league_spartan);
 }
 
 

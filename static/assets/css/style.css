@@ -674,7 +674,7 @@ body {
     gap: 30px;
 }
 
-.section-title .hero-banner .img-holder.one {
+ .hero-banner .img-holder.one {
     border-top-right-radius: 70px;
     border-bottom-left-radius: 110px;
 }
@@ -788,8 +788,8 @@ body {
 
 .about-shape-2 {
     display: block;
-    bottom: -100px;
-    left: -60px;
+    bottom: 50px;
+    left: 80px;
     animation: bounce 2.5s infinite;
 }
 

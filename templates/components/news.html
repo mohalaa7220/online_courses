@@ -49,6 +49,9 @@
           {% else %}
           <!-- display en -->
           <div class="card-content">
+            <a href="#" class="card-btn" aria-label="read more">
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
             <h3 class="h3">
               <a
                 href="{% url 'news_details' news_id=item.id%}"

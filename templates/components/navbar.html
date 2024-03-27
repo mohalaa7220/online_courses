@@ -1,33 +1,18 @@
 {% load static %} {% load i18n %}
 
 <header class="header" data-header>
-  <div class="container">
-    <a href="/" class="logo">
-      <img
-        src="{% static 'assets/images/logo-light.webp' %}"
-        width="83"
-        height="10"
-        alt="{% trans 'Up2Date logo' %}"
-      />
-    </a>
-    <nav class="navbar" data-navbar>
-      <div class="wrapper">
+    <div class="container">
         <a href="/" class="logo">
-          <img
-            src="{% static 'assets/images/logo-light.webp' %}"
-            width="83"
-            height="10"
-            alt="{% trans 'EduWeb logo' %}"
-          />
+            <img src="{% static 'assets/images/logo-light.webp' %}" width="83" height="10" alt="{% trans 'Up2Date logo' %}" />
         </a>
+        <nav class="navbar" data-navbar>
+            <div class="wrapper">
+                <a href="/" class="logo">
+                    <img src="{% static 'assets/images/logo-light.webp' %}" width="83" height="10" alt="{% trans 'EduWeb logo' %}" />
+                </a>
 
-        <button
-          class="nav-close-btn"
-          aria-label="{% trans 'close menu' %}"
-          data-nav-toggler
-        >
-          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-        </button>
+                <button class="nav-close-btn" aria-label="{% trans 'close menu' %}" data-nav-toggler>
+          x
       </div>
 
       <ul class="navbar-list">
@@ -100,31 +85,26 @@
               <i class="bx bx-globe"></i>
               English
             </button>
-          </li>
+                </li>
 
-          {% else %}
-          <li class="navbar-item">
-            <button
-              type="submit"
-              name="language"
-              value="ar"
-              class="navbar-link"
-            >
+                {% else %}
+                <li class="navbar-item">
+                    <button type="submit" name="language" value="ar" class="navbar-link">
               <i class="bx bx-globe"></i>
               العربية
             </button>
-          </li>
-          {% endif %}
-        </form>
-      </ul>
-    </nav>
+                </li>
+                {% endif %}
+                </form>
+                </ul>
+        </nav>
 
-    <div class="header-actions">
-      <button class="header-action-btn" data-nav-toggler>
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        <div class="header-actions">
+            <button class="header-action-btn" data-nav-toggler>
+        <i class="bx bx-menu"></i>
       </button>
-    </div>
+        </div>
 
-    <div class="overlay" data-nav-toggler data-overlay></div>
-  </div>
+        <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
 </header>

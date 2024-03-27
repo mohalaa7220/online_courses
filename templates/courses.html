@@ -1,7 +1,5 @@
 {% extends 'base.html' %} {% load static %} {% load i18n %} {% block body %}
 
-<!-- display data -->
-
 <!-- ======= set page in breadcrumb ========= -->
 {% with page_title=section.section_title_en %}
 <!-- ======= breadcrumb ========= -->
@@ -9,7 +7,7 @@
 
 <div class="container">
   <div class="service-section pt-7">
-    <div class="skewed">
+    <div class="skewed" data-aos="zoom-in-down">
       <div class="card card_section mb-3">
         <div class="row g-0">
           <div class="col-md-4">
@@ -49,7 +47,7 @@
     </div>
     <div class="row">
       {% for level in levels %}
-      <div class="col-lg-4 cards">
+      <div class="col-lg-4 cards" data-aos="fade-up">
         <div class="card">
           {% if request.LANGUAGE_CODE == 'ar' %}
           <!-- display ar -->
@@ -60,10 +58,17 @@
                 <p>{{ level.level_description_ar }}</p>
               </div>
             </div>
-            <a href="#" class="btn has-before">
+            <!-- to display video -->
+            <button
+              type="button"
+              class="btn has-before"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              data-video-src="{{ level.video.url }}"
+            >
               <span class="span">{% trans "Video" %}</span>
               <i class="bx bx-right-arrow-alt"></i>
-            </a>
+            </button>
           </div>
           {% else %}
           <!-- display en -->
@@ -74,10 +79,17 @@
                 <p>{{ level.level_description_en }}</p>
               </div>
             </div>
-            <a href="#" class="btn has-before">
+            <!-- to display video -->
+            <button
+              type="button"
+              class="btn has-before"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              data-video-src="{{ level.video.url }}"
+            >
               <span class="span">{% trans "Video" %}</span>
               <i class="bx bx-right-arrow-alt"></i>
-            </a>
+            </button>
           </div>
           {% endif %}
         </div>
@@ -86,4 +98,53 @@
     </div>
   </div>
 </section>
+
+<!-- ======= Video Modal ======= -->
+<div
+  class="modal fade model-video fade modal-dialog modal-dialog-centered"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          {% trans "Video" %}
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <video width="100%" height="auto" controls id="videoPlayer">
+          <source src="" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let modalButtons = document.querySelectorAll('[data-bs-toggle="modal"]');
+  let videoPlayer = document.getElementById("videoPlayer");
+
+  modalButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      let videoSrc = this.getAttribute("data-video-src");
+      videoPlayer.querySelector("source").setAttribute("src", videoSrc);
+      videoPlayer.load();
+    });
+  });
+
+  document
+    .querySelector('[data-bs-dismiss="modal"]')
+    .addEventListener("click", function () {
+      videoPlayer.pause();
+    });
+</script>
+
 {% endblock body %}

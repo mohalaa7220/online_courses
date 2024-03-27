@@ -1,52 +1,59 @@
 {% extends 'base.html' %} {% load static %} {% load i18n %} {% block body %}
 
-<!-- ======= set page in breadcrumb ========= -->
-{% with page_title=section.section_title_en %}
-<!-- ======= breadcrumb ========= -->
-{% include 'components/breadcrumb.html' %} {% endwith %}
+<!-- display data -->
 
-<div class="container">
-  <div class="service-section pt-7">
-    <div class="skewed" data-aos="fade-in">
-      <div class="card card_section mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img
-              src="{{ section.pictureSection.url }}"
-              alt="{{ section.section_title_en }}"
-              class="section_img"
-            />
-          </div>
-          <div class="col-md-8">
-            {% if request.LANGUAGE_CODE == 'ar' %}
-            <!-- display ar -->
-            <div class="card-body">
-              <h1>{{ section.section_title_ar}}</h1>
-              <p>{{ section.description_ar }}</p>
-            </div>
-            {% else %}
-            <!-- display en -->
-            <div class="card-body">
-              <h1>{{ section.section_title_en}}</h1>
-              <p>{{ section.description_en }}</p>
-            </div>
-            {% endif %}
-          </div>
-        </div>
+<!-- ======= set page in breadcrumb ========= -->
+{% if request.LANGUAGE_CODE == 'ar' %}
+<!--  -->
+{% with page_title=course_id.level_title_ar%}
+<!-- ======= breadcrumb ========= -->
+{% include 'components/breadcrumb.html' %} {% endwith %} {% else %}
+<!--  -->
+{% with page_title=course_id.level_title_en %}
+<!-- ======= breadcrumb ========= -->
+{% include 'components/breadcrumb.html' %} {% endwith %} {% endif %}
+<!-- ======== content =========== -->
+<section class="news_details">
+  <div class="news_container">
+    {% if request.LANGUAGE_CODE == 'ar' %}
+    <div class="head">
+      <h1>{{course_id.level_title_ar}}</h1>
+    </div>
+    <div class="center">
+      <video width="100%" height="500px" controls id="videoPlayer">
+        <source src="{{course_id.video.url}}" type="video/mp4" />
+      </video>
+      <div class="description">
+        <h3>{{course_id.level_title_ar}}</h3>
+        <p>{{course_id.level_description_en}}</p>
       </div>
     </div>
+    {% else %}
+    <div class="head">
+      <h1>{{course_id.level_title_en}}</h1>
+    </div>
+    <div class="center">
+      <video width="100%" height="500px" controls id="videoPlayer">
+        <source src="{{course_id.video.url}}" type="video/mp4" />
+      </video>
+      <div class="description">
+        <h3>{{course_id.level_title_en}}</h3>
+        <p>{{course_id.level_description_en}}</p>
+      </div>
+    </div>
+    {% endif %}
   </div>
-</div>
+</section>
 
-<!-- =============== levels ================= -->
+<!-- ======== related levels =========== -->
 <section class="levels_parent">
   <div class="container">
     <div class="level_head text-center">
-      <span class="sub_heading"> {% trans "Levels " %} </span>
-      <h3>{% trans "Levels " %}</h3>
+      <span class="sub_heading"> {% trans "Related Levels " %} </span>
+      <h3>{% trans "Related Levels " %}</h3>
     </div>
     <div class="row">
-      {% for level in levels %}
+      {% for level in other_levels %}
       <div class="col-lg-4 cards" data-aos="zoom-in">
         <div class="card">
           {% if request.LANGUAGE_CODE == 'ar' %}
@@ -92,5 +99,4 @@
     </div>
   </div>
 </section>
-
 {% endblock body %}

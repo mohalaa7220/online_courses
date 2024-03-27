@@ -100,9 +100,11 @@ msgid "phone number"
 msgstr ""
 
 #: .\project\settings.py:113
+#: .\project\settings.py:113
 msgid "Arabic"
 msgstr ""
 
+#: .\project\settings.py:114
 #: .\project\settings.py:114
 msgid "English"
 msgstr ""
@@ -140,6 +142,7 @@ msgid "be as challenging,but cerainly ,it is more effective"
 msgstr "بالتأكيد هي أسرع و أكثر فعالية"
 
 #: .\templates\components\breadcrumb.html:8
+#: .\templates\components\navbar.html:20
 #: .\templates\components\navbar.html:20
 msgid "Home"
 msgstr "الرئيسية"
@@ -202,17 +205,21 @@ msgid "reality"
 msgstr "الواقع"
 
 #: .\templates\components\navbar.html:6
+#: .\templates\components\navbar.html:6
 msgid "Up2Date logo"
 msgstr ""
 
+#: .\templates\components\navbar.html:11
 #: .\templates\components\navbar.html:11
 msgid "EduWeb logo"
 msgstr ""
 
 #: .\templates\components\navbar.html:14
+#: .\templates\components\navbar.html:14
 msgid "close menu"
 msgstr ""
 
+#: .\templates\components\navbar.html:65 .\templates\contact_us.html:23
 #: .\templates\components\navbar.html:65 .\templates\contact_us.html:23
 #: .\templates\contact_us.html:24
 msgid "Contact us"

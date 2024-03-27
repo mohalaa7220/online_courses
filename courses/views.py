@@ -49,3 +49,16 @@ def news_details(request, news_id):
         'news_id': news_id,
     }
     return render(request, 'news_details.html', context)
+
+
+# ============ get courses details =============
+def course_details(request, course_id):
+
+    course_id = get_object_or_404(Level, id=course_id)
+    section = course_id.section
+    other_levels = section.level_set.exclude(id=course_id.id)
+    context = {
+        'course_id': course_id,
+        'other_levels': other_levels,
+    }
+    return render(request, 'courses_details.html', context)

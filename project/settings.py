@@ -115,7 +115,7 @@ LANGUAGES = [
 
 
 LOCALE_PATHS = [
-    BASE_DIR / 'locale/',
+    os.path.join(BASE_DIR, 'locale')
 ]
 
 

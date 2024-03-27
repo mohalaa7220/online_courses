@@ -8,7 +8,7 @@
 {% include 'components/breadcrumb.html' %} {% endwith %}
 
 <div class="container">
-  <div class="service-section">
+  <div class="service-section pt-7">
     <div class="skewed">
       <div class="txt">
         {% if request.LANGUAGE_CODE == 'ar' %}
@@ -34,46 +34,55 @@
         <img src="{% static 'images/Thinking face-cuate.svg' %}" alt="img" />
       </div>
     </div>
-    {% for level in levels %}
-    <div class="cards">
-      <div class="card">
-        <div class="content">
-          {% if request.LANGUAGE_CODE == 'ar' %}
-          <!-- display arabic -->
-          <h3>{{ level.level_title_ar }}</h3>
-          <!-- display english -->
-          {% else %}
+  </div>
+</div>
 
-          <h3>{{ level.level_title_en }}</h3>
+<!-- =============== levels ================= -->
+<section class="levels_parent">
+  <div class="container">
+    <div class="level_head text-center">
+      <span class="sub_heading"> {% trans "Levels " %} </span>
+      <h3>{% trans "Levels " %}</h3>
+    </div>
+    <div class="row">
+      {% for level in levels %}
+      <div class="col-lg-4 cards">
+        <div class="card">
+          <div class="content">
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <!-- display arabic -->
+            <h3>{{ level.level_title_ar }}</h3>
+            <!-- display english -->
+            {% else %}
 
-          <!-- end check -->
+            <h3>{{ level.level_title_en }}</h3>
 
-          {% endif %}
-          <div class="scroll-bg">
-            <div class="scroll-div">
-              {% if request.LANGUAGE_CODE == 'ar' %}
-              <!-- display arabic -->
-              <p>{{ level.level_description_ar }}</p>
-              <!-- display english -->
-              {% else %}
+            <!-- end check -->
 
-              <p>{{ level.level_description_en }}</p>
-              <!-- end check -->
+            {% endif %}
+            <div class="scroll-bg">
+              <div class="scroll-div">
+                {% if request.LANGUAGE_CODE == 'ar' %}
+                <!-- display arabic -->
+                <p>{{ level.level_description_ar }}</p>
+                <!-- display english -->
+                {% else %}
 
-              {% endif %}
+                <p>{{ level.level_description_en }}</p>
+                <!-- end check -->
+
+                {% endif %}
+              </div>
             </div>
+            <a href="# " class="btn has-before">
+              <span class="span">video</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
-          <a href="#" class="btn has-before">
-            <span class="span">video</span>
-            <ion-icon
-              name="arrow-forward-outline"
-              aria-hidden="true"
-            ></ion-icon>
-          </a>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
-</div>
+</section>
 {% endblock body %}

@@ -338,11 +338,10 @@ body {
     margin-block-end: 40px;
 }
 
-<<<<<<< HEAD
-.Sticker{
-margin-top: 80px;
+.Sticker {
+    margin-top: 80px;
 }
-=======
+
 .sub_heading {
     font-size: 14px;
     line-height: 15px;
@@ -358,7 +357,6 @@ margin-top: 80px;
 }
 
 
->>>>>>> 854c1874cfb2879cee2ea453112eb283650919b9
 /*-----------------------------------*\
 #HEADER
 \*-----------------------------------*/
@@ -439,9 +437,7 @@ margin-top: 80px;
 .navbar .wrapper {
     padding: 15px 20px;
     border-block-end: 1px solid var(--platinum);
-    
 }
-
 
 .nav-close-btn {
     background-color: var(--platinum);
@@ -594,6 +590,22 @@ margin-top: 80px;
     background-image: var(--opacity-linear);
 }
 
+.hero .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    width: 50%;
+    flex: 0 0 auto;
+    padding-top: 3rem;
+}
+
+.hero-banner {
+    width: 50%;
+    flex: 0 0 auto;
+}
+
 .hero::after {
     position: absolute;
     z-index: -1;
@@ -626,11 +638,6 @@ margin-top: 80px;
     content: "";
 }
 
-.hero .container {
-    display: grid;
-    gap: 40px;
-}
-
 .hero-content .section-n {
     font-size: 4.7rem;
     font-weight: 700;
@@ -649,8 +656,8 @@ margin-top: 80px;
     align-items: flex-start;
     gap: 30px;
 }
-.section-title
-.hero-banner .img-holder.one {
+
+.section-title .hero-banner .img-holder.one {
     border-top-right-radius: 70px;
     border-bottom-left-radius: 110px;
 }
@@ -688,6 +695,29 @@ margin-top: 80px;
 @media screen and (max-width: 980px) {
     .hero-content .section-n {
         font-size: 4.5rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero-content .section-n {
+        font-size: 2.5rem;
+    }
+    .hero-content .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .hero-content,
+    .hero-banner {
+        width: 100%;
+    }
+    .hero-content {
+        padding-top: 0;
+        margin-bottom: 3rem;
+    }
+    .hero-content .section-n {
+        font-size: 3.5rem;
     }
 }
 
@@ -1510,9 +1540,6 @@ padding-inline: 30px;
     .hero {
         padding-block-start: calc(var(--section-padding) + 130px);
     }
-    .hero .container {
-        gap: 50px;
-    }
     .hero-text {
         margin-block-end: 22px;
     }
@@ -1529,14 +1556,13 @@ padding-inline: 30px;
     .hero-banner .img-holder.two {
         margin-block-start: 100px;
     }
-
     .hero-shape-1 {
         display: block;
         position: absolute;
         bottom: -40px;
         left: -10px;
     }
-    .Sticker{
+    .Sticker {
         margin-top: -100;
     }
     /**
@@ -1599,10 +1625,6 @@ padding-inline: 30px;
     /**
 * HERO
 */
-    .hero .container {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-    }
     .hero .btn {
         margin-inline: 0;
     }
@@ -1702,9 +1724,6 @@ padding-inline: 30px;
     /**
 * HERO
 */
-    .hero .container {
-        gap: 80px;
-    }
     .hero-shape-2 {
         top: -80px;
         z-index: -1;
@@ -1763,10 +1782,6 @@ li.card-meta-item {
 
 .pt-7 {
     padding-block: 7rem;
-}
-
-.logo {
-    flex: 1;
 }
 
 .hero-content .section-title {

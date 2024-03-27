@@ -14,14 +14,16 @@
         />
       </div>
 
-      <img
-        src="{% static 'assets/images/WhatsApp.webp' %}"
-        width="150"
-        height="80"
-        loading="lazy"
-        alt="call us "
-        class="shape about-shape-2"
-      />
+      <a href="/contact_us">
+        <img
+          src="{% static 'assets/images/WhatsApp.webp' %}"
+          width="150"
+          height="80"
+          loading="lazy"
+          alt="call us "
+          class="shape about-shape-2"
+        />
+      </a>
 
       <img
         src="{% static 'assets/images/about-shape-3.webp' %}"
@@ -56,8 +58,10 @@
           <span class="span">{% trans "Lifetime Access" %}</span>
         </li>
       </ul>
-      <h2 class="h2 section-inf">
-        {% trans "it's possible that our methods are regarded by some to be as challenging,but cerainly ,it is more effective" %}
+      <h2 class="h2 section-title">
+        {% trans "it's possible that our methods are regarded by some" %}
+        <!--  -->
+        {% trans "to be as challenging,but cerainly ,it is more effective"%}
       </h2>
 
       <img

@@ -31,29 +31,3 @@ body {
     }
 }
 
-
-/* ========== responsive levels ========= */
-
-@media screen and (max-width: 1300px) {
-    .cards .card h3 {
-        font-size: 1.7rem;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .cards .card h3 {
-        font-size: 1.45rem;
-    }
-    .cards .card .content p {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    .cards .card h3 {
-        font-size: 1.3rem;
-    }
-    .cards .card .content p {
-        font-size: 1.2rem;
-    }
-}

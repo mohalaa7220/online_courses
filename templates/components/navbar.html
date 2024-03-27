@@ -22,7 +22,7 @@
 
         {% for course_data in data %}
         <li class="navbar-item">
-          <a href="#" class="navbar-link" data-nav-link>
+          <a href="#" class="navbar-link" >
             {% if request.LANGUAGE_CODE == 'ar' %}
             <!-- display arabic -->
             {{course_data.course.course_name_ar }} {% else %}

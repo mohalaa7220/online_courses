@@ -64,7 +64,12 @@
               class="btn has-before"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
+              {% if level.video %}
               data-video-src="{{ level.video.url }}"
+           
+              {% else %}
+              disabled
+              {% endif %}
             >
               <span class="span">{% trans "Video" %}</span>
               <i class="bx bx-right-arrow-alt"></i>

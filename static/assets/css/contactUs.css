@@ -6,6 +6,7 @@
     background-position: center center;
     background-size: 100%;
     width: 100%;
+   
 }
 
 #container {
@@ -49,6 +50,7 @@
 .contactForm form {
     width: 60%;
     padding: 50px 30px 70px 30px;
+    
 }
 
 
@@ -172,6 +174,8 @@
     transform: scale(1.5);
     color: #000000;
 }
+<<<<<<< HEAD
+=======
 
 @media screen and (max-width: 955px) {
     .moreInfo {
@@ -193,3 +197,4 @@
         margin: 0 7px;
     }
 }
+>>>>>>> 851b8f095af321cb621b02f18a09dbac0c0214aa

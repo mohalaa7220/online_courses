@@ -13,63 +13,62 @@
   <!-- ======= set page in breadcrumb ========= -->
   {% with page_title="Contact us" %}
   <!-- ======= breadcrumb ========= -->
-  {% include 'components/breadcrumb.html' %}
-   {% endwith %}
-
-
+  {% include 'components/breadcrumb.html' %} {% endwith %}
 
   <!-- ======= content ========= -->
 
-  
-  <div class="back" >
-<div id="container"  >
-  <div class="innerContainer">
-      <div class="contactForm">
-          <form>
-              <h1>{% trans "Follow Us" %} </h1>
-       {%for contact in contact %}
-              <div class="social-icons">
-                <a href="{{contact.Facebook_url}}"  title="facebook"> 
-                  <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="{{contact.X_url}}" title="X"> 
-                  <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="{{contact.Instgram_url}}" title="instagram">  
-                  <i class="fa-brands fa-instagram"  aria-hidden="true"></i>
-               
-                </a>
-                <a href="{{contact.WhatsApp_url}}" title="whatssup">
-                  <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="{{contact.LinkeIN_url}}" title="linkedin">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="{{contact.Telgram_url}}" title="telegram">
-                  <i class="fa-brands fa-telegram"></i>
-                </a>
-                <a href="{{contact.TikTok_url}}" title="tikTok">
-                  <i class="fa-brands fa-tiktok"></i>
-                </a>
-              </div>
-             
-          </form>
-        
-          <div class="moreInfo">
-              <h1> {% trans "HERE IS MORE INFORMATION" %} </h1>
-              <p>{% trans " Feal free to get in touch with us..." %}</p>
-              <p class="city">
-                  <i class="fas fa-map-marker-alt"></i> Online
-                
-              </p>
-              <p class="city"><a href="info@example.com"><i class="fas fa-envelope"></i>{{ contact.Email_url }}</a></p>
-              <p class="city"><i class="fas fa-phone"></i>{{contact.Phone_Num }}</p>
-            
-              {% endfor %}
-          </div>
+  <div class="back">
+    <div id="container">
+      <div class="level_head text-center">
+        <span class="sub_heading"> {% trans "Contact Us" %} </span>
+        <h3 class="mb-5">{% trans "Contact Us" %}</h3>
       </div>
-  </div>
+      <div class="innerContainer">
+        <div class="contactForm">
+          <form>
+            <h1>{% trans "Follow Us" %}</h1>
+            {%for contact in contact %}
+            <div class="social-icons">
+              <a href="{{contact.Facebook_url}}" title="facebook">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a href="{{contact.X_url}}" title="X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="{{contact.Instgram_url}}" title="instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="{{contact.WhatsApp_url}}" title="whatssup">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+              <a href="{{contact.LinkeIN_url}}" title="linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="{{contact.Telgram_url}}" title="telegram">
+                <i class="fa-brands fa-telegram"></i>
+              </a>
+              <a href="{{contact.TikTok_url}}" title="tikTok">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </div>
+          </form>
 
-</div>
-</div>
-{% endblock body %}
+          <div class="moreInfo">
+            <h1>{% trans "get in touch" %}</h1>
+            <p class="city"><i class="fas fa-map-marker-alt"></i> Online</p>
+            <p class="city">
+              <a href="{{ contact.Email_url }}">
+                <i class="fas fa-envelope"></i> Mail
+              </a>
+            </p>
+            <p class="city">
+              <i class="fas fa-phone"></i>{{contact.Phone_Num }}
+            </p>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock body %}
+</main>

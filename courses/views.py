@@ -1,7 +1,7 @@
 
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
-from .models import Course, Section, Level, News,Contact_inf
+from .models import (Course, Section, Level, News, Contact_inf)
 
 
 # ============ home page =============
@@ -19,14 +19,14 @@ def home_page(request):
 def about(request):
     return render(request, 'about.html')
 
+
 # ============ course page =============
 def contact_us(request):
     contact = Contact_inf.objects.all()
     return render(request, 'contact_us.html', {'contact': contact})
 
+
 # ============ get section and related levels =============
-
-
 def section_detail(request, section_slug):
 
     section = get_object_or_404(
@@ -39,3 +39,13 @@ def section_detail(request, section_slug):
         'levels': levels
     }
     return render(request, 'courses.html', context)
+
+
+# ============ get news details =============
+def news_details(request, news_id):
+
+    news_id = get_object_or_404(News.objects.all(), id=news_id)
+    context = {
+        'news_id': news_id,
+    }
+    return render(request, 'news_details.html', context)

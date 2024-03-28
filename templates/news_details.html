@@ -3,13 +3,39 @@
 <!-- display data -->
 
 <!-- ======= set page in breadcrumb ========= -->
+{% if request.LANGUAGE_CODE == 'ar' %}
+<!--  -->
+{% with page_title=news_id.news_title_ar%}
+<!-- ======= breadcrumb ========= -->
+{% include 'components/breadcrumb.html' %} {% endwith %} {% else %}
+<!--  -->
 {% with page_title=news_id.news_title_en %}
 <!-- ======= breadcrumb ========= -->
-{% include 'components/breadcrumb.html' %} {% endwith %}
+{% include 'components/breadcrumb.html' %} {% endwith %} {% endif %}
 
 <!-- ======== content =========== -->
 <section class="news_details">
   <div class="news_container">
+    {% if request.LANGUAGE_CODE == 'ar' %}
+    <div class="head">
+      <div class="date">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>{{ news_id.created_at|date:"d M Y" }}</span>
+      </div>
+      <h1>{{news_id.news_title_ar}}</h1>
+    </div>
+    <div class="center">
+      <img src="{{news_id.newsImage.url}}" alt="{{news_id.news_title_en}}" />
+      <div class="description">
+        <div class="date">
+          <i class="fa-solid fa-calendar-days"></i>
+          <span>{{ news_id.created_at|date:"d M Y" }}</span>
+        </div>
+        <h3>{{news_id.news_title_ar}}</h3>
+        <p>{{news_id.news_desc_ar}}</p>
+      </div>
+    </div>
+    {% else %}
     <div class="head">
       <div class="date">
         <i class="fa-solid fa-calendar-days"></i>
@@ -28,6 +54,7 @@
         <p>{{news_id.news_desc_en}}</p>
       </div>
     </div>
+    {% endif %}
   </div>
 </section>
 

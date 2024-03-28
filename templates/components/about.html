@@ -1,47 +1,77 @@
 {% load static %} {% load i18n %}
 
 <section class="section about" id="about" aria-label="about">
-    <div class="container">
-        <figure class="about-banner">
-            <div class="img-holder" style="--width: 520; --height: 370">
-                <img src="{% static 'assets/images/about-banner.webp' %}" width="520" height="370" loading="lazy" alt="about banner" class="img-cover" />
-            </div>
+  <div class="container">
+    <figure class="about-banner">
+      <div class="img-holder" style="--width: 520; --height: 370">
+        <img
+          src="{% static 'assets/images/about-banner.webp' %}"
+          width="520"
+          height="370"
+          loading="lazy"
+          alt="about banner"
+          class="img-cover"
+        />
+      </div>
 
-            <a href="/contact_us">
-                <img src="{% static 'assets/images/WhatsApp.webp' %}" width="150" height="80" loading="lazy" alt="call us " class="shape about-shape-2" />
-            </a>
+      <a href="/contact_us">
+        <img
+          src="{% static 'assets/images/WhatsApp.webp' %}"
+          width="150"
+          height="80"
+          loading="lazy"
+          alt="call us "
+          class="shape about-shape-2"
+        />
+      </a>
 
-            <img src="{% static 'assets/images/about-shape-3.webp' %}" width="722" height="528" loading="lazy" alt="" class="shape about-shape-3" />
-        </figure>
+      <img
+        src="{% static 'assets/images/about-shape-3.webp' %}"
+        width="722"
+        height="528"
+        loading="lazy"
+        alt=""
+        class="shape about-shape-3"
+      />
+    </figure>
 
-        <div class="about-content">
-            <p class="section-subtitle sub_heading">{% trans "About Us" %}</p>
+    <div class="about-content">
+      <p class="section-subtitle sub_heading">{% trans "About Us" %}</p>
 
-            <h2 class="h2 section-title">
-                {% trans "Our methods are effective cuz we write lessons to be taught by skilful teachers to smart students" %}
-            </h2>
+      <h2 class="h2 section-title">
+        {% trans "Our methods are effective cuz we write" %}
+        <!--  -->
+        {% trans "lessons to be taught by skilful teachers to smart students" %}
+      </h2>
 
-            <ul class="about-list">
-                <li class="about-item">
-                    <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span class="span">{% trans "More free time" %} </span>
-                </li>
-                <li class="about-item">
-                    <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span class="span">{% trans "Online Remote Learning" %}</span>
-                </li>
-                <li class="about-item">
-                    <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
-                    <span class="span">{% trans "Lifetime Access" %}</span>
-                </li>
-            </ul>
-            <h2 class="h2 section-title">
-                {% trans "it's possible that our methods are regarded by some to" %}
-                <!--  -->
-                {% trans "be as challenging,but cerainly ,it is more effective" %}
-            </h2>
+      <ul class="about-list">
+        <li class="about-item">
+          <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+          <span class="span">{% trans "More free time" %} </span>
+        </li>
+        <li class="about-item">
+          <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+          <span class="span">{% trans "Online Remote Learning" %}</span>
+        </li>
+        <li class="about-item">
+          <ion-icon name="checkmark-done-outline" aria-hidden="true"></ion-icon>
+          <span class="span">{% trans "Lifetime Access" %}</span>
+        </li>
+      </ul>
+      <h2 class="h2 section-title">
+        {% trans "it's possible that our methods are regarded by some to" %}
+        <!--  -->
+        {% trans "be as challenging,but cerainly ,it is more effective" %}
+      </h2>
 
-            <img src="{% static 'assets/images/bose.webp' %}" width="150" height="150" loading="lazy" alt="" class="shape about-shape-4" />
-        </div>
+      <img
+        src="{% static 'assets/images/bose.webp' %}"
+        width="150"
+        height="150"
+        loading="lazy"
+        alt=""
+        class="shape about-shape-4"
+      />
     </div>
+  </div>
 </section>

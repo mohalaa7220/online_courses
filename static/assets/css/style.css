@@ -513,6 +513,7 @@ body {
     border-bottom: 2.5px solid var(--kappel);
     animation: fade .5s linear;
     z-index: 33;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .dropdown_list {
@@ -806,7 +807,7 @@ body {
 }
 
 .about-item .span {
-    color: var(--eerie-black-1);
+    color: var(--paragraph-color);
 }
 
 

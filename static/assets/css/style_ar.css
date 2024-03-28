@@ -22,6 +22,15 @@ body {
 
 /* ===== about ====== */
 
+.about .about-content h2 {
+    font-size: 2.5rem;
+    line-height: 1.65;
+}
+
+.about .about-content h2:last-of-type {
+    font-size: 2.3rem;
+}
+
 @media (min-width: 1200px) {
     .about-shape-3 {
         top: -20px;
@@ -35,4 +44,13 @@ body {
     text-align: right;
     padding-right: 1rem;
     padding-left: 0;
+}
+
+.contactForm form {
+    width: 100% !important;
+}
+
+.moreInfo {
+    top: 100% !important;
+    right: 0 !important;
 }

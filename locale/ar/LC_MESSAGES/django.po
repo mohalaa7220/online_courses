@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 22:22+0200\n"
+"POT-Creation-Date: 2024-03-28 22:21+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,35 +107,37 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: .\templates\components\about.html:18
+#: .\templates\components\about.html:39
 msgid "About Us"
 msgstr "عننا"
 
-#: .\templates\components\about.html:21
-msgid ""
-"Our methods are effective cuz we write lessons to be taught by skilful "
-"teachers to smart students"
-msgstr ""
-"أساليبنا فعالة لأننا نكتب دروسًا ليتم تدريسها على يد معلمين ماهرين للطلاب "
-"الأذكياء"
+#: .\templates\components\about.html:42
+msgid "Our methods are effective cuz we write"
+msgstr "أساليبنا فعالة لأننا نكتب دروسًا ليتم تدريسها"
 
-#: .\templates\components\about.html:27
+#: .\templates\components\about.html:44
+msgid "lessons to be taught by skilful teachers to smart students"
+msgstr "على يد معلمين ماهرين للطلاب"
+
+
+
+#: .\templates\components\about.html:50
 msgid "More free time"
 msgstr "المزيد من وقت الفراغ"
 
-#: .\templates\components\about.html:31
+#: .\templates\components\about.html:54
 msgid "Online Remote Learning"
 msgstr "التعلم عن بعد"
 
-#: .\templates\components\about.html:35
+#: .\templates\components\about.html:58
 msgid "Lifetime Access"
 msgstr "الوصول مدى الحياة"
 
-#: .\templates\components\about.html:39
+#: .\templates\components\about.html:62
 msgid "it's possible that our methods are regarded by some to"
 msgstr "من الممكن أن يعتبر البعض أساليبنا كذلك"
 
-#: .\templates\components\about.html:41
+#: .\templates\components\about.html:64
 msgid "be as challenging,but cerainly ,it is more effective"
 msgstr "يكون بنفس القدر من التحدي، ولكن من المؤكد أنه أكثر فعالية"
 
@@ -180,7 +182,8 @@ msgstr ""
 msgid "About"
 msgstr "عننا"
 
-#: .\templates\components\navbar.html:80
+#: .\templates\components\navbar.html:80 .\templates\contact_us.html:23
+#: .\templates\contact_us.html:24
 msgid "Contact us"
 msgstr "تواصل معنا"
 
@@ -263,20 +266,16 @@ msgstr "تبادل الأفكار وتعزز التفكير النقدي."
 
 #: .\templates\contact_us.html:29
 msgid "Follow Us"
-msgstr ""
+msgstr "تابعنا"
 
-#: .\templates\contact_us.html:59
-msgid "HERE IS MORE INFORMATION"
-msgstr ""
+#: .\templates\contact_us.html:57
+msgid "get in touch"
+msgstr "ابقى على تواصل"
 
-#: .\templates\contact_us.html:60
-msgid " Feal free to get in touch with us..."
-msgstr ""
-
-#: .\templates\courses.html:54 .\templates\courses.html:55
+#: .\templates\courses.html:47 .\templates\courses.html:48
 msgid "Levels "
 msgstr "المستويات"
 
-#: .\templates\courses.html:88
+#: .\templates\courses.html:64 .\templates\courses.html:78
 msgid "Video"
 msgstr "فيديو"

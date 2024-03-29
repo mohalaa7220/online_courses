@@ -40,6 +40,21 @@ body {
     }
 }
 
+
+/* ========== responsive hero  ========= */
+
+@media screen and (max-width: 1300px) {
+    .hero-content .section-n {
+        font-size: 4.7rem;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hero-content .section-n {
+        font-size: 3rem;
+    }
+}
+
 .services_card .content {
     text-align: right;
     padding-right: 1rem;
@@ -53,4 +68,19 @@ body {
 .moreInfo {
     top: 100% !important;
     right: 0 !important;
+}
+
+@media screen and (max-width: 700px) {
+    .about .about-content h2:last-of-type {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about .about-content h2 {
+        font-size: 1.7rem;
+    }
+    .about .about-content h2:last-of-type {
+        font-size: 1.5rem;
+    }
 }

@@ -171,17 +171,17 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--sec-opacity-color);
+    background-color: var(--white);
     border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--color-primary);
+    background: var(--color-primary);
     border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--paragraph-color);
+    background: var(--opacity-linear2);
     border-radius: 50px;
 }
 
@@ -452,6 +452,10 @@ body {
     box-shadow: var(--shadow-2);
     padding: 8px;
     border-radius: var(--radius-circle);
+    width: 40px;
+    height: 40px;
+    line-height: 0px;
+    color: var(--paragraph-color);
 }
 
 .nav-close-btn .hydrated {
@@ -1165,7 +1169,7 @@ body {
 }
 
 .news-card .card-content h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: capitalize
 }
 
@@ -1805,9 +1809,13 @@ li.card-meta-item {
 }
 
 .about .about-content h2 {
-    font-size: 2.7rem;
-    line-height: 1.35;
+    font-size: 2.5rem;
+    line-height: 1.55;
     font-family: var(--heading-font);
+}
+
+.about .about-content h2:last-of-type {
+    font-size: 2rem;
 }
 
 .news {

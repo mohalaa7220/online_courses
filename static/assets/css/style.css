@@ -166,19 +166,23 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: hsl(0, 0%, 98%);
+    background-color: var(--sec-opacity-color);
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(0, 0%, 80%);
+    background-color: var(--color-primary);
+    border-radius: 50px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(0, 0%, 70%);
+    background-color: var(--paragraph-color);
+    border-radius: 50px;
 }
 
 .container {
@@ -273,6 +277,10 @@ body {
 .has-after::after {
     position: absolute;
     content: "";
+}
+
+.bx {
+    line-height: 0;
 }
 
 .btn::before {
@@ -800,7 +808,7 @@ body {
     gap: 15px;
 }
 
-.about-item ion-icon {
+.about-item .bx {
     color: var(--selective-yellow);
     font-size: 20px;
     --ionicon-stroke-width: 50px;
@@ -1082,12 +1090,14 @@ body {
     transform: translate(-50%, -50%);
     background-color: var(--color-primary);
     font-size: 30px;
-    padding: 16px;
     color: var(--white);
     border-radius: var(--radius-circle);
     box-shadow: 0 0 0 0 var(--white_50);
     z-index: 1;
     animation: pulse 3s ease infinite;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
 }
 
 @keyframes pulse {
@@ -1216,12 +1226,12 @@ body {
 }
 
 .news-card .card-meta-item {
-    gap: 10px;
+    gap: 5px;
     align-items: center;
-    color: var(--eerie-black-1);
+    color: var(--paragraph-color);
 }
 
-.news-card .card-meta-item ion-icon {
+.news-card .card-meta-item i {
     color: var(--paragraph-color);
     font-size: 18px;
     --ionicon-stroke-width: 40px;
@@ -1344,12 +1354,15 @@ body {
     background: var(--color-primary);
     color: var(--white);
     font-size: 20px;
-    padding: 10px;
     border-radius: var(--radius-circle);
     z-index: 3;
     opacity: 0;
     pointer-events: none;
     transition: all .4s linear;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
 }
 
 .back-top-btn.active {
@@ -1471,9 +1484,6 @@ body {
     /**
 * VIDEO
 */
-    .video .play-btn {
-        padding: 25px;
-    }
     /**
 * STATS
 */
@@ -1498,6 +1508,10 @@ body {
     .newsletter-form .btn {
         min-width: max-content;
     }
+}
+
+.about-list {
+    padding-left: 0;
 }
 
 
@@ -1526,7 +1540,6 @@ body {
     /**
 * HEADER
 */
-  
     .header .btn {
         display: flex;
         padding: 10px 30px;

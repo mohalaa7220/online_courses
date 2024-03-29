@@ -30,39 +30,44 @@
             {%for contact in contact %}
             <div class="social-icons">
               <a href="{{contact.Facebook_url}}" title="facebook">
-                <i class="fa-brands fa-facebook"></i>
+                <i class="bx bxl-facebook-circle"></i>
               </a>
               <a href="{{contact.X_url}}" title="X">
-                <i class="fa-brands fa-x-twitter"></i>
+                <i class="bx bxl-twitter"></i>
               </a>
               <a href="{{contact.Instgram_url}}" title="instagram">
-                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <i class="bx bxl-instagram"></i>
               </a>
               <a href="{{contact.WhatsApp_url}}" title="whatssup">
-                <i class="fa-brands fa-whatsapp"></i>
+                <i class="bx bxl-whatsapp"></i>
               </a>
               <a href="{{contact.LinkeIN_url}}" title="linkedin">
-                <i class="fa-brands fa-linkedin"></i>
+                <i class="bx bxl-linkedin-square"></i>
               </a>
               <a href="{{contact.Telgram_url}}" title="telegram">
-                <i class="fa-brands fa-telegram"></i>
+                <i class="bx bxl-telegram"></i>
               </a>
               <a href="{{contact.TikTok_url}}" title="tikTok">
-                <i class="fa-brands fa-tiktok"></i>
+                <i class="bx bxl-tiktok"></i>
               </a>
             </div>
           </form>
 
           <div class="moreInfo">
             <h1>{% trans "get in touch" %}</h1>
-            <p class="city"><i class="fas fa-map-marker-alt"></i> Online</p>
+            <p class="city">
+              <i class="bx bx-map"></i>
+              <span>Online</span>
+            </p>
             <p class="city">
               <a href="{{ contact.Email_url }}">
-                <i class="fas fa-envelope"></i> Mail
+                <i class="bx bx-mail-send"></i>
+                <span>Mail</span>
               </a>
             </p>
             <p class="city">
-              <i class="fas fa-phone"></i>{{contact.Phone_Num }}
+              <i class="bx bxs-phone-call"></i>
+              <span>{{contact.Phone_Num }}</span>
             </p>
             {% endfor %}
           </div>

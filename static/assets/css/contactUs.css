@@ -6,7 +6,6 @@
     background-position: center center;
     background-size: 100%;
     width: 100%;
-   
 }
 
 #container {
@@ -50,7 +49,6 @@
 .contactForm form {
     width: 60%;
     padding: 50px 30px 70px 30px;
-    
 }
 
 
@@ -78,14 +76,20 @@
 }
 
 .moreInfo p i {
-    margin-right: 10px;
+    margin-inline-end: 10px;
     color: var(--paragraph-color);
+    font-size: 2.3rem;
 }
 
 .moreInfo .city {
-    font-size: 1.7rem;
+    margin-bottom: 2.5rem;
+}
+
+.moreInfo .city,
+.moreInfo .city a {
+    display: flex;
+    align-items: center;
     font-weight: bold;
-    margin-bottom: 2rem;
     color: var(--paragraph-color);
 }
 
@@ -174,8 +178,6 @@
     transform: scale(1.5);
     color: #000000;
 }
-<<<<<<< HEAD
-=======
 
 @media screen and (max-width: 955px) {
     .moreInfo {
@@ -197,4 +199,3 @@
         margin: 0 7px;
     }
 }
->>>>>>> 851b8f095af321cb621b02f18a09dbac0c0214aa

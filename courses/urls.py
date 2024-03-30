@@ -7,5 +7,7 @@ urlpatterns = [
     path('section-detail/<slug:section_slug>',
          views.section_detail, name='section-detail'),
     path('news_details/<int:news_id>', views.news_details, name='news_details'),
+    path('course_details/<int:course_id>',
+         views.course_details, name='course_details'),
     path('contact_us/', views.contact_us, name='contact_us'),
 ]

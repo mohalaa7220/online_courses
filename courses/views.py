@@ -49,3 +49,20 @@ def news_details(request, news_id):
         'news_id': news_id,
     }
     return render(request, 'news_details.html', context)
+
+
+# ============ get courses details =============
+def course_details(request, course_id):
+
+    course_id = get_object_or_404(Level.objects.all(), id=course_id)
+    section = course_id.section
+    other_levels = Level.objects.filter(section=section)
+
+    print("#####################################")
+    print(other_levels)
+    print("#####################################")
+
+    context = {
+        'course_id': course_id,
+    }
+    return render(request, 'courses_details.html', context)

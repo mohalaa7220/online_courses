@@ -97,36 +97,36 @@
       {% endfor %}
     </div>
   </div>
-</section>
 
-<!-- ======= Video Modal ======= -->
-<div
-  class="modal fade model-video fade modal-dialog modal-dialog-centered"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">
-          {% trans "Video" %}
-        </h1>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        <video width="100%" height="auto" controls id="videoPlayer">
-          <source src="" type="video/mp4" />
-        </video>
+  <!-- ======= Video Modal ======= -->
+  <div
+    class="modal fade model-video fade modal-dialog modal-dialog-centered"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            {% trans "Video" %}
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <video width="100%" height="auto" controls id="videoPlayer">
+            <source src="" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <script>
   let modalButtons = document.querySelectorAll('[data-bs-toggle="modal"]');

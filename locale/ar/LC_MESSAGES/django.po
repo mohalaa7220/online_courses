@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-28 22:21+0200\n"
+"POT-Creation-Date: 2024-03-30 20:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,11 +99,11 @@ msgstr ""
 msgid "phone number"
 msgstr ""
 
-#: .\project\settings.py:112
+#: .\project\settings.py:113
 msgid "Arabic"
 msgstr ""
 
-#: .\project\settings.py:113
+#: .\project\settings.py:114
 msgid "English"
 msgstr ""
 
@@ -118,8 +118,6 @@ msgstr "أساليبنا فعالة لأننا نكتب دروسًا ليتم ت
 #: .\templates\components\about.html:44
 msgid "lessons to be taught by skilful teachers to smart students"
 msgstr "على يد معلمين ماهرين للطلاب"
-
-
 
 #: .\templates\components\about.html:50
 msgid "More free time"
@@ -142,9 +140,45 @@ msgid "be as challenging,but cerainly ,it is more effective"
 msgstr "يكون بنفس القدر من التحدي، ولكن من المؤكد أنه أكثر فعالية"
 
 #: .\templates\components\breadcrumb.html:8
-#: .\templates\components\navbar.html:35
+#: .\templates\components\navbar.html:20
 msgid "Home"
 msgstr "الرئيسية"
+
+#: .\templates\components\footer.html:18
+msgid "Always up to date with us"
+msgstr ""
+
+#: .\templates\components\footer.html:21
+msgid "Call:"
+msgstr ""
+
+#: .\templates\components\footer.html:25
+msgid "Email:"
+msgstr ""
+
+#: .\templates\components\footer.html:31 .\templates\components\navbar.html:60
+msgid "About"
+msgstr "عننا"
+
+#: .\templates\components\footer.html:34
+msgid "Events"
+msgstr ""
+
+#: .\templates\components\footer.html:37
+#, fuzzy
+#| msgid "Contact us"
+msgid "Contact us "
+msgstr "تواصل معنا"
+
+#: .\templates\components\footer.html:41
+#, fuzzy
+#| msgid "Follow Us"
+msgid "Follow us "
+msgstr "تابعنا"
+
+#: .\templates\components\footer.html:43
+msgid "Subscribe our socialmedia links"
+msgstr ""
 
 #: .\templates\components\hero.html:8
 msgid "EXCELLENCE IN EDUCATION"
@@ -166,23 +200,19 @@ msgstr "مهاراتك"
 msgid "reality"
 msgstr "الواقع"
 
-#: .\templates\components\navbar.html:10
+#: .\templates\components\navbar.html:6
 msgid "Up2Date logo"
 msgstr ""
 
-#: .\templates\components\navbar.html:20
+#: .\templates\components\navbar.html:11
 msgid "EduWeb logo"
 msgstr ""
 
-#: .\templates\components\navbar.html:26
+#: .\templates\components\navbar.html:14
 msgid "close menu"
 msgstr ""
 
-#: .\templates\components\navbar.html:75
-msgid "About"
-msgstr "عننا"
-
-#: .\templates\components\navbar.html:80 .\templates\contact_us.html:23
+#: .\templates\components\navbar.html:65 .\templates\contact_us.html:23
 #: .\templates\contact_us.html:24
 msgid "Contact us"
 msgstr "تواصل معنا"
@@ -268,14 +298,24 @@ msgstr "تبادل الأفكار وتعزز التفكير النقدي."
 msgid "Follow Us"
 msgstr "تابعنا"
 
-#: .\templates\contact_us.html:57
+#: .\templates\contact_us.html:61
 msgid "get in touch"
 msgstr "ابقى على تواصل"
 
-#: .\templates\courses.html:47 .\templates\courses.html:48
+#: .\templates\courses.html:45 .\templates\courses.html:46
 msgid "Levels "
 msgstr "المستويات"
 
-#: .\templates\courses.html:64 .\templates\courses.html:78
-msgid "Video"
-msgstr "فيديو"
+#: .\templates\courses.html:66 .\templates\courses.html:84
+#: .\templates\courses_details.html:73 .\templates\courses_details.html:91
+msgid "More"
+msgstr "التفاصيل"
+
+#: .\templates\courses_details.html:52 .\templates\courses_details.html:53
+#, fuzzy
+#| msgid "Levels "
+msgid "Related Levels "
+msgstr "المستويات"
+
+#~ msgid "Video"
+#~ msgstr "فيديو"

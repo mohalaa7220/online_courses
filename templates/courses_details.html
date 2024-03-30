@@ -44,4 +44,59 @@
     {% endif %}
   </div>
 </section>
+
+<!-- ======== related levels =========== -->
+<section class="levels_parent">
+  <div class="container">
+    <div class="level_head text-center">
+      <span class="sub_heading"> {% trans "Related Levels " %} </span>
+      <h3>{% trans "Related Levels " %}</h3>
+    </div>
+    <div class="row">
+      {% for level in other_levels %}
+      <div class="col-lg-4 cards" data-aos="zoom-in">
+        <div class="card">
+          {% if request.LANGUAGE_CODE == 'ar' %}
+          <!-- display ar -->
+          <div class="content">
+            <h3>{{ level.level_title_ar }}</h3>
+            <div class="scroll-bg">
+              <div class="scroll-div">
+                <p>{{ level.level_description_ar }}</p>
+              </div>
+            </div>
+            <!-- to display video -->
+            <a
+              class="btn has-before"
+              href="{% url 'course_details' course_id=level.id%}"
+            >
+              <span class="span">{% trans "More" %}</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          {% else %}
+          <!-- display en -->
+          <div class="content">
+            <h3>{{ level.level_title_en }}</h3>
+            <div class="scroll-bg">
+              <div class="scroll-div">
+                <p>{{ level.level_description_en }}</p>
+              </div>
+            </div>
+            <!-- to display details -->
+            <a
+              class="btn has-before"
+              href="{% url 'course_details' course_id=level.id%}"
+            >
+              <span class="span">{% trans "More" %}</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock body %}

@@ -1003,6 +1003,7 @@ body {
 .levels_parent {
     padding-bottom: 5rem;
     background-image: var(--opacity-linear);
+    position: relative;
 }
 
 .level_head h3 {
@@ -2060,4 +2061,25 @@ section.news_details {
     .news_details .description h3 {
         font-size: 1.7rem;
     }
+}
+
+
+/* ============= modal video style ================ */
+
+.model-video {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    height: auto;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }

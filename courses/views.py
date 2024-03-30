@@ -56,7 +56,8 @@ def course_details(request, course_id):
 
     course_id = get_object_or_404(Level.objects.all(), id=course_id)
     section = course_id.section
-    other_levels = Level.objects.filter(section=section)
+    other_levels = Level.objects.filter(
+        section=section).exclude(id=course_id.id)
 
     print("#####################################")
     print(other_levels)

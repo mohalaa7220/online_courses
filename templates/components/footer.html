@@ -2,13 +2,13 @@
 
 <footer
   class="footer"
-  style="background-image: url('{% static 'assets/images/footer.webp' %}')"
+  style="background-image: url('{% static 'images/footer.webp' %}')"
 >
   <div class="footer-top section">
     <div class="container grid-list">
       <a href="#" class="logo">
         <img
-          src="{% static 'assets/images/logo-light.webp' %}"
+          src="{% static 'images/logo-light.webp' %}"
           width="162"
           height="50"
           alt="logo"
@@ -19,11 +19,15 @@
         {%for contact in contact_info %}
         <div class="wrapper">
           <span class="span">{% trans "Call:" %}</span>
-          <a href="tel:++963 09938  890" class="footer-link">{{contact.Phone_Num}}  </a>
+          <a href="tel:++963 09938  890" class="footer-link"
+            >{{contact.Phone_Num}}
+          </a>
         </div>
         <div class="wrapper">
           <span class="span"> {% trans "Email:" %}</span>
-          <a href="mailto:info@eweb.com" class="footer-link">{{contact.Email_url}}</a>
+          <a href="mailto:info@eweb.com" class="footer-link"
+            >{{contact.Email_url}}</a
+          >
         </div>
       </div>
       <ul class="footer-list">
@@ -42,7 +46,7 @@
         <p class="footer-list-text">
           {% trans "Subscribe our socialmedia links" %}
         </p>
-       
+
         <ul class="social-list">
           <li>
             <a href="{{contact.Facebbok_url}}" class="social-link">
@@ -80,11 +84,10 @@
             </a>
           </li>
           <li>
-            <a href="{{contact.TikTok_url}}"  class="social-link">
+            <a href="{{contact.TikTok_url}}" class="social-link">
               <i class="fa-brands fa-tiktok"></i>
             </a>
           </li>
-      
         </ul>
         {%endfor %}
       </div>

@@ -1,0 +1,105 @@
+.services {
+    background-color: var(--sec-bag);
+}
+
+.services_content {
+    margin-top: 2rem;
+}
+
+.services .col-lg-4 {
+    margin-bottom: 2.5rem;
+}
+
+.services h3 {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    letter-spacing: 1.2px;
+    color: #1a1818;
+    font-family: var(--heading-font);
+    font-weight: 800;
+}
+
+.services_card {
+    position: relative;
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.5s linear;
+}
+
+.services_card::after {
+    content: '';
+    background: linear-gradient(90deg, var(--color-primary), var(--color-pink));
+    width: 0%;
+    height: 3.5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s linear;
+}
+
+.services_card:hover::after {
+    width: 100%;
+}
+
+.services_card .icon ion-icon.md.hydrated {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.services_card .icon i {
+    font-size: 4rem;
+    color: var(--main-color);
+}
+
+.services_card .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.services_card .content h4 {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: .5rem;
+    font-size: 1.65rem;
+    text-transform: capitalize;
+}
+
+.services_card .content p {
+    font-size: 1.5rem;
+    color: var(--paragraph-color);
+}
+
+
+/* =========== responsive ======== */
+
+@media screen and (max-width: 1199px) {
+    .services .col-lg-4 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .services .container {
+        width: 90%;
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .services .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    .services .col-lg-4 {
+        width: 100%;
+    }
+}
+
+.icon {
+    padding-inline-end: 1rem;
+    opacity: .85;
+}

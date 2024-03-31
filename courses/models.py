@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
+from django.core.files.uploadedfile import InMemoryUploadedFile
+import cloudinary.uploader
 
 
 # ============ course model ================
@@ -28,6 +30,7 @@ class Section(models.Model):
     description_ar = models.TextField(verbose_name=_("وصف القسم"))
     pictureSection = models.ImageField(
         upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Section"))
+    image_url = models.URLField(null=True, blank=True)
     section_Slug = models.SlugField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -38,7 +41,11 @@ class Section(models.Model):
     def save(self, *args, **kwargs):
         if not self.section_Slug:
             self.section_Slug = slugify(self.section_title_en)
-        super(Section, self).save()
+
+        cloudinary_response = cloudinary.uploader.upload(self.pictureSection)
+        self.image_url = cloudinary_response['secure_url']
+
+        super(Section, self).save(*args, **kwargs)
 
     class Meta:
         ordering = ('-created_at', '-update_at')
@@ -55,11 +62,17 @@ class Level(models.Model):
     level_description_en = models.TextField(
         verbose_name=_("Level Description"))
     level_description_ar = models.TextField(verbose_name=_("وصف المستوي"))
-   # image_level = models.ImageField(
-    #   upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Level"))
     video = models.FileField(null=True, blank=True)
+    video_url = models.URLField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        cloudinary_response = cloudinary.uploader.upload(
+            self.video, resource_type="video")
+        self.video_url = cloudinary_response['secure_url']
+
+        return super().save(*args, **kwargs)
 
     def __str__(self):
         return self.level_title_en
@@ -81,8 +94,14 @@ class News(models.Model):
     lessonsNum = models.IntegerField(verbose_name=_("Lesson Number"))
     newsImage = models.ImageField(
         upload_to='newsImage/', null=True, blank=True, verbose_name=_("News Image"))
+    image_url = models.URLField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        cloudinary_response = cloudinary.uploader.upload(self.newsImage)
+        self.image_url = cloudinary_response['secure_url']
+        return super().save(*args, **kwargs)
 
     class Meta:
         verbose_name_plural = "News"

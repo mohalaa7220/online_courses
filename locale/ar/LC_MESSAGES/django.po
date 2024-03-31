@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-27 06:33+0300\n"
+"POT-Creation-Date: 2024-03-30 20:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -100,26 +100,24 @@ msgid "phone number"
 msgstr ""
 
 #: .\project\settings.py:113
-#: .\project\settings.py:113
 msgid "Arabic"
 msgstr ""
 
-#: .\project\settings.py:114
 #: .\project\settings.py:114
 msgid "English"
 msgstr ""
 
 #: .\templates\components\about.html:39
 msgid "About Us"
-msgstr "من نحن"
+msgstr "عننا"
 
 #: .\templates\components\about.html:42
 msgid "Our methods are effective cuz we write"
-msgstr "   مناهجنا فعالة لاننا نعتبر "
+msgstr "أساليبنا فعالة لأننا نكتب دروسًا ليتم تدريسها"
 
 #: .\templates\components\about.html:44
 msgid "lessons to be taught by skilful teachers to smart students"
-msgstr "طلابنا أذكياء و أساتذتنا أذكياء "
+msgstr "على يد معلمين ماهرين للطلاب"
 
 #: .\templates\components\about.html:50
 msgid "More free time"
@@ -135,21 +133,20 @@ msgstr "الوصول مدى الحياة"
 
 #: .\templates\components\about.html:62
 msgid "it's possible that our methods are regarded by some to"
-msgstr "من الممكن أن مناهجنا تحتاج جهداً أكبر ولكن  "
+msgstr "من الممكن أن يعتبر البعض أساليبنا كذلك"
 
 #: .\templates\components\about.html:64
 msgid "be as challenging,but cerainly ,it is more effective"
-msgstr "بالتأكيد هي أسرع و أكثر فعالية"
+msgstr "يكون بنفس القدر من التحدي، ولكن من المؤكد أنه أكثر فعالية"
 
 #: .\templates\components\breadcrumb.html:8
-#: .\templates\components\navbar.html:20
 #: .\templates\components\navbar.html:20
 msgid "Home"
 msgstr "الرئيسية"
 
 #: .\templates\components\footer.html:18
 msgid "Always up to date with us"
-msgstr " ابقى دائما على تواصل معنا"
+msgstr ""
 
 #: .\templates\components\footer.html:21
 msgid "Call:"
@@ -161,11 +158,11 @@ msgstr ""
 
 #: .\templates\components\footer.html:31 .\templates\components\navbar.html:60
 msgid "About"
-msgstr "من نحن"
+msgstr "عننا"
 
 #: .\templates\components\footer.html:34
 msgid "Events"
-msgstr "الأخبار"
+msgstr ""
 
 #: .\templates\components\footer.html:37
 #, fuzzy
@@ -176,13 +173,12 @@ msgstr "تواصل معنا"
 #: .\templates\components\footer.html:41
 #, fuzzy
 #| msgid "Follow Us"
-  
 msgid "Follow us "
 msgstr "تابعنا"
 
 #: .\templates\components\footer.html:43
 msgid "Subscribe our socialmedia links"
-msgstr " اشترك بقنواتنا "
+msgstr ""
 
 #: .\templates\components\hero.html:8
 msgid "EXCELLENCE IN EDUCATION"
@@ -205,21 +201,17 @@ msgid "reality"
 msgstr "الواقع"
 
 #: .\templates\components\navbar.html:6
-#: .\templates\components\navbar.html:6
 msgid "Up2Date logo"
 msgstr ""
 
-#: .\templates\components\navbar.html:11
 #: .\templates\components\navbar.html:11
 msgid "EduWeb logo"
 msgstr ""
 
 #: .\templates\components\navbar.html:14
-#: .\templates\components\navbar.html:14
 msgid "close menu"
 msgstr ""
 
-#: .\templates\components\navbar.html:65 .\templates\contact_us.html:23
 #: .\templates\components\navbar.html:65 .\templates\contact_us.html:23
 #: .\templates\contact_us.html:24
 msgid "Contact us"
@@ -314,7 +306,16 @@ msgstr "ابقى على تواصل"
 msgid "Levels "
 msgstr "المستويات"
 
-#: .\templates\courses.html:74 .\templates\courses.html:95
-#: .\templates\courses.html:117
-msgid "Video"
-msgstr "فيديو"
+#: .\templates\courses.html:66 .\templates\courses.html:84
+#: .\templates\courses_details.html:73 .\templates\courses_details.html:91
+msgid "More"
+msgstr "التفاصيل"
+
+#: .\templates\courses_details.html:52 .\templates\courses_details.html:53
+#, fuzzy
+#| msgid "Levels "
+msgid "Related Levels "
+msgstr "المستويات"
+
+#~ msgid "Video"
+#~ msgstr "فيديو"

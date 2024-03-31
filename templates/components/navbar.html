@@ -3,12 +3,12 @@
 <header class="header" data-header>
     <div class="container">
         <a href="/" class="logo">
-            <img src="{% static 'assets/images/logo-light.webp' %}" width="83" height="10" alt="{% trans 'Up2Date logo' %}" />
+            <img src="{% static 'images/logo-light.webp' %}" width="83" height="10" alt="{% trans 'Up2Date logo' %}" />
         </a>
         <nav class="navbar" data-navbar>
             <div class="wrapper">
                 <a href="/" class="logo">
-                    <img src="{% static 'assets/images/logo-light.webp' %}" width="83" height="10" alt="{% trans 'EduWeb logo' %}" />
+                    <img src="{% static 'images/logo-light.webp' %}" width="83" height="10" alt="{% trans 'EduWeb logo' %}" />
                 </a>
 
                 <button class="nav-close-btn" aria-label="{% trans 'close menu' %}" data-nav-toggler>
@@ -22,7 +22,7 @@
 
         {% for course_data in data %}
         <li class="navbar-item">
-          <a href="#" class="navbar-link" >
+          <a href="#" class="navbar-link" data-nav-link>
             {% if request.LANGUAGE_CODE == 'ar' %}
             <!-- display arabic -->
             {{course_data.course.course_name_ar }} {% else %}

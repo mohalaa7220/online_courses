@@ -28,15 +28,7 @@ class SectionAdmin(admin.ModelAdmin):
                      'description_en', 'description_ar')
     list_filter = ('created_at', 'update_at')
 
-    readonly_fields = ["image"]
-
-    def image(self, obj):
-        if obj.pictureSection:
-            return format_html('<img src="{}" width="500" />'.format(obj.pictureSection.url))
-        else:
-            return 'No Image'
-
-    image.short_description = 'Display Image'
+    readonly_fields = ["image_url"]
 
 
 # =============== Level Model =================
@@ -48,15 +40,7 @@ class LevelAdmin(admin.ModelAdmin):
                      'level_description_en', 'level_description_ar')
     list_filter = ('created_at', 'update_at')
 
-    readonly_fields = ["image"]
-
-    def image(self, obj):
-        if obj.image_level:
-            return format_html('<img src="{}" width="500" />'.format(obj.image_level.url))
-        else:
-            return 'No Image'
-
-    image.short_description = 'Display Image'
+    readonly_fields = ["video_url"]
 
 
 # =============== News Model =================
@@ -68,15 +52,7 @@ class NewsAdmin(admin.ModelAdmin):
                      'news_title_ar', 'news_desc_ar')
     list_filter = ('created_at', 'update_at')
 
-    readonly_fields = ["image"]
-
-    def image(self, obj):
-        if obj.newsImage:
-            return format_html('<img src="{}" width="500" />'.format(obj.newsImage.url))
-        else:
-            return 'No Image'
-
-    image.short_description = 'Display Image'
+    readonly_fields = ["image_url"]
 
 
 # =============== Contact Model =================

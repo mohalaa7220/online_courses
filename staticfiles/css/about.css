@@ -76,6 +76,12 @@
 
 /* =========== responsive ======== */
 
+@media screen and (max-width: 1399px) {
+    .services_card .content p {
+        font-size: 1.3rem;
+    }
+}
+
 @media screen and (max-width: 1199px) {
     .services .col-lg-4 {
         width: 50%;

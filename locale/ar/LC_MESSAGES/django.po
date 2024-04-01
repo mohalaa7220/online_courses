@@ -89,7 +89,7 @@ msgstr ""
 
 #: .\courses\models.py:81
 msgid "Lesson Number"
-msgstr ""
+msgstr "عدد الدروس"
 
 #: .\courses\models.py:83
 msgid "News Image"
@@ -109,15 +109,15 @@ msgstr ""
 
 #: .\templates\components\about.html:39
 msgid "About Us"
-msgstr "عننا"
+msgstr "من نحن"
 
 #: .\templates\components\about.html:42
 msgid "Our methods are effective cuz we write"
-msgstr "أساليبنا فعالة لأننا نكتب دروسًا ليتم تدريسها"
+msgstr " مناهجنا فعالة لأننا  "
 
 #: .\templates\components\about.html:44
 msgid "lessons to be taught by skilful teachers to smart students"
-msgstr "على يد معلمين ماهرين للطلاب"
+msgstr " نعتبر طلابنا أذكياء و أساتذتنا أذكياء  "
 
 #: .\templates\components\about.html:50
 msgid "More free time"
@@ -133,11 +133,11 @@ msgstr "الوصول مدى الحياة"
 
 #: .\templates\components\about.html:62
 msgid "it's possible that our methods are regarded by some to"
-msgstr "من الممكن أن يعتبر البعض أساليبنا كذلك"
+msgstr "من الممكن أن مناهجنا تحتاج جهدا أكبر  "
 
 #: .\templates\components\about.html:64
 msgid "be as challenging,but cerainly ,it is more effective"
-msgstr "يكون بنفس القدر من التحدي، ولكن من المؤكد أنه أكثر فعالية"
+msgstr " ولكن بالتأكيد هي أسرع وأكثر فعالية "
 
 #: .\templates\components\breadcrumb.html:8
 #: .\templates\components\navbar.html:20
@@ -146,23 +146,23 @@ msgstr "الرئيسية"
 
 #: .\templates\components\footer.html:18
 msgid "Always up to date with us"
-msgstr ""
+msgstr "ابقى دائما على تواصل معنا "
 
 #: .\templates\components\footer.html:21
 msgid "Call:"
-msgstr ""
+msgstr "اتصل بنا:"
 
 #: .\templates\components\footer.html:25
 msgid "Email:"
-msgstr ""
+msgstr "الأيميل:"
 
 #: .\templates\components\footer.html:31 .\templates\components\navbar.html:60
 msgid "About"
-msgstr "عننا"
+msgstr "من نحن "
 
 #: .\templates\components\footer.html:34
 msgid "Events"
-msgstr ""
+msgstr "الأخبار"
 
 #: .\templates\components\footer.html:37
 #, fuzzy
@@ -178,7 +178,7 @@ msgstr "تابعنا"
 
 #: .\templates\components\footer.html:43
 msgid "Subscribe our socialmedia links"
-msgstr ""
+msgstr "اشترك في قنواتنا"
 
 #: .\templates\components\hero.html:8
 msgid "EXCELLENCE IN EDUCATION"
@@ -190,7 +190,7 @@ msgstr "نقدم لك أفضل خيار للتعلم عن بعد"
 
 #: .\templates\components\hero.html:16 .\templates\components\hero.html:22
 msgid "update your"
-msgstr "قم بتحديث"
+msgstr "طور "
 
 #: .\templates\components\hero.html:18 .\templates\components\services.html:61
 msgid "skills"
@@ -198,7 +198,7 @@ msgstr "مهاراتك"
 
 #: .\templates\components\hero.html:24
 msgid "reality"
-msgstr "الواقع"
+msgstr "واقعك"
 
 #: .\templates\components\navbar.html:6
 msgid "Up2Date logo"

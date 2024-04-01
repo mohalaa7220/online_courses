@@ -19,7 +19,7 @@
     {% if request.LANGUAGE_CODE == 'ar' %}
     <div class="head">
       <div class="date">
-        <i class="fa-solid fa-calendar-days"></i>
+        <i class="bx bx-calendar"></i>
         <span>{{ news_id.created_at|date:"d M Y" }}</span>
       </div>
       <h1>{{news_id.news_title_ar}}</h1>
@@ -28,7 +28,7 @@
       <img src="{{news_id.image_url}}" alt="{{news_id.news_title_en}}" />
       <div class="description">
         <div class="date">
-          <i class="fa-solid fa-calendar-days"></i>
+          <i class="bx bx-calendar"></i>
           <span>{{ news_id.created_at|date:"d M Y" }}</span>
         </div>
         <h3>{{news_id.news_title_ar}}</h3>
@@ -38,7 +38,7 @@
     {% else %}
     <div class="head">
       <div class="date">
-        <i class="fa-solid fa-calendar-days"></i>
+        <i class="bx bx-calendar"></i>
         <span>{{ news_id.created_at|date:"d M Y" }}</span>
       </div>
       <h1>{{news_id.news_title_en}}</h1>
@@ -47,7 +47,7 @@
       <img src="{{news_id.image_url}}" alt="{{news_id.news_title_en}}" />
       <div class="description">
         <div class="date">
-          <i class="fa-solid fa-calendar-days"></i>
+          <i class="bx bx-calendar"></i>
           <span>{{ news_id.created_at|date:"d M Y" }}</span>
         </div>
         <h3>{{news_id.news_title_en}}</h3>

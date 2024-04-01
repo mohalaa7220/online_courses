@@ -26,6 +26,13 @@
           {% if request.LANGUAGE_CODE == 'ar' %}
           <!-- display ar -->
           <div class="card-content">
+            <a
+              href="{% url 'news_details' news_id=item.id%}"
+              class="card-btn"
+              aria-label="read more"
+            >
+              <i class="bx bx-right-top-arrow-circle"></i>
+            </a>
             <h3 class="h3">
               <a
                 href="{% url 'news_details' news_id=item.id%}"
@@ -49,8 +56,12 @@
           {% else %}
           <!-- display en -->
           <div class="card-content">
-            <a href="#" class="card-btn" aria-label="read more">
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            <a
+              href="{% url 'news_details' news_id=item.id%}"
+              class="card-btn"
+              aria-label="read more"
+            >
+              <i class="bx bx-right-top-arrow-circle"></i>
             </a>
             <h3 class="h3">
               <a

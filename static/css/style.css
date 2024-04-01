@@ -582,15 +582,15 @@ body {
         width: 100%;
         position: absolute;
         top: 0;
-        margin-top: 3rem;
+        margin-top: 1.5rem;
     }
     .navbar.active .navbar-list {
         flex-direction: column;
         width: 100%;
     }
     .navbar.active .navbar-list li {
-        line-height: 4;
-        padding-left: 1rem;
+        line-height: 3;
+        padding-left: 1.5rem;
     }
 }
 

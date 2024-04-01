@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 20:45+0200\n"
+"POT-Creation-Date: 2024-04-01 17:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,123 +19,123 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: .\courses\models.py:9
+#: .\courses\models.py:11
 msgid "Course Name"
 msgstr ""
 
-#: .\courses\models.py:11
+#: .\courses\models.py:13
 msgid "اسم الكورس"
 msgstr ""
 
-#: .\courses\models.py:22
+#: .\courses\models.py:24
 msgid "Course"
 msgstr ""
 
-#: .\courses\models.py:24
+#: .\courses\models.py:26
 msgid "Section Title"
 msgstr ""
 
-#: .\courses\models.py:26
+#: .\courses\models.py:28
 msgid "اسم القسم"
 msgstr ""
 
-#: .\courses\models.py:27
+#: .\courses\models.py:29
 msgid "Description"
 msgstr ""
 
-#: .\courses\models.py:28
+#: .\courses\models.py:30
 msgid "وصف القسم"
 msgstr ""
 
-#: .\courses\models.py:30
+#: .\courses\models.py:32
 msgid "Image Section"
 msgstr ""
 
-#: .\courses\models.py:50
+#: .\courses\models.py:57
 msgid "Level Title"
 msgstr ""
 
-#: .\courses\models.py:52
+#: .\courses\models.py:59
 msgid "عنوان المستوي"
 msgstr ""
 
-#: .\courses\models.py:54
+#: .\courses\models.py:61
 msgid "Section"
 msgstr ""
 
-#: .\courses\models.py:56
+#: .\courses\models.py:63
 msgid "Level Description"
 msgstr ""
 
-#: .\courses\models.py:57
+#: .\courses\models.py:64
 msgid "وصف المستوي"
 msgstr ""
 
-#: .\courses\models.py:75
+#: .\courses\models.py:88
 msgid "News Title"
 msgstr ""
 
-#: .\courses\models.py:76
+#: .\courses\models.py:89
 msgid "News Description"
 msgstr ""
 
-#: .\courses\models.py:78
+#: .\courses\models.py:91
 msgid "عنوان الخبر"
 msgstr ""
 
-#: .\courses\models.py:79
+#: .\courses\models.py:92
 msgid "وصف الخبر"
 msgstr ""
 
-#: .\courses\models.py:81
+#: .\courses\models.py:94
 msgid "Lesson Number"
 msgstr ""
 
-#: .\courses\models.py:83
+#: .\courses\models.py:96
 msgid "News Image"
 msgstr ""
 
-#: .\courses\models.py:97
+#: .\courses\models.py:116
 msgid "phone number"
 msgstr ""
 
-#: .\project\settings.py:113
+#: .\project\settings.py:120
 msgid "Arabic"
 msgstr ""
 
-#: .\project\settings.py:114
+#: .\project\settings.py:121
 msgid "English"
 msgstr ""
 
-#: .\templates\components\about.html:39
+#: .\templates\components\about.html:28
 msgid "About Us"
 msgstr "عننا"
 
-#: .\templates\components\about.html:42
+#: .\templates\components\about.html:31
 msgid "Our methods are effective cuz we write"
 msgstr "أساليبنا فعالة لأننا نكتب دروسًا ليتم تدريسها"
 
-#: .\templates\components\about.html:44
+#: .\templates\components\about.html:33
 msgid "lessons to be taught by skilful teachers to smart students"
 msgstr "على يد معلمين ماهرين للطلاب"
 
-#: .\templates\components\about.html:50
+#: .\templates\components\about.html:39
 msgid "More free time"
 msgstr "المزيد من وقت الفراغ"
 
-#: .\templates\components\about.html:54
+#: .\templates\components\about.html:43
 msgid "Online Remote Learning"
 msgstr "التعلم عن بعد"
 
-#: .\templates\components\about.html:58
+#: .\templates\components\about.html:47
 msgid "Lifetime Access"
 msgstr "الوصول مدى الحياة"
 
-#: .\templates\components\about.html:62
+#: .\templates\components\about.html:51
 msgid "it's possible that our methods are regarded by some to"
 msgstr "من الممكن أن يعتبر البعض أساليبنا كذلك"
 
-#: .\templates\components\about.html:64
+#: .\templates\components\about.html:53
 msgid "be as challenging,but cerainly ,it is more effective"
 msgstr "يكون بنفس القدر من التحدي، ولكن من المؤكد أنه أكثر فعالية"
 
@@ -152,53 +152,57 @@ msgstr ""
 msgid "Call:"
 msgstr ""
 
-#: .\templates\components\footer.html:25
+#: .\templates\components\footer.html:27
 msgid "Email:"
 msgstr ""
 
-#: .\templates\components\footer.html:31 .\templates\components\navbar.html:60
+#: .\templates\components\footer.html:35 .\templates\components\navbar.html:60
 msgid "About"
 msgstr "عننا"
 
-#: .\templates\components\footer.html:34
+#: .\templates\components\footer.html:38
 msgid "Events"
 msgstr ""
 
-#: .\templates\components\footer.html:37
+#: .\templates\components\footer.html:41
 #, fuzzy
 #| msgid "Contact us"
 msgid "Contact us "
 msgstr "تواصل معنا"
 
-#: .\templates\components\footer.html:41
+#: .\templates\components\footer.html:45
 #, fuzzy
 #| msgid "Follow Us"
 msgid "Follow us "
 msgstr "تابعنا"
 
-#: .\templates\components\footer.html:43
+#: .\templates\components\footer.html:47
 msgid "Subscribe our socialmedia links"
 msgstr ""
 
-#: .\templates\components\hero.html:8
+#: .\templates\components\hero.html:11
 msgid "EXCELLENCE IN EDUCATION"
 msgstr "التميز في التعليم"
 
-#: .\templates\components\hero.html:11
+#: .\templates\components\hero.html:14
 msgid "Start Better Languages Future From Here"
 msgstr "نقدم لك أفضل خيار للتعلم عن بعد"
 
-#: .\templates\components\hero.html:16 .\templates\components\hero.html:22
+#: .\templates\components\hero.html:19 .\templates\components\hero.html:25
 msgid "update your"
 msgstr "قم بتحديث"
 
-#: .\templates\components\hero.html:18 .\templates\components\services.html:61
+#: .\templates\components\hero.html:21 .\templates\components\services.html:61
 msgid "skills"
 msgstr "مهاراتك"
 
-#: .\templates\components\hero.html:24
+#: .\templates\components\hero.html:27
 msgid "reality"
 msgstr "الواقع"
+
+#: .\templates\components\hero.html:32
+msgid "Play Now"
+msgstr "فيديو تعريفي"
 
 #: .\templates\components\navbar.html:6
 msgid "Up2Date logo"

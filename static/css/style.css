@@ -84,6 +84,7 @@
     --opacity-linear: linear-gradient(rgb(255, 255, 255) 0%, rgb(239, 241, 255) 100%);
     --opacity-linear2: linear-gradient(rgb(255, 255, 255) 0%, rgba(97, 113, 232, 0.397) 100%);
     --opacity-linear3: linear-gradient(rgba(71, 80, 145, 0.403) 100%, rgba(97, 113, 232, 0.197) 100%);
+    --opacity1: linear-gradient(rgb(255, 255, 255) 0%, rgb(239 241 255 / 71%) 100%);
     --shadow-1: 0px 6px 34px rgba(215, 216, 222, 0.41);
 }
 
@@ -1182,8 +1183,6 @@ body {
     font-weight: 800;
 }
 
-
-
 .video .play-btn {
     position: absolute;
     top: 50%;
@@ -1213,9 +1212,8 @@ body {
 }
 
 .video-banner {
-  
     background-color: #000;
-    max-width: 80%; 
+    max-width: 80%;
     margin: 0 auto;
     position: relative;
     border-top-right-radius: 80px;
@@ -1223,9 +1221,13 @@ body {
 }
 
 .video-banner video {
-    width: 100%; /* Set width to 100% to fill the container */
-    height: auto; /* Allow the height to adjust according to the aspect ratio */
+    width: 100%;
+    /* Set width to 100% to fill the container */
+    height: auto;
+    /* Allow the height to adjust according to the aspect ratio */
 }
+
+
 /*-----------------------------------*\
 #news-section
 \*-----------------------------------*/

@@ -1,9 +1,39 @@
 .services {
-    background-color: var(--sec-bag);
+    /* background-color: var(--sec-bag); */
 }
 
 .services_content {
     margin-top: 2rem;
+    background: var(--opacity1);
+    color: var(--sec-bag);
+    padding-block: 8rem;
+    padding-inline: 3rem;
+}
+
+.tns-controls {
+    display: none;
+}
+
+.tns-nav {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    z-index: 2;
+    transform: translate(-50%, 0);
+}
+
+.tns-nav>[aria-controls] {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: var(--sec-bag);
+    border: 0;
+}
+
+.tns-nav>.tns-nav-active {
+    background: #e23826;
 }
 
 .services .col-lg-4 {
@@ -28,6 +58,8 @@
     height: 100%;
     background-color: #fff;
     transition: all 0.5s linear;
+    border-radius: 2px solid #000;
+    height: 100%;
 }
 
 .services_card::after {
@@ -45,13 +77,8 @@
     width: 100%;
 }
 
-.services_card .icon ion-icon.md.hydrated {
-    font-size: 5rem;
-    color: var(--main-color);
-}
-
 .services_card .icon i {
-    font-size: 4rem;
+    font-size: 3.4rem;
     color: var(--main-color);
 }
 
@@ -93,6 +120,9 @@
         width: 90%;
         max-width: 90%;
     }
+    .services_content {
+        padding-block: 0;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -103,9 +133,13 @@
     .services .col-lg-4 {
         width: 100%;
     }
+    .services_card {
+        padding: 3.5rem 0.5rem;
+    }
 }
 
 .icon {
     padding-inline-end: 1rem;
     opacity: .85;
+    margin-bottom: .5rem;
 }

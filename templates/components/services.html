@@ -5,98 +5,28 @@
     <h6 class="sub_heading">{% trans "Services" %}</h6>
     <h3>{% trans "Services" %}</h3>
     <div class="services_content">
-      <div class="row">
-        <div class="col-lg-4" data-aos="fade-right">
-          <div class="services_card">
-            <div class="icon">
-              <i class="bx bx-world"></i>
-            </div>
-            <div class="content">
-              <h4>{% trans "Courses Offered" %}</h4>
-              <p>
-                {% trans "Advanced courses in English language and,"%}
-                <!-- ========== -->
-                {%trans "advanced courses in German language."%}
-              </p>
-            </div>
+      <div class="services-slide">
+        {% for service in services %} {% if request.LANGUAGE_CODE == 'ar' %}
+        <div class="services_card">
+          <div class="icon">
+            <i class="bx bx-world"></i>
+          </div>
+          <div class="content">
+            <h4>{{service.title_ar}}</h4>
+            <p>{{service.description_ar}}</p>
           </div>
         </div>
-
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="services_card">
-            <div class="icon">
-              <i class="bx bx-message-rounded-dots"></i>
-            </div>
-            <div class="content">
-              <h4>{% trans "Consultancy Services" %}</h4>
-              <p>
-                {% trans "Consultancy services to assess language needs "%}
-                {%trans "and develop personalized learning programs."%}
-              </p>
-            </div>
+        {% else %}
+        <div class="services_card">
+          <div class="icon">
+            <i class="bx bx-world"></i>
+          </div>
+          <div class="content">
+            <h4>{{service.title_en}}</h4>
+            <p>{{service.description_en}}</p>
           </div>
         </div>
-
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="services_card">
-            <div class="icon">
-              <i class="bx bx-brain"></i>
-            </div>
-            <div class="content">
-              <h4>{% trans "Language Enhancement" %}</h4>
-              <p>
-                {% trans "Workshops and events to boost language skills"%}
-                {%trans "through social interaction."%}
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4" data-aos="fade-left">
-          <div class="services_card">
-            <div class="icon">
-              <i class="bx bx-layer"></i>
-            </div>
-            <div class="content">
-              <h4>{% trans "skills" %}</h4>
-              <p>
-                {% trans "Improved language skills enable you to"%}
-                <!-- =======  -->
-                {% trans "effectively communicate with your audience."%}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="services_card">
-            <div class="icon">
-              <i class="bx bx-book-open"></i>
-            </div>
-            <div class="content">
-              <h4>{% trans "Knowledge" %}</h4>
-              <p>
-                {% trans "shared communication channels such as books,"%}
-                <!-- =======  -->
-                {% trans "lectures, conversations, and digital media."%}
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="services_card">
-            <div class="icon">
-              <i class="bx bx-bell"></i>
-            </div>
-            <div class="content">
-              <h4>{% trans "Discussion" %}</h4>
-              <p>
-                {% trans "valuable communication tools that facilitate the"%}
-                <!--  -->
-                {%trans "exchange of ideas, promote critical thinking."%}
-              </p>
-            </div>
-          </div>
-        </div>
+        {% endif %} {% endfor %}
       </div>
     </div>
   </div>

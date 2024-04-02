@@ -1,20 +1,26 @@
 {% load static %} {% load i18n %}
 <section
-  class="video has-bg-image"  aria-label="video"  style="background-image: url('{% static 'images/video-bg.webp' %}')">
+  class="video has-bg-image"
+  aria-label="video"
+  style="background-image: url('{% static 'images/video-bg.webp' %}')"
+>
   <h2 class="h2 section-title" data-aos="zoom-in">
     Online <span class="span">Classes</span> For Remote Learning
   </h2>
- <div class="container">
+  <div class="container">
     <div class="video-card" data-aos="fade-up">
-      <div class="video-banner img-holder has-after"  ">
-        <video id="video"  >
-      <source src="https://res.cloudinary.com/dfuaubjg7/video/upload/v1711980859/VID-20240401-WA0004_bct9q2.mp4" type="video/mp4"> 
+      <div class="video-banner img-holder has-after">
+        <video id="video">
+          <source src="{% static 'images/v.mp4' %}" type="video/mp4" />
         </video>
-        <button id="playButton" type="button" class="play-btn" aria-label="play video">
-
+        <button
+          id="playButton"
+          type="button"
+          class="play-btn"
+          aria-label="play video"
+        >
           <i class="bx bx-play"></i>
         </button>
-   
       </div>
     </div>
   </div>

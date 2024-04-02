@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import (Course, Section, Level, News, Contact_inf)
-from django.utils.html import format_html
+from .models import (Course, Section, Level, News, Contact_inf, Services)
 from django import forms
 
 
@@ -61,3 +60,11 @@ class Contact_infAdmin(admin.ModelAdmin):
     list_display = ('Phone_Num', 'Email_url', 'Facebook_url', 'Instgram_url',
                     'X_url', 'TikTok_url', 'Telgram_url', 'WhatsUp_url', 'LinkeIN_url')
     search_fields = ('Phone_Num',)
+
+
+# =============== Services Model =================
+@admin.register(Services)
+class ServicesAdmin(admin.ModelAdmin):
+    list_display = ('title_en', 'description_en', 'title_ar', 'description_ar')
+    search_fields = ('title_en', 'description_en',
+                     'title_ar', 'description_ar')

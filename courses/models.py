@@ -131,3 +131,9 @@ class Contact_inf(models.Model):
         verbose_name = "Contact Information"
         verbose_name_plural = "Contact Information"
 
+class Services(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title

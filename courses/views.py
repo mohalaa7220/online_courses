@@ -1,7 +1,7 @@
 
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
-from .models import (Course, Section, Level, News, Contact_inf)
+from .models import (Course, Section, Level, News, Contact_inf,Services)
 
 
 # ============ home page =============
@@ -62,7 +62,7 @@ def course_details(request, course_id):
         'other_levels': other_levels,
     }
     return render(request, 'courses_details.html', context)
-""" # ============ Services =============
-def service_list(request):
-    services = Service.objects.all()
-    return render(request, 'service_list.html', {'services': services}) """
+ # ============ Services =============
+def about(request):
+    services = Services.objects.all()
+    return render(request, 'about.html', {'services': services})

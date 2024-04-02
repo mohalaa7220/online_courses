@@ -61,9 +61,9 @@ const activeElem = function () {
 };
 
 addEventOnElem(window, "scroll", activeElem);
+
 const video = document.querySelector('video');
 const playButton = document.getElementById('playButton');
-
 
 playButton.addEventListener('click', function() {
   if (video.paused) {

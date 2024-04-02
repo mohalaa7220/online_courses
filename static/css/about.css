@@ -1,5 +1,10 @@
 .services {
-    /* background-color: var(--sec-bag); */
+    background-color: var(--sec-bag);
+    position: relative;
+}
+
+.tns-outer {
+    position: relative;
 }
 
 .services_content {
@@ -20,6 +25,8 @@
     bottom: -40px;
     z-index: 2;
     transform: translate(-50%, 0);
+    display: flex;
+    border-radius: 1px;
 }
 
 .tns-nav>[aria-controls] {
@@ -28,12 +35,12 @@
     padding: 0;
     margin: 0 5px;
     border-radius: 50%;
-    background: var(--sec-bag);
+    background: var(--paragraph-color);
     border: 0;
 }
 
 .tns-nav>.tns-nav-active {
-    background: #e23826;
+    background: var(--color-primary);
 }
 
 .services .col-lg-4 {
@@ -58,8 +65,8 @@
     height: 100%;
     background-color: #fff;
     transition: all 0.5s linear;
-    border-radius: 2px solid #000;
     height: 100%;
+    border-right: 2px solid #0000000d;
 }
 
 .services_card::after {

@@ -62,3 +62,7 @@ def course_details(request, course_id):
         'other_levels': other_levels,
     }
     return render(request, 'courses_details.html', context)
+""" # ============ Services =============
+def service_list(request):
+    services = Service.objects.all()
+    return render(request, 'service_list.html', {'services': services}) """

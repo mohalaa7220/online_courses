@@ -130,3 +130,4 @@ class Contact_inf(models.Model):
     class Meta:
         verbose_name = "Contact Information"
         verbose_name_plural = "Contact Information"
+

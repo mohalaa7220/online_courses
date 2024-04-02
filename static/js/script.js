@@ -62,19 +62,27 @@ const activeElem = function () {
 
 addEventOnElem(window, "scroll", activeElem);
 
-const video = document.querySelector("#video");
+const video = document.getElementById("video");
 const playButton = document.getElementById("playButton");
 
+// Add click event listener to the play button
 playButton.addEventListener("click", function () {
   if (video.paused) {
     video.play();
+    playButton.innerHTML = '<i class="bx bx-pause"></i>';
   } else {
     video.pause();
+    playButton.innerHTML = '<i class="bx bx-play"></i>';
   }
 });
 
-/* ================= Swiper Featured ==================*/
+// Add event listener to detect when the video ends
+video.addEventListener("ended", function () {
+  // Reset the button icon to play
+  playButton.innerHTML = '<i class="bx bx-play"></i>';
+});
 
+/* ================= Swiper Featured ==================*/
 try {
   var slider = tns({
     container: ".services-slide",

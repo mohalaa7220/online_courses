@@ -1147,9 +1147,9 @@ body {
 \*-----------------------------------*/
 
 .video {
-    background-size: contain;
-    background-position: center top;
-    padding-block: 10rem;
+    background-size: cover;
+    background-position: center center;
+    padding-block: 0rem;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -1182,11 +1182,7 @@ body {
     font-weight: 800;
 }
 
-.video-banner {
-    position: relative;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 120px;
-}
+
 
 .video .play-btn {
     position: absolute;
@@ -1210,7 +1206,26 @@ body {
     background-color: var(--black_30);
 }
 
+.video-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.video-banner {
+  
+    background-color: #000;
+    max-width: 80%; 
+    margin: 0 auto;
+    position: relative;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 120px;
+}
+
+.video-banner video {
+    width: 100%; /* Set width to 100% to fill the container */
+    height: auto; /* Allow the height to adjust according to the aspect ratio */
+}
 /*-----------------------------------*\
 #news-section
 \*-----------------------------------*/

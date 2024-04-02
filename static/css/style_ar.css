@@ -89,3 +89,51 @@ body {
     left: 30px;
     right: auto;
 }
+
+
+/* =========== media for shape-2 ========== */
+
+@media screen and (min-width: 1400px) {
+    .about-shape-2 {
+        display: block;
+        left: auto;
+        animation: bounce 2.5s infinite;
+        z-index: 22;
+        right: 60%;
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .about-shape-2 {
+        display: block;
+        left: auto;
+        animation: bounce 2.5s infinite;
+        z-index: 22;
+        right: 62%;
+        top: 35%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .about-shape-2 {
+        display: block;
+        left: auto;
+        animation: bounce 2.5s infinite;
+        z-index: 22;
+        right: 48%;
+        top: 28%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .about-shape-2 {
+        display: block;
+        left: auto;
+        animation: bounce 2.5s infinite;
+        z-index: 22;
+        right: 0;
+        top: 0;
+        ;
+    }
+}

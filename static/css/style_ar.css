@@ -141,3 +141,8 @@ body {
 .icon {
     text-align: right;
 }
+
+#tns1-iw {
+    margin: 0px;
+    direction: ltr;
+}

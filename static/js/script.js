@@ -62,18 +62,27 @@ const activeElem = function () {
 
 addEventOnElem(window, "scroll", activeElem);
 
-const video = document.getElementById("video");
+const video = document.querySelector("video");
+const videoCard = document.querySelector(".video-card");
 const playButton = document.getElementById("playButton");
+const loadingSpinner = document.querySelector(".skeleton");
 
-// Add click event listener to the play button
 playButton.addEventListener("click", function () {
   if (video.paused) {
     video.play();
     playButton.innerHTML = '<i class="bx bx-pause"></i>';
+    playButton.style.visibility = "hidden";
   } else {
     video.pause();
     playButton.innerHTML = '<i class="bx bx-play"></i>';
   }
+});
+
+// Hide loading spinner when video is loaded
+video.addEventListener("loadeddata", function () {
+  loadingSpinner.style.display = "none";
+  videoCard.style.display = "block";
+  video.style.display = "block";
 });
 
 // Add event listener to detect when the video ends

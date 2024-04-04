@@ -2,16 +2,25 @@
 <section
   class="video has-bg-image"
   aria-label="video"
-  style="background-image: url('{% static 'images/video-bg.webp' %}')"
+  style="background-image: url('{% static 'images/video-bg4.svg' %}')"
 >
   <h2 class="h2 section-title" data-aos="zoom-in">
     Online <span class="span">Classes</span> For Remote Learning
   </h2>
   <div class="container">
-    <div class="video-card" data-aos="fade-up">
-      <div class="video-banner img-holder has-after">
-        <video id="video" controls>
-          <source src="{% static 'images/Trim.mp4' %}" type="video/mp4" />
+    <div class="skeleton" style="width: 100%; height: 500px"></div>
+    <div class="video-card">
+      <div class="video-banner img-holder">
+        <video
+          id="video"
+          controls
+          autoplay
+          style="width: 100%; height: 50%; justify-content: center"
+        >
+          <source
+            src="https://res.cloudinary.com/depsgqmeh/video/upload/v1712228864/V3_arnnp3.mp4"
+            type="video/mp4"
+          />
         </video>
         <button
           id="playButton"

@@ -71,7 +71,6 @@ playButton.addEventListener("click", function () {
   if (video.paused) {
     video.play();
     playButton.innerHTML = '<i class="bx bx-pause"></i>';
-    playButton.style.visibility = "hidden";
   } else {
     video.pause();
     playButton.innerHTML = '<i class="bx bx-play"></i>';

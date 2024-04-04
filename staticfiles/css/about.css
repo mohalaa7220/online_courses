@@ -1,9 +1,46 @@
 .services {
     background-color: var(--sec-bag);
+    position: relative;
+}
+
+.tns-outer {
+    position: relative;
 }
 
 .services_content {
     margin-top: 2rem;
+    background: var(--opacity1);
+    color: var(--sec-bag);
+    padding-block: 8rem;
+    padding-inline: 3rem;
+}
+
+.tns-controls {
+    display: none;
+}
+
+.tns-nav {
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    z-index: 2;
+    transform: translate(-50%, 0);
+    display: flex;
+    border-radius: 1px;
+}
+
+.tns-nav>[aria-controls] {
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: var(--paragraph-color);
+    border: 0;
+}
+
+.tns-nav>.tns-nav-active {
+    background: var(--color-primary);
 }
 
 .services .col-lg-4 {
@@ -28,6 +65,12 @@
     height: 100%;
     background-color: #fff;
     transition: all 0.5s linear;
+    height: 100%;
+    border-right: 3px solid #0000000d;
+}
+
+.services_card:last-child {
+    border-right: none;
 }
 
 .services_card::after {
@@ -45,13 +88,8 @@
     width: 100%;
 }
 
-.services_card .icon ion-icon.md.hydrated {
-    font-size: 5rem;
-    color: var(--main-color);
-}
-
 .services_card .icon i {
-    font-size: 4rem;
+    font-size: 3.4rem;
     color: var(--main-color);
 }
 
@@ -80,6 +118,12 @@
     .services_card .content p {
         font-size: 1.3rem;
     }
+    .about .about-content h2 {
+        font-size: 2rem;
+    }
+    .about .about-content h2:last-of-type {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 1199px) {
@@ -93,6 +137,9 @@
         width: 90%;
         max-width: 90%;
     }
+    .services_content {
+        padding-block: 0;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -103,9 +150,13 @@
     .services .col-lg-4 {
         width: 100%;
     }
+    .services_card {
+        padding: 3.5rem 0.5rem;
+    }
 }
 
 .icon {
     padding-inline-end: 1rem;
     opacity: .85;
+    margin-bottom: .5rem;
 }

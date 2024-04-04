@@ -61,3 +61,85 @@ const activeElem = function () {
 };
 
 addEventOnElem(window, "scroll", activeElem);
+
+const video = document.querySelector("video");
+const videoCard = document.querySelector(".video-card");
+const playButton = document.getElementById("playButton");
+const loadingSpinner = document.querySelector(".skeleton");
+
+playButton.addEventListener("click", function () {
+  if (video.paused) {
+    video.play();
+    playButton.innerHTML = '<i class="bx bx-pause"></i>';
+    playButton.style.visibility = "hidden";
+  } else {
+    video.pause();
+    playButton.innerHTML = '<i class="bx bx-play"></i>';
+  }
+});
+
+// Hide loading spinner when video is loaded
+video.addEventListener("loadeddata", function () {
+  loadingSpinner.style.display = "none";
+  videoCard.style.display = "block";
+  video.style.display = "block";
+});
+
+// Add event listener to detect when the video ends
+video.addEventListener("ended", function () {
+  // Reset the button icon to play
+  playButton.innerHTML = '<i class="bx bx-play"></i>';
+});
+
+/* ================= Swiper Featured ==================*/
+try {
+  var slider = tns({
+    container: ".services-slide",
+    items: 3,
+    rewind: true,
+    swipeAngle: false,
+    speed: 400,
+    mouseDrag: true,
+    responsive: {
+      100: {
+        items: 1,
+      },
+      200: {
+        items: 1,
+      },
+      300: {
+        items: 1,
+      },
+
+      400: {
+        items: 1,
+      },
+
+      500: {
+        items: 1,
+      },
+
+      600: {
+        items: 1,
+      },
+      650: {
+        items: 1,
+      },
+      700: {
+        items: 1,
+      },
+
+      800: {
+        items: 2,
+      },
+      900: {
+        items: 2,
+      },
+      1200: {
+        items: 3,
+      },
+    },
+  });
+} catch (error) {
+  console.log(error);
+}

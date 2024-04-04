@@ -134,10 +134,11 @@ class Contact_inf(models.Model):
 
 # ============ Services model =============
 class Services(models.Model):
-    title_en = models.CharField(max_length=100)
-    description_en = models.TextField()
-    title_ar = models.CharField(max_length=100)
-    description_ar = models.TextField()
+    title_en = models.CharField(
+        max_length=100, verbose_name=_("Services Title"))
+    description_en = models.TextField(verbose_name=_("Description Title"))
+    title_ar = models.CharField(max_length=100, verbose_name=_("عنوان الخدمة"))
+    description_ar = models.TextField(verbose_name=_("وصف الخدمة"))
 
     def __str__(self):
         return self.title_en

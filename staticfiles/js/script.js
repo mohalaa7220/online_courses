@@ -62,16 +62,28 @@ const activeElem = function () {
 
 addEventOnElem(window, "scroll", activeElem);
 
+// ======================= video ==================================
 const video = document.querySelector("video");
 const videoCard = document.querySelector(".video-card");
 const playButton = document.getElementById("playButton");
 const loadingSpinner = document.querySelector(".skeleton");
 
+// Check if video source is stored in localStorage
+const videoSource = localStorage.getItem("videoSource");
+console.log(videoSource);
+if (videoSource) {
+  video.src = videoSource;
+  loadingSpinner.style.display = "none";
+  videoCard.style.display = "block";
+} else {
+  video.src =
+    "https://res.cloudinary.com/dfuaubjg7/video/upload/v1712255713/v3_hqypf9.mp4";
+}
+
 playButton.addEventListener("click", function () {
   if (video.paused) {
     video.play();
     playButton.innerHTML = '<i class="bx bx-pause"></i>';
-    playButton.style.visibility = "hidden";
   } else {
     video.pause();
     playButton.innerHTML = '<i class="bx bx-play"></i>';
@@ -80,6 +92,8 @@ playButton.addEventListener("click", function () {
 
 // Hide loading spinner when video is loaded
 video.addEventListener("loadeddata", function () {
+  // Store video source in localStorage
+  localStorage.setItem("videoSource", video.src);
   loadingSpinner.style.display = "none";
   videoCard.style.display = "block";
   video.style.display = "block";
@@ -90,7 +104,6 @@ video.addEventListener("ended", function () {
   // Reset the button icon to play
   playButton.innerHTML = '<i class="bx bx-play"></i>';
 });
-
 /* ================= Swiper Featured ==================*/
 try {
   var slider = tns({

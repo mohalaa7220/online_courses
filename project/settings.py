@@ -195,6 +195,7 @@ JAZZMIN_SETTINGS = {
     "custom_js": None,
     "use_google_fonts_cdn": True,
     "changeform_format": "single",
+    "show_ui_builder": True,
 }
 
 
@@ -229,6 +230,9 @@ JAZZMIN_UI_TWEAKS = {
         "success": "btn-success"
     },
 }
+
+
+# =============== cors =======================
 CORS_ALLOW_METHODS = (
     "DELETE",
     "GET",
@@ -239,6 +243,7 @@ CORS_ALLOW_METHODS = (
 )
 
 
+# =============== cloudinary =======================
 cloudinary.config(
     cloud_name="dw18qcase",
     api_key="642133494324994",

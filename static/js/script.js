@@ -63,7 +63,7 @@ const activeElem = function () {
 addEventOnElem(window, "scroll", activeElem);
 
 // ======================= video ==================================
-const video = document.querySelector("video");
+const video = document.querySelector("#video");
 const videoCard = document.querySelector(".video-card");
 const playButton = document.getElementById("playButton");
 const loadingSpinner = document.querySelector(".skeleton");

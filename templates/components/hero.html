@@ -2,9 +2,12 @@
 
 <section class="section hero has-bg-image" id="home" aria-label="home">
     <div class="container">
-        <a href="/contact_us">
+        {%for contact in contact_info %}
+
+        <a  href="{{contact.WhatsUp_url}}" >
             <img src="{% static 'images/WhatsApp.webp' %}" width="150" height="80" loading="lazy" alt="call us " class="shape about-shape-2" />
         </a>
+        {%endfor %}
         <img src="{% static 'images/bose.webp' %}" width="150" height="150" loading="lazy" alt="" class="sticker1" />
         <div class="hero-content" data-aos="fade-right">
             <span class="sub_heading">

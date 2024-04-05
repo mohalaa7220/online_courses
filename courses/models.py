@@ -68,12 +68,12 @@ class Level(models.Model):
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        cloudinary_response = cloudinary.uploader.upload(
-            self.video, resource_type="video")
-        self.video_url = cloudinary_response['secure_url']
-
+        if self.video:  # Check if the 'video' field has a value
+            cloudinary_response = cloudinary.uploader.upload(
+                self.video, resource_type="video")
+            self.video_url = cloudinary_response['secure_url']
+        
         return super().save(*args, **kwargs)
-
     def __str__(self):
         return self.level_title_en
 

@@ -20,7 +20,7 @@
       <h1>{{course_id.level_title_ar}}</h1>
     </div>
     <div class="center">
-      <video width="100%" height="500px" controls id="videoPlayer">
+      <video width="100%" height="500px" controls id="videoPlayer" poster="{% static 'images/learn.webp' %}">
         <source src="{{course_id.video_url}}" type="video/mp4" />
       </video>
       <div class="description">

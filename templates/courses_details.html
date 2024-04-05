@@ -20,9 +20,15 @@
       <h1>{{course_id.level_title_ar}}</h1>
     </div>
     <div class="center">
+      {% if course_id.video_url %}
       <video width="100%" height="500px" controls id="videoPlayer" poster="{% static 'images/learn.webp' %}">
         <source src="{{course_id.video_url}}" type="video/mp4" />
       </video>
+    {% else %}
+      <img src="{% static 'images/learn.webp' %}" alt="No Video Available" style="width: 50%; height: 50;"/>
+     
+    {% endif %}
+
       <div class="description">
         <h3>{{course_id.level_title_ar}}</h3>
         <p>{{course_id.level_description_en}}</p>

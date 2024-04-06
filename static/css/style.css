@@ -2270,15 +2270,12 @@ video#videoPlayer {
     }
 }
 
-
-/* .bnt_parent {
+.bnt_parent {
     background: transparent;
     width: 100%;
     height: 100%;
     position: absolute;
     padding: 5rem;
     top: 0;
-    /* visibility: hidden; */
-
-
+    visibility: hidden;
 }

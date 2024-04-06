@@ -1,15 +1,8 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 import cloudinary.uploader
-
-
-# ============ error message ================
-custom_error_messages = {
-    'required': _("%(field_name)s is required."),
-    'invalid': _("Invalid value for %(field_name)s."),
-    'upload_to': _("Failed to upload file for %(field_name)s."),
-}
 
 
 # ============ course model ================
@@ -119,7 +112,7 @@ class News(models.Model):
         return self.news_title_en
 
 
-# ============ course model =============
+# ============ Contact model =============
 class Contact_inf(models.Model):
     Phone_Num = models.CharField(max_length=40, verbose_name=_("phone number"))
     Email_url = models.URLField(null=True, blank=True)
@@ -134,6 +127,11 @@ class Contact_inf(models.Model):
 
     def __str__(self):
         return self.Phone_Num
+
+    def save(self, *args, **kwargs):
+        if not self.pk and Contact_inf.objects.exists():
+            return
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Contact Information"

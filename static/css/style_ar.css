@@ -99,8 +99,8 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 60%;
-        top: 40%;
+        right: 40%;
+        top: 36%;
     }
 }
 
@@ -110,7 +110,7 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 62%;
+        right: 40%;
         top: 35%;
     }
 }
@@ -126,15 +126,27 @@ body {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .about-shape-2 {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about-shape-2 {
+        top: 0;
+        right: 33%;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .about-shape-2 {
         display: block;
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 0;
+        right: 35%;
         top: 0;
-        ;
     }
 }
 
@@ -176,14 +188,8 @@ body {
 @media screen and (max-width: 767px) {
     .sticker1 {
         margin-top: 100px;
-        margin-left: 70px;
+        margin-left: 0;
         left: 0%;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .about-shape-2 {
-        display: none;
     }
 }
 

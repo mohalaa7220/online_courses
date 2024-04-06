@@ -206,7 +206,7 @@ body {
 
 .shape {
     position: absolute;
-    display: none;
+    /* display: none; */
 }
 
 .has-bg-image {
@@ -863,6 +863,7 @@ body {
     margin-top: 325px;
     left: 130px;
     animation: bounce 2.5s infinite;
+    z-index: 3333;
 }
 
 @keyframes bounce {
@@ -934,10 +935,32 @@ body {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .about-shape-2 {
+        display: block;
+        left: auto;
+        animation: bounce 2.5s infinite;
+        z-index: 22;
+        right: 40%;
+        top: 10%;
+    }
+}
+
 @media screen and (max-width: 769px) {
     .about {
         margin-top: 4rem !important;
         padding-block-start: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sticker1 {
+        margin-top: 75px;
+        margin-left: 320px;
+    }
+    .about-shape-2 {
+        right: 35%;
+        top: 0%;
     }
 }
 
@@ -2245,4 +2268,17 @@ video#videoPlayer {
     to {
         background-position: left;
     }
+}
+
+
+/* .bnt_parent {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 5rem;
+    top: 0;
+    /* visibility: hidden; */
+
+
 }

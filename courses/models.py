@@ -127,16 +127,16 @@ def validate_unique_contact_info(value):
             if Contact_inf.objects.exists():
                 raise ValidationError('Contact info already exists')
 class Contact_inf(models.Model):
-    Phone_Num = models.CharField(max_length=40, verbose_name=_("phone number") , validators=[validate_unique_contact_info])
-    Email_url = models.URLField(null=True, blank=True , validators=[validate_unique_contact_info])
-    Facebook_url = models.URLField(null=True, blank=True , validators=[validate_unique_contact_info])
-    Instgram_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
-    X_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
-    TikTok_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
-    Telgram_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
-    WhatsUp_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
-    LinkeIN_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
-    Youtube_url = models.URLField(null=True, blank=True, validators=[validate_unique_contact_info])
+    Phone_Num = models.CharField(max_length=40, verbose_name=_("phone number") )
+    Email_url = models.URLField(null=True, blank=True )
+    Facebook_url = models.URLField(null=True, blank=True )
+    Instgram_url = models.URLField(null=True, blank=True)
+    X_url = models.URLField(null=True, blank=True)
+    TikTok_url = models.URLField(null=True, blank=True)
+    Telgram_url = models.URLField(null=True, blank=True)
+    WhatsUp_url = models.URLField(null=True, blank=True)
+    LinkeIN_url = models.URLField(null=True, blank=True)
+    Youtube_url = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return self.Phone_Num

@@ -74,7 +74,7 @@ try {
   if (videoSource) {
     video.src = videoSource;
     loadingSpinner.style.display = "none";
-    videoCard.style.display = "block";
+    videoCard.style.display = "flex";
   } else {
     video.src =
       "https://res.cloudinary.com/dfuaubjg7/video/upload/v1712255713/v3_hqypf9.mp4";
@@ -84,9 +84,11 @@ try {
     if (video.paused) {
       video.play();
       playButton.innerHTML = '<i class="bx bx-pause"></i>';
+      playButton.style.display = "none"; 
     } else {
       video.pause();
       playButton.innerHTML = '<i class="bx bx-play"></i>';
+      playButton.style.display = "block";
     }
   });
 
@@ -103,11 +105,25 @@ try {
   video.addEventListener("ended", function () {
     // Reset the button icon to play
     playButton.innerHTML = '<i class="bx bx-play"></i>';
+    playButton.style.display = "block";
   });
 } catch (error) {
   console.log(error);
 }
 
+video.addEventListener('mouseenter', function () {
+  playButton.style.display = 'block'; // عرض الزر عند تحريك الماوس فوق الفيديو
+});
+
+video.addEventListener('mouseleave', function () {
+  if (!video.paused) {
+      playButton.style.display = 'none'; // يخفي الزر إذا كان الفيديو مشغلًا وغير متوقف
+  }
+});
+
+video.addEventListener("ended", function () {
+  playButton.style.display = 'block'; // يعرض الزر عند انتهاء الفيديو
+});
 /* ================= Swiper Featured ==================*/
 try {
   var slider = tns({

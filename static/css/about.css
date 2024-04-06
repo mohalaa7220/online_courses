@@ -138,11 +138,11 @@
         max-width: 90%;
     }
     .services_content {
-        padding-block: 0;
+        padding-block: 1rem;
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
     .services .container {
         width: 100%;
         max-width: 100%;
@@ -152,6 +152,9 @@
     }
     .services_card {
         padding: 3.5rem 0.5rem;
+    }
+    .services_content {
+        padding-inline: 2rem;
     }
 }
 

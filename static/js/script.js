@@ -85,15 +85,11 @@ try {
     if (video.paused) {
       video.play();
       playButton.innerHTML = '<i class="bx bx-pause"></i>';
-      bntParent.style.viability = "hidden";
-      bntParent.style.display = "none";
-      console.log("first play");
+      bntParent.style.visibility = "hidden";
     } else {
       video.pause();
       playButton.innerHTML = '<i class="bx bx-play"></i>';
-      bntParent.style.viability = "visible";
-      bntParent.style.display = "block";
-      console.log("puse");
+      bntParent.style.visibility = "visible";
     }
   });
 

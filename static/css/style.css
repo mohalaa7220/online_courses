@@ -2277,5 +2277,5 @@ video#videoPlayer {
     position: absolute;
     padding: 5rem;
     top: 0;
-    visibility: hidden;
+    visibility: visible;
 }

@@ -1,12 +1,19 @@
 from django.db import models
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
-from django.core.files.uploadedfile import InMemoryUploadedFile
 import cloudinary.uploader
 from django.core.exceptions import ValidationError
 
     
     
+
+# ============ error message ================
+custom_error_messages = {
+    'required': _("%(field_name)s is required."),
+    'invalid': _("Invalid value for %(field_name)s."),
+    'upload_to': _("Failed to upload file for %(field_name)s."),
+}
+
 
 # ============ course model ================
 class Course(models.Model):
@@ -32,7 +39,7 @@ class Section(models.Model):
     description_en = models.TextField(verbose_name=_("Description"))
     description_ar = models.TextField(verbose_name=_("وصف القسم"))
     pictureSection = models.ImageField(
-        upload_to='pictures/', null=True, blank=True, verbose_name=_("Image Section"))
+        upload_to='pictures/', verbose_name=_("Image Section"), default='')
     image_url = models.URLField(null=True, blank=True)
     section_Slug = models.SlugField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -65,7 +72,7 @@ class Level(models.Model):
     level_description_en = models.TextField(
         verbose_name=_("Level Description"))
     level_description_ar = models.TextField(verbose_name=_("وصف المستوي"))
-    video = models.FileField(null=True, blank=True)
+    video = models.FileField(default='')
     video_url = models.URLField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
@@ -97,7 +104,7 @@ class News(models.Model):
     news_date = models.DateField(null=True, blank=True)
     lessonsNum = models.IntegerField(verbose_name=_("Lesson Number"))
     newsImage = models.ImageField(
-        upload_to='newsImage/', null=True, blank=True, verbose_name=_("News Image"))
+        upload_to='newsImage/', default='', verbose_name=_("News Image"))
     image_url = models.URLField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)

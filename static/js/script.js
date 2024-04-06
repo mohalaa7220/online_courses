@@ -65,6 +65,7 @@ addEventOnElem(window, "scroll", activeElem);
 // ======================= video ==================================
 try {
   const video = document.querySelector("#video");
+  // const bntParent = document.querySelector(".bnt_parent ");
   const videoCard = document.querySelector(".video-card");
   const playButton = document.getElementById("playButton");
   const loadingSpinner = document.querySelector(".skeleton");
@@ -84,7 +85,7 @@ try {
     if (video.paused) {
       video.play();
       playButton.innerHTML = '<i class="bx bx-pause"></i>';
-      playButton.style.display = "none"; 
+      playButton.style.display = "none";
     } else {
       video.pause();
       playButton.innerHTML = '<i class="bx bx-play"></i>';
@@ -111,19 +112,18 @@ try {
   console.log(error);
 }
 
-video.addEventListener('mouseenter', function () {
-  playButton.style.display = 'block'; // عرض الزر عند تحريك الماوس فوق الفيديو
+video.addEventListener("mouseenter", function () {
+  playButton.style.display = "block"; // عرض الزر عند تحريك الماوس فوق الفيديو
+  console.log("================================================");
 });
 
-video.addEventListener('mouseleave', function () {
+video.addEventListener("mouseleave", function () {
   if (!video.paused) {
-      playButton.style.display = 'none'; // يخفي الزر إذا كان الفيديو مشغلًا وغير متوقف
+    playButton.style.display = "none"; // يخفي الزر إذا كان الفيديو مشغلًا وغير متوقف
+    console.log("++++++++++++++++++++++");
   }
 });
 
-video.addEventListener("ended", function () {
-  playButton.style.display = 'block'; // يعرض الزر عند انتهاء الفيديو
-});
 /* ================= Swiper Featured ==================*/
 try {
   var slider = tns({

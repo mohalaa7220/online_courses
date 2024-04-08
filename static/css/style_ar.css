@@ -99,7 +99,7 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 40%;
+        right: 20%;
         top: 36%;
     }
 }
@@ -128,14 +128,15 @@ body {
 
 @media screen and (max-width: 767px) {
     .about-shape-2 {
-        top: 0;
+        top: 3%;
+        right: 10%;
     }
 }
 
 @media screen and (max-width: 650px) {
     .about-shape-2 {
-        top: 0;
-        right: 33%;
+        top: 3%;
+        right: 10%;
     }
 }
 
@@ -145,8 +146,8 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 35%;
-        top: 0;
+        top: 3%;
+        right: 10%;
     }
 }
 

@@ -206,7 +206,7 @@ body {
 
 .shape {
     position: absolute;
-    /* display: none; */
+    display: none; 
 }
 
 .has-bg-image {
@@ -931,7 +931,7 @@ body {
         animation: bounce 2.5s infinite;
         z-index: 22;
         right: 48%;
-        top: 28%;
+        top: 30%;
     }
 }
 
@@ -941,7 +941,7 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 40%;
+        right: 30%;
         top: 10%;
     }
 }
@@ -956,11 +956,16 @@ body {
 @media screen and (max-width: 600px) {
     .sticker1 {
         margin-top: 75px;
-        margin-left: 320px;
+        margin-left: 250px;
+        width: 20%;
+        
     }
     .about-shape-2 {
-        right: 35%;
-        top: 0%;
+        margin-left: 0px;
+        margin-top: 300px;
+        z-index: 10;
+      
+      
     }
 }
 
@@ -979,8 +984,7 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 0;
-        top: 0;
+       
     }
     .about .about-content h2 {
         font-size: 1.7rem;

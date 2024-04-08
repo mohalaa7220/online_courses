@@ -128,14 +128,14 @@ body {
 
 @media screen and (max-width: 767px) {
     .about-shape-2 {
-        top: 3%;
+        margin-top: 150px;
         right: 10%;
     }
 }
 
 @media screen and (max-width: 650px) {
     .about-shape-2 {
-        top: 3%;
+        margin-top: 150px;
         right: 10%;
     }
 }
@@ -146,7 +146,7 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        top: 3%;
+        margin-top: 150px;
         right: 10%;
     }
 }

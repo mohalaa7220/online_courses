@@ -62,7 +62,7 @@ class Level(models.Model):
     level_description_en = models.TextField(
         verbose_name=_("Level Description"))
     level_description_ar = models.TextField(verbose_name=_("وصف المستوي"))
-    video = models.FileField(default='')
+    video = models.FileField(null=True, blank=True)
     video_url = models.URLField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     update_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)

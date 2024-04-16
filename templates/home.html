@@ -1,22 +1,25 @@
 {% extends 'base.html' %} {% load i18n %}{% block body %} {% load static %}
 
+<!-- ============= title ================ -->
+{% block title %} Online Courses {% endblock %}
+
 <main>
-  <article>
-    <!-- ============= Hero ============ -->
-    {% include 'components/hero.html' %}
+    <article>
+        <!-- ============= Hero ============ -->
+        {% include 'components/hero.html' %}
 
-    <!-- ============= ABOUT ============ -->
-    {% include 'components/about.html' %}
+        <!-- ============= ABOUT ============ -->
+        {% include 'components/about.html' %}
 
-    <!-- ======= services ========= -->
-    {% include 'components/services.html' %}
+        <!-- ======= services ========= -->
+        {% include 'components/services.html' %}
 
-    <!-- ========== VIDEO =========== -->
-    {% include 'components/video.html' %}
+        <!-- ========== VIDEO =========== -->
+        {% include 'components/video.html' %}
 
-    <!-- ========= NEWS ============ -->
-    {% include 'components/news.html' %}
-  </article>
+        <!-- ========= NEWS ============ -->
+        {% include 'components/news.html' %}
+    </article>
 </main>
 
 {% endblock body %}

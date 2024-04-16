@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% load i18n %} {% block body %}
 
-<!-- display data -->
+<!-- ============= title ================ -->
+{% block title %}{{course_id.level_title_en}}{% endblock %}
 
 <!-- ======= set page in breadcrumb ========= -->
 {% if request.LANGUAGE_CODE == 'ar' %}
@@ -14,101 +15,89 @@
 {% include 'components/breadcrumb.html' %} {% endwith %} {% endif %}
 <!-- ======== content =========== -->
 <section class="news_details">
-  <div class="news_container">
-    {% if request.LANGUAGE_CODE == 'ar' %}
-    <div class="head">
-      <h1>{{course_id.level_title_ar}}</h1>
-    </div>
-    <div class="center">
-      {% if level.video_url %}
-      <video width="100%" height="500px" controls id="videoPlayer" poster="{% static 'images/learn.webp' %}">
-          <source src="{{ level.video_url }}" type="video/mp4" />
-      </video>
-  {% else %}
-      <img src="{% static 'images/learn.webp' %}" style="width: 40%; height: 40%; margin-left: auto; margin-right: auto;" alt="Default Image">
-  {% endif %}
+    <div class="news_container">
+        {% if request.LANGUAGE_CODE == 'ar' %}
+        <div class="head">
+            <h1>{{course_id.level_title_ar}}</h1>
+        </div>
+        <div class="center">
+            {% if level.video_url %}
+            <video width="100%" height="500px" controls id="videoPlayer" poster="{% static 'images/learn.webp' %}">
+        <source src="{{ level.video_url }}" type="video/mp4" />
+      </video> {% else %}
+            <img src="{% static 'images/learn.webp' %}" style="width: 40%; height: 40%; margin-left: auto; margin-right: auto" alt="Default Image" /> {% endif %}
 
+            <div class="description">
+                <h3>{{course_id.level_title_ar}}</h3>
+                <p>{{course_id.level_description_ar}}</p>
+            </div>
+        </div>
+        {% else %}
+        <div class="head">
+            <h1>{{course_id.level_title_en}}</h1>
+        </div>
+        <div class="center">
+            {% if level.video_url %}
+            <video width="100%" height="500px" controls id="videoPlayer" poster="{% static 'images/learn.webp' %}">
+        <source src="{{ level.video_url }}" type="video/mp4" />
+      </video> {% else %}
+            <img src="{% static 'images/learn.webp' %}" style="width: 40%; height: 40%; margin-left: auto; margin-right: auto" alt="Default Image" /> {% endif %}
 
-      <div class="description">
-        <h3>{{course_id.level_title_ar}}</h3>
-        <p>{{course_id.level_description_ar}}</p>
-      </div>
+            <div class="description">
+                <h3>{{course_id.level_title_en}}</h3>
+                <p>{{course_id.level_description_en}}</p>
+            </div>
+        </div>
+        {% endif %}
     </div>
-    {% else %}
-    <div class="head">
-      <h1>{{course_id.level_title_en}}</h1>
-    </div>
-    <div class="center">
-
-           {% if level.video_url %}
-      <video width="100%" height="500px" controls id="videoPlayer" poster="{% static 'images/learn.webp' %}">
-          <source src="{{ level.video_url }}" type="video/mp4" />
-      </video>
-  {% else %}
-      <img src="{% static 'images/learn.webp' %}"style="width: 40%; height: 40%; margin-left: auto; margin-right: auto;"alt="Default Image">
-  {% endif %}
-   
-      <div class="description">
-        <h3>{{course_id.level_title_en}}</h3>
-        <p>{{course_id.level_description_en}}</p>
-      </div>
-    </div>
-    {% endif %}
-  </div>
 </section>
 
 <!-- ======== related levels =========== -->
 <section class="levels_parent">
-  <div class="container">
-    <div class="level_head text-center">
-      <span class="sub_heading"> {% trans "Related Levels " %} </span>
-      <h3>{% trans "Related Levels " %}</h3>
-    </div>
-    <div class="row">
-      {% for level in other_levels %}
-      <div class="col-lg-4 cards" data-aos="zoom-in">
-        <div class="card">
-          {% if request.LANGUAGE_CODE == 'ar' %}
-          <!-- display ar -->
-          <div class="content">
-            <h3>{{ level.level_title_ar }}</h3>
-            <div class="scroll-bg">
-              <div class="scroll-div">
-                <p>{{ level.level_description_ar }}</p>
-              </div>
-            </div>
-            <!-- to display video -->
-            <a
-              class="btn has-before"
-              href="{% url 'course_details' course_id=level.id%}"
-            >
-              <span class="span">{% trans "More" %}</span>
-              <i class="bx bx-right-arrow-alt"></i>
-            </a>
-          </div>
-          {% else %}
-          <!-- display en -->
-          <div class="content">
-            <h3>{{ level.level_title_en }}</h3>
-            <div class="scroll-bg">
-              <div class="scroll-div">
-                <p>{{ level.level_description_en }}</p>
-              </div>
-            </div>
-            <!-- to display details -->
-            <a
-              class="btn has-before"
-              href="{% url 'course_details' course_id=level.id%}"
-            >
-              <span class="span">{% trans "More" %}</span>
-              <i class="bx bx-right-arrow-alt"></i>
-            </a>
-          </div>
-          {% endif %}
+    <div class="container">
+        <div class="level_head text-center">
+            <span class="sub_heading"> {% trans "Related Levels " %} </span>
+            <h3>{% trans "Related Levels " %}</h3>
         </div>
-      </div>
-      {% endfor %}
+        <div class="row">
+            {% for level in other_levels %}
+            <div class="col-lg-4 cards" data-aos="zoom-in">
+                <div class="card">
+                    {% if request.LANGUAGE_CODE == 'ar' %}
+                    <!-- display ar -->
+                    <div class="content">
+                        <h3>{{ level.level_title_ar }}</h3>
+                        <div class="scroll-bg">
+                            <div class="scroll-div">
+                                <p>{{ level.level_description_ar }}</p>
+                            </div>
+                        </div>
+                        <!-- to display video -->
+                        <a class="btn has-before" href="{% url 'course_details' course_id=level.id%}">
+                            <span class="span">{% trans "More" %}</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                    {% else %}
+                    <!-- display en -->
+                    <div class="content">
+                        <h3>{{ level.level_title_en }}</h3>
+                        <div class="scroll-bg">
+                            <div class="scroll-div">
+                                <p>{{ level.level_description_en }}</p>
+                            </div>
+                        </div>
+                        <!-- to display details -->
+                        <a class="btn has-before" href="{% url 'course_details' course_id=level.id%}">
+                            <span class="span">{% trans "More" %}</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-  </div>
 </section>
 {% endblock body %}

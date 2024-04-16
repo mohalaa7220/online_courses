@@ -1,5 +1,8 @@
 {% extends 'base.html' %} {% load i18n %} {% load static %}
 
+<!-- ============= title ================ -->
+{% block title %}{% trans 'Contact us' %}{% endblock %}
+
 <!-- ======== css_style ========= -->
 {% block css_style %}
 
@@ -10,74 +13,74 @@
 {% block body %}
 
 <main>
-  <!-- ======= set page in breadcrumb ========= -->
-  {% with page_title="Contact us" %}
-  <!-- ======= breadcrumb ========= -->
-  {% include 'components/breadcrumb.html' %} {% endwith %}
+    <!-- ======= set page in breadcrumb ========= -->
+    {% with page_title="Contact us" %}
+    <!-- ======= breadcrumb ========= -->
+    {% include 'components/breadcrumb.html' %} {% endwith %}
 
-  <!-- ======= content ========= -->
+    <!-- ======= content ========= -->
 
-  <div class="back">
-    <div id="container">
-      <div class="level_head text-center">
-        <span class="sub_heading"> {% trans "Contact us" %} </span>
-        <h3 class="mb-5">{% trans "Contact us" %}</h3>
-      </div>
-      <div class="innerContainer">
-        <div class="contactForm">
-          <form>
-            <h1>{% trans "Follow Us" %}</h1>
-            {%for contact in contact %}
-            <div class="social-icons">
-              <a href="{{contact.Facebook_url}}" title="facebook">
-                <i class="bx bxl-facebook-circle"></i>
-              </a>
-              <a href="{{contact.X_url}}" title="X">
-                <i class="bx bxl-twitter"></i>
-              </a>
-              <a href="{{contact.Instgram_url}}" title="instagram">
-                <i class="bx bxl-instagram"></i>
-              </a>
-              <a href="{{contact.WhatsUp_url}}" title="whatssup">
-                <i class="bx bxl-whatsapp"></i>
-              </a>
-              <a href="{{contact.LinkeIN_url}}" title="linkedin">
-                <i class="bx bxl-linkedin-square"></i>
-              </a>
-              <a href="{{contact.Telgram_url}}" title="telegram">
-                <i class="bx bxl-telegram"></i>
-              </a>
-
-              <a href="{{contact.TikTok_url}}" title="tikTok">
-                <i class="bx bxl-tiktok"></i>
-              </a>
-              <a href="{{contact.Youtube_url}}" title="youtube">
-                <i class="bx bxl-youtube"></i>
-              </a>
+    <div class="back">
+        <div id="container">
+            <div class="level_head text-center">
+                <span class="sub_heading"> {% trans "Contact us" %} </span>
+                <h3 class="mb-5">{% trans "Contact us" %}</h3>
             </div>
-          </form>
+            <div class="innerContainer">
+                <div class="contactForm">
+                    <form>
+                        <h1>{% trans "Follow Us" %}</h1>
+                        {%for contact in contact %}
+                        <div class="social-icons">
+                            <a href="{{contact.Facebook_url}}" title="facebook">
+                                <i class="bx bxl-facebook-circle"></i>
+                            </a>
+                            <a href="{{contact.X_url}}" title="X">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                            <a href="{{contact.Instgram_url}}" title="instagram">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                            <a href="{{contact.WhatsUp_url}}" title="whatssup">
+                                <i class="bx bxl-whatsapp"></i>
+                            </a>
+                            <a href="{{contact.LinkeIN_url}}" title="linkedin">
+                                <i class="bx bxl-linkedin-square"></i>
+                            </a>
+                            <a href="{{contact.Telgram_url}}" title="telegram">
+                                <i class="bx bxl-telegram"></i>
+                            </a>
 
-          <div class="moreInfo">
-            <h1>{% trans "get in touch" %}</h1>
-            <p class="city">
-              <i class="bx bx-map"></i>
-              <span>Online</span>
-            </p>
-            <p class="city">
-              <a href="{{ contact.Email_url }}">
-                <i class="bx bx-mail-send"></i>
-                <span>Mail</span>
-              </a>
-            </p>
-            <p class="city">
-              <i class="bx bxs-phone-call"></i>
-              <span>{{contact.Phone_Num }}</span>
-            </p>
-            {% endfor %}
-          </div>
+                            <a href="{{contact.TikTok_url}}" title="tikTok">
+                                <i class="bx bxl-tiktok"></i>
+                            </a>
+                            <a href="{{contact.Youtube_url}}" title="youtube">
+                                <i class="bx bxl-youtube"></i>
+                            </a>
+                        </div>
+                    </form>
+
+                    <div class="moreInfo">
+                        <h1>{% trans "get in touch" %}</h1>
+                        <p class="city">
+                            <i class="bx bx-map"></i>
+                            <span>Online</span>
+                        </p>
+                        <p class="city">
+                            <a href="{{ contact.Email_url }}">
+                                <i class="bx bx-mail-send"></i>
+                                <span>Mail</span>
+                            </a>
+                        </p>
+                        <p class="city">
+                            <i class="bx bxs-phone-call"></i>
+                            <span>{{contact.Phone_Num }}</span>
+                        </p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  {% endblock body %}
+    {% endblock body %}
 </main>

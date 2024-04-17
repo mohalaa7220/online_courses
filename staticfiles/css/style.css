@@ -600,8 +600,27 @@ body {
         width: 100%;
     }
     .navbar.active .navbar-list li {
-        line-height: 3;
+        line-height: 3.5;
         padding-left: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .logo img {
+        height: auto;
+        width: 5rem;
+    }
+    .header.active {
+        padding-block: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .logo img {
+        width: 4.3rem;
+    }
+    .header.active {
+        padding-block: 2.3rem;
     }
 }
 
@@ -844,6 +863,7 @@ body {
     margin-top: 325px;
     left: 130px;
     animation: bounce 2.5s infinite;
+    z-index: 3333;
 }
 
 @keyframes bounce {
@@ -911,20 +931,50 @@ body {
         animation: bounce 2.5s infinite;
         z-index: 22;
         right: 48%;
-        top: 28%;
+        top: 30%;
+    }
+    .about {
+        margin-block: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-shape-2 {
+        display: block;
+        left: auto;
+        animation: bounce 2.5s infinite;
+        z-index: 22;
+        right: 30%;
+        top: 10%;
     }
 }
 
 @media screen and (max-width: 769px) {
     .about {
-        margin-block: 0 !important;
+        margin-top: 4rem !important;
         padding-block-start: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sticker1 {
+        margin-top: 75px;
+        margin-left: 250px;
+        width: 20%;
+    }
+    .about-shape-2 {
+        margin-left: 0px;
+        margin-top: 300px;
+        z-index: 10;
     }
 }
 
 @media screen and (max-width: 555px) {
     .about .about-content h2 {
         font-size: 2rem;
+    }
+    .about .about-content h2:last-of-type {
+        margin-bottom: 0;
     }
 }
 
@@ -934,9 +984,9 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-        right: 0;
-        top: 0;
-        ;
+    }
+    .about .about-content h2 {
+        font-size: 1.7rem;
     }
 }
 
@@ -1182,7 +1232,7 @@ body {
 .video .section-title {
     text-align: center;
     font-family: var(--heading-font);
-    margin-bottom: 5rem;
+    line-height: 1.5;
     font-weight: 800;
 }
 
@@ -2050,6 +2100,12 @@ section.news_details {
     margin-left: auto;
     margin-right: auto;
     padding-inline: 1rem;
+    background: #ffffff;
+    padding-block: 2rem;
+}
+
+.news_details .center {
+    padding-inline-start: 1rem;
 }
 
 .news_details .head {
@@ -2060,7 +2116,6 @@ section.news_details {
     flex-direction: column;
     width: 100%;
     padding: 44px 140px 30px;
-    background: #ffffff;
     border-radius: 4px 4px 0 0;
 }
 
@@ -2216,4 +2271,14 @@ video#videoPlayer {
     to {
         background-position: left;
     }
+}
+
+.bnt_parent {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 5rem;
+    top: 0;
+    visibility: visible;
 }

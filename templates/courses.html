@@ -1,7 +1,10 @@
-{% extends 'base.html' %} {% load static %} {% load i18n %} {% block body %}
+{% extends 'base.html' %} {% load static %} {% load i18n %}
 
 <!-- ============= title ================ -->
 {% block title %}{{section.section_title_en}}{% endblock %}
+
+<!-- ======== content =========== -->
+{% block body %}
 
 <!-- ======= set page in breadcrumb ========= -->
 {% with page_title=section.section_title_en %}
@@ -9,81 +12,91 @@
 {% include 'components/breadcrumb.html' %} {% endwith %}
 
 <div class="container">
-    <div class="service-section pt-7">
-        <div class="skewed" data-aos="fade-in">
-            <div class="card card_section mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="{{ section.image_url }}" alt="{{ section.section_title_en }}" class="section_img" />
-                    </div>
-                    <div class="col-md-8">
-                        {% if request.LANGUAGE_CODE == 'ar' %}
-                        <!-- display ar -->
-                        <div class="card-body">
-                            <h1>{{ section.section_title_ar}}</h1>
-                            <p>{{ section.description_ar }}</p>
-                        </div>
-                        {% else %}
-                        <!-- display en -->
-                        <div class="card-body">
-                            <h1>{{ section.section_title_en}}</h1>
-                            <p>{{ section.description_en }}</p>
-                        </div>
-                        {% endif %}
-                    </div>
-                </div>
+  <div class="service-section pt-7">
+    <div class="skewed" data-aos="fade-in">
+      <div class="card card_section mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="{{ section.image_url }}"
+              alt="{{ section.section_title_en }}"
+              class="section_img"
+            />
+          </div>
+          <div class="col-md-8">
+            {% if request.LANGUAGE_CODE == 'ar' %}
+            <!-- display ar -->
+            <div class="card-body">
+              <h1>{{ section.section_title_ar}}</h1>
+              <p>{{ section.description_ar }}</p>
             </div>
+            {% else %}
+            <!-- display en -->
+            <div class="card-body">
+              <h1>{{ section.section_title_en}}</h1>
+              <p>{{ section.description_en }}</p>
+            </div>
+            {% endif %}
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 <!-- =============== levels ================= -->
 <section class="levels_parent">
-    <div class="container">
-        <div class="level_head text-center">
-            <span class="sub_heading"> {% trans "Levels " %} </span>
-            <h3>{% trans "Levels " %}</h3>
-        </div>
-        <div class="row">
-            {% for level in levels %}
-            <div class="col-lg-4 cards" data-aos="zoom-in">
-                <div class="card">
-                    {% if request.LANGUAGE_CODE == 'ar' %}
-                    <!-- display ar -->
-                    <div class="content">
-                        <h3>{{ level.level_title_ar }}</h3>
-                        <div class="scroll-bg">
-                            <div class="scroll-div">
-                                <p>{{ level.level_description_ar }}</p>
-                            </div>
-                        </div>
-                        <!-- to display video -->
-                        <a class="btn has-before" href="{% url 'course_details' course_id=level.id%}">
-                            <span class="span">{% trans "More" %}</span>
-                            <i class="bx bx-right-arrow-alt"></i>
-                        </a>
-                    </div>
-                    {% else %}
-                    <!-- display en -->
-                    <div class="content">
-                        <h3>{{ level.level_title_en }}</h3>
-                        <div class="scroll-bg">
-                            <div class="scroll-div">
-                                <p>{{ level.level_description_en }}</p>
-                            </div>
-                        </div>
-                        <!-- to display details -->
-                        <a class="btn has-before" href="{% url 'course_details' course_id=level.id%}">
-                            <span class="span">{% trans "More" %}</span>
-                            <i class="bx bx-right-arrow-alt"></i>
-                        </a>
-                    </div>
-                    {% endif %}
-                </div>
-            </div>
-            {% endfor %}
-        </div>
+  <div class="container">
+    <div class="level_head text-center">
+      <span class="sub_heading"> {% trans "Levels " %} </span>
+      <h3>{% trans "Levels " %}</h3>
     </div>
+    <div class="row">
+      {% for level in levels %}
+      <div class="col-lg-4 cards" data-aos="zoom-in">
+        <div class="card">
+          {% if request.LANGUAGE_CODE == 'ar' %}
+          <!-- display ar -->
+          <div class="content">
+            <h3>{{ level.level_title_ar }}</h3>
+            <div class="scroll-bg">
+              <div class="scroll-div">
+                <p>{{ level.level_description_ar }}</p>
+              </div>
+            </div>
+            <!-- to display video -->
+            <a
+              class="btn has-before"
+              href="{% url 'course_details' course_id=level.id%}"
+            >
+              <span class="span">{% trans "More" %}</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          {% else %}
+          <!-- display en -->
+          <div class="content">
+            <h3>{{ level.level_title_en }}</h3>
+            <div class="scroll-bg">
+              <div class="scroll-div">
+                <p>{{ level.level_description_en }}</p>
+              </div>
+            </div>
+            <!-- to display details -->
+            <a
+              class="btn has-before"
+              href="{% url 'course_details' course_id=level.id%}"
+            >
+              <span class="span">{% trans "More" %}</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
 {% endblock body %}

@@ -63,47 +63,64 @@ const activeElem = function () {
 addEventOnElem(window, "scroll", activeElem);
 
 // ======================= video ==================================
-const video = document.querySelector("video");
-const videoCard = document.querySelector(".video-card");
-const playButton = document.getElementById("playButton");
-const loadingSpinner = document.querySelector(".skeleton");
+try {
+  const video = document.querySelector("#video");
+  const bntParent = document.querySelector(".bnt_parent ");
+  const videoCard = document.querySelector(".video-card");
+  const playButton = document.getElementById("playButton");
+  const loadingSpinner = document.querySelector(".skeleton");
 
-// Check if video source is stored in localStorage
-const videoSource = localStorage.getItem("videoSource");
-console.log(videoSource);
-if (videoSource) {
-  video.src = videoSource;
-  loadingSpinner.style.display = "none";
-  videoCard.style.display = "block";
-} else {
-  video.src =
-    "https://res.cloudinary.com/dfuaubjg7/video/upload/v1712255713/v3_hqypf9.mp4";
+  // Check if video source is stored in localStorage
+  const videoSource = localStorage.getItem("videoSource");
+  if (videoSource) {
+    video.src = videoSource;
+    loadingSpinner.style.display = "none";
+    videoCard.style.display = "flex";
+  } else {
+    video.src =
+      "https://res.cloudinary.com/dfuaubjg7/video/upload/v1712255713/v3_hqypf9.mp4";
+  }
+
+  playButton.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+      playButton.innerHTML = '<i class="bx bx-pause"></i>';
+      bntParent.style.visibility = "hidden";
+    } else {
+      video.pause();
+      playButton.innerHTML = '<i class="bx bx-play"></i>';
+      bntParent.style.visibility = "visible";
+    }
+  });
+
+  // Hide loading spinner when video is loaded
+  video.addEventListener("loadeddata", function () {
+    // Store video source in localStorage
+    localStorage.setItem("videoSource", video.src);
+    loadingSpinner.style.display = "none";
+    videoCard.style.display = "block";
+    video.style.display = "block";
+  });
+
+  // Add event listener to detect when the video ends
+  video.addEventListener("ended", function () {
+    playButton.innerHTML = '<i class="bx bx-play"></i>';
+    bntParent.style.display = "block";
+  });
+
+  video.addEventListener("mouseenter", function () {
+    bntParent.style.viability = "visible"; // عرض الزر عند تحريك الماوس فوق الفيديو
+  });
+
+  video.addEventListener("mouseleave", function () {
+    if (!video.paused) {
+      bntParent.style.viability = "hidden"; // يخفي الزر إذا كان الفيديو مشغلًا وغير متوقف
+    }
+  });
+} catch (error) {
+  console.log(error);
 }
 
-playButton.addEventListener("click", function () {
-  if (video.paused) {
-    video.play();
-    playButton.innerHTML = '<i class="bx bx-pause"></i>';
-  } else {
-    video.pause();
-    playButton.innerHTML = '<i class="bx bx-play"></i>';
-  }
-});
-
-// Hide loading spinner when video is loaded
-video.addEventListener("loadeddata", function () {
-  // Store video source in localStorage
-  localStorage.setItem("videoSource", video.src);
-  loadingSpinner.style.display = "none";
-  videoCard.style.display = "block";
-  video.style.display = "block";
-});
-
-// Add event listener to detect when the video ends
-video.addEventListener("ended", function () {
-  // Reset the button icon to play
-  playButton.innerHTML = '<i class="bx bx-play"></i>';
-});
 /* ================= Swiper Featured ==================*/
 try {
   var slider = tns({

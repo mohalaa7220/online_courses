@@ -156,6 +156,9 @@
     .services_content {
         padding-inline: 2rem;
     }
+    .services h3 {
+        font-size: 3rem;
+    }
 }
 
 .icon {

@@ -39,7 +39,7 @@
 
 .contactForm {
     background-image: var(--opacity-linear);
-    width: 80%;
+    width: 100%;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -47,7 +47,7 @@
 }
 
 .contactForm form {
-    width: 60%;
+    width: 100%;
     padding: 50px 30px 70px 30px;
 }
 
@@ -184,6 +184,9 @@
         left: 0;
         top: 100%;
         margin-top: 2rem;
+    }
+    .contactForm form {
+        padding: 2rem;
     }
 }
 

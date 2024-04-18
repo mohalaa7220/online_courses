@@ -2,12 +2,8 @@
 
 <section class="section hero has-bg-image" id="home" aria-label="home">
     <div class="container">
-        {%for contact in contact_info %}
-
-        <a href="{{contact.WhatsUp_url}}">
-            <img src="{% static 'images/WhatsApp.webp' %}" width="120" height="70" loading="lazy" alt="call us " class="shape about-shape-2" />
-        </a>
-        {%endfor %}
+       
+      
         <img src="{% static 'images/bose.webp' %}" width="150" height="150" loading="lazy" alt="" class="sticker1" />
         <div class="hero-content" data-aos="fade-right">
             <span class="sub_heading">
@@ -31,7 +27,14 @@
                     </span>
                 </h5>
             </p>
+            {%for contact in contact_info %}
+
+            <a href="{{contact.WhatsUp_url}}"type="button" class="play-btn" aria-label="play video">
+                <span>{% trans 'contact us' %}</span>
+                <i class="bx bx-play"></i>
+            </a>
        
+            {%endfor %}
         </div>
 
         <figure class="hero-banner" data-aos="fade-left">

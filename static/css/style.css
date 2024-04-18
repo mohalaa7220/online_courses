@@ -206,7 +206,7 @@ body {
 
 .shape {
     position: absolute;
-    display: none;
+    display: none; 
 }
 
 .has-bg-image {
@@ -620,7 +620,7 @@ body {
         width: 4.3rem;
     }
     .header.active {
-        padding-block: 2.3rem;
+        padding-block: 1.45rem;
     }
 }
 
@@ -933,9 +933,6 @@ body {
         right: 48%;
         top: 30%;
     }
-    .about {
-        margin-block: 0;
-    }
 }
 
 @media screen and (max-width: 767px) {
@@ -961,11 +958,14 @@ body {
         margin-top: 75px;
         margin-left: 250px;
         width: 20%;
+        
     }
     .about-shape-2 {
         margin-left: 0px;
         margin-top: 300px;
         z-index: 10;
+      
+      
     }
 }
 
@@ -984,6 +984,7 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
+       
     }
     .about .about-content h2 {
         font-size: 1.7rem;
@@ -1232,7 +1233,7 @@ body {
 .video .section-title {
     text-align: center;
     font-family: var(--heading-font);
-    line-height: 1.5;
+    margin-bottom: 5rem;
     font-weight: 800;
 }
 
@@ -1429,7 +1430,7 @@ body {
 
 .footer {
     background-repeat: no-repeat;
-    background-color: var(--eerie-black-2);
+    background-color:var(--eerie-black-2);
     color: var(--gray-x-11);
     font-size: var(--fs-5);
 }

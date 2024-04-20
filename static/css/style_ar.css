@@ -40,6 +40,13 @@ body {
     }
 }
 
+@media screen and (max-width: 1199px) {
+    .about .about-content h2,
+    .about .about-content h2:last-of-type {
+        font-size: 1.75rem;
+    }
+}
+
 
 /* ========== responsive hero  ========= */
 

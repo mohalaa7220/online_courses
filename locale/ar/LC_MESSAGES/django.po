@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-01 17:31+0200\n"
+"POT-Creation-Date: 2024-04-20 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,41 +71,64 @@ msgstr ""
 msgid "وصف المستوي"
 msgstr ""
 
-#: .\courses\models.py:88
+#: .\courses\models.py:89
 msgid "News Title"
 msgstr ""
 
-#: .\courses\models.py:89
+#: .\courses\models.py:90
 msgid "News Description"
 msgstr ""
 
-#: .\courses\models.py:91
+#: .\courses\models.py:92
 msgid "عنوان الخبر"
 msgstr ""
 
-#: .\courses\models.py:92
+#: .\courses\models.py:93
 msgid "وصف الخبر"
 msgstr ""
 
-#: .\courses\models.py:94
+#: .\courses\models.py:95
 msgid "Lesson Number"
 msgstr "عدد الدروس"
 
-#: .\courses\models.py:96
+#: .\courses\models.py:97
 msgid "News Image"
 msgstr ""
 
-#: .\courses\models.py:116
+#: .\courses\models.py:117
 msgid "phone number"
 msgstr ""
 
-#: .\project\settings.py:120
+#: .\courses\models.py:144
+#, fuzzy
+#| msgid "Services"
+msgid "Services Title"
+msgstr "الخدمات"
+
+#: .\courses\models.py:145
+msgid "Description Title"
+msgstr ""
+
+#: .\courses\models.py:146
+msgid "عنوان الخدمة"
+msgstr ""
+
+#: .\courses\models.py:147
+msgid "وصف الخدمة"
+msgstr ""
+
+#: .\project\settings.py:130
 msgid "Arabic"
 msgstr ""
 
-#: .\project\settings.py:121
+#: .\project\settings.py:131
 msgid "English"
 msgstr ""
+
+#: .\templates\about.html:4 .\templates\components\footer.html:35
+#: .\templates\components\navbar.html:60
+msgid "About"
+msgstr "من نحن "
 
 #: .\templates\components\about.html:28
 msgid "About Us"
@@ -156,10 +179,6 @@ msgstr "اتصل بنا:"
 msgid "Email:"
 msgstr "الأيميل:"
 
-#: .\templates\components\footer.html:35 .\templates\components\navbar.html:60
-msgid "About"
-msgstr "من نحن "
-
 #: .\templates\components\footer.html:38
 msgid "Events"
 msgstr "الأخبار"
@@ -177,32 +196,36 @@ msgid "Follow us "
 msgstr "تابعنا"
 
 #: .\templates\components\footer.html:47
-msgid "Subscribe our socialmedia links"
+#, fuzzy
+#| msgid "Subscribe our socialmedia links"
+msgid "Subscribe our social media links"
 msgstr "اشترك في قنواتنا"
 
-#: .\templates\components\hero.html:11
+#: .\templates\components\hero.html:10
 msgid "EXCELLENCE IN EDUCATION"
 msgstr "التميز في التعليم"
 
-#: .\templates\components\hero.html:14
+#: .\templates\components\hero.html:13
 msgid "Start Better Languages Future From Here"
 msgstr "نقدم لك أفضل خيار للتعلم عن بعد"
 
-#: .\templates\components\hero.html:19 .\templates\components\hero.html:25
+#: .\templates\components\hero.html:18 .\templates\components\hero.html:24
 msgid "update your"
 msgstr "طور "
 
-#: .\templates\components\hero.html:21 .\templates\components\services.html:61
+#: .\templates\components\hero.html:20
 msgid "skills"
 msgstr "مهاراتك"
 
-#: .\templates\components\hero.html:27
+#: .\templates\components\hero.html:26
 msgid "reality"
 msgstr "واقعك"
 
-#: .\templates\components\hero.html:32
-msgid "Play Now"
-msgstr "فيديو تعريفي"
+#: .\templates\components\hero.html:33
+#, fuzzy
+#| msgid "Contact us"
+msgid "contact us"
+msgstr "تواصل معنا"
 
 #: .\templates\components\navbar.html:6
 msgid "Up2Date logo"
@@ -216,8 +239,8 @@ msgstr ""
 msgid "close menu"
 msgstr ""
 
-#: .\templates\components\navbar.html:65 .\templates\contact_us.html:23
-#: .\templates\contact_us.html:24
+#: .\templates\components\navbar.html:65 .\templates\contact_us.html:4
+#: .\templates\contact_us.html:26 .\templates\contact_us.html:27
 msgid "Contact us"
 msgstr "تواصل معنا"
 
@@ -230,96 +253,82 @@ msgstr "الأخبار"
 msgid "Services"
 msgstr "الخدمات"
 
-#: .\templates\components\services.html:15
-msgid "Courses Offered"
-msgstr "الدورات المقدمة"
-
-#: .\templates\components\services.html:17
-msgid "Advanced courses in English language and,"
-msgstr "دورات متقدمة في اللغة الإنجليزية"
-
-#: .\templates\components\services.html:19
-msgid "advanced courses in German language."
-msgstr "ودورات متقدمة في اللغة الألمانية."
-
-#: .\templates\components\services.html:31
-msgid "Consultancy Services"
-msgstr "خدمات استشارية"
-
-#: .\templates\components\services.html:33
-msgid "Consultancy services to assess language needs "
-msgstr "خدمات استشارية لتقييم الاحتياجات اللغوية"
-
-#: .\templates\components\services.html:34
-msgid "and develop personalized learning programs."
-msgstr "وتطوير برامج تعليمية مخصصة."
-
-#: .\templates\components\services.html:46
-msgid "Language Enhancement"
-msgstr "تعزيز اللغة"
-
-#: .\templates\components\services.html:48
-msgid "Workshops and events to boost language skills"
-msgstr "ورش عمل وفعاليات لتعزيز المهارات اللغوية"
-
-#: .\templates\components\services.html:49
-msgid "through social interaction."
-msgstr "من خلال التفاعل الاجتماعي."
-
-#: .\templates\components\services.html:63
-msgid "Improved language skills enable you to"
-msgstr "تمكنك المهارات اللغوية المحسنة"
-
-#: .\templates\components\services.html:65
-msgid "effectively communicate with your audience."
-msgstr "من التواصل بفعالية مع جمهورك."
-
-#: .\templates\components\services.html:76
-msgid "Knowledge"
-msgstr "المعرفة"
-
-#: .\templates\components\services.html:78
-msgid "shared communication channels such as books,"
-msgstr "قنوات الاتصال المشتركة مثل الكتب،"
-
-#: .\templates\components\services.html:80
-msgid "lectures, conversations, and digital media."
-msgstr "المحاضرات والمحادثات والوسائط الرقمية."
-
-#: .\templates\components\services.html:91
-msgid "Discussion"
-msgstr "المناقشة"
-
-#: .\templates\components\services.html:93
-msgid "valuable communication tools that facilitate the"
-msgstr "أدوات اتصال قيمة تسهل"
-
-#: .\templates\components\services.html:95
-msgid "exchange of ideas, promote critical thinking."
-msgstr "تبادل الأفكار وتعزز التفكير النقدي."
-
-#: .\templates\contact_us.html:29
+#: .\templates\contact_us.html:32
 msgid "Follow Us"
 msgstr "تابعنا"
 
-#: .\templates\contact_us.html:61
+#: .\templates\contact_us.html:64
 msgid "get in touch"
 msgstr "ابقى على تواصل"
 
-#: .\templates\courses.html:45 .\templates\courses.html:46
+#: .\templates\courses.html:51 .\templates\courses.html:52
 msgid "Levels "
 msgstr "المستويات"
 
-#: .\templates\courses.html:66 .\templates\courses.html:84
-#: .\templates\courses_details.html:73 .\templates\courses_details.html:91
+#: .\templates\courses.html:72 .\templates\courses.html:90
+#: .\templates\courses_details.html:107 .\templates\courses_details.html:125
 msgid "More"
 msgstr "التفاصيل"
 
-#: .\templates\courses_details.html:52 .\templates\courses_details.html:53
+#: .\templates\courses_details.html:86 .\templates\courses_details.html:87
 #, fuzzy
-#| msgid "Levels "
-msgid "Related Levels "
-msgstr "المستويات"
+#| msgid "Levels"
+msgid "Related Levels"
+msgstr "المستويات الأخري"
+
+#~ msgid "Play Now"
+#~ msgstr "فيديو تعريفي"
+
+#~ msgid "Courses Offered"
+#~ msgstr "الدورات المقدمة"
+
+#~ msgid "Advanced courses in English language and,"
+#~ msgstr "دورات متقدمة في اللغة الإنجليزية"
+
+#~ msgid "advanced courses in German language."
+#~ msgstr "ودورات متقدمة في اللغة الألمانية."
+
+#~ msgid "Consultancy Services"
+#~ msgstr "خدمات استشارية"
+
+#~ msgid "Consultancy services to assess language needs "
+#~ msgstr "خدمات استشارية لتقييم الاحتياجات اللغوية"
+
+#~ msgid "and develop personalized learning programs."
+#~ msgstr "وتطوير برامج تعليمية مخصصة."
+
+#~ msgid "Language Enhancement"
+#~ msgstr "تعزيز اللغة"
+
+#~ msgid "Workshops and events to boost language skills"
+#~ msgstr "ورش عمل وفعاليات لتعزيز المهارات اللغوية"
+
+#~ msgid "through social interaction."
+#~ msgstr "من خلال التفاعل الاجتماعي."
+
+#~ msgid "Improved language skills enable you to"
+#~ msgstr "تمكنك المهارات اللغوية المحسنة"
+
+#~ msgid "effectively communicate with your audience."
+#~ msgstr "من التواصل بفعالية مع جمهورك."
+
+#~ msgid "Knowledge"
+#~ msgstr "المعرفة"
+
+#~ msgid "shared communication channels such as books,"
+#~ msgstr "قنوات الاتصال المشتركة مثل الكتب،"
+
+#~ msgid "lectures, conversations, and digital media."
+#~ msgstr "المحاضرات والمحادثات والوسائط الرقمية."
+
+#~ msgid "Discussion"
+#~ msgstr "المناقشة"
+
+#~ msgid "valuable communication tools that facilitate the"
+#~ msgstr "أدوات اتصال قيمة تسهل"
+
+#~ msgid "exchange of ideas, promote critical thinking."
+#~ msgstr "تبادل الأفكار وتعزز التفكير النقدي."
 
 #~ msgid "Video"
 #~ msgstr "فيديو"

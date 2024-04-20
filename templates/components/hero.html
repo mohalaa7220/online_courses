@@ -2,8 +2,8 @@
 
 <section class="section hero has-bg-image" id="home" aria-label="home">
     <div class="container">
-       
-      
+
+
         <img src="{% static 'images/bose.webp' %}" width="150" height="150" loading="lazy" alt="" class="sticker1" />
         <div class="hero-content" data-aos="fade-right">
             <span class="sub_heading">
@@ -29,11 +29,11 @@
             </p>
             {%for contact in contact_info %}
 
-            <a href="{{contact.WhatsUp_url}}"type="button" class="play-btn" aria-label="play video">
-                <span>{% trans 'contact us' %}</span>
+            <a href="{{contact.WhatsUp_url}}" type="button" class="play-btn" aria-label="play video">
+                <span>{% trans 'Contact us' %}</span>
                 <i class="bx bx-play"></i>
             </a>
-       
+
             {%endfor %}
         </div>
 

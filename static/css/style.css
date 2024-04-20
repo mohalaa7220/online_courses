@@ -122,7 +122,7 @@ img {
 
 .logo img {
     height: auto;
-    width: 7rem;
+    width: 9rem;
 }
 
 input,
@@ -196,9 +196,10 @@ body {
     }
 }
 
-.container {
+
+/* .container {
     padding-inline: 15px;
-}
+} */
 
 .section {
     padding-block: var(--section-padding);
@@ -206,7 +207,7 @@ body {
 
 .shape {
     position: absolute;
-    display: none; 
+    display: none;
 }
 
 .has-bg-image {
@@ -264,7 +265,6 @@ body {
 
 .btn {
     color: var(--sec-opacity-color);
-    font-family: var(--ff-league_spartan);
     font-size: var(--fs-4);
     display: flex;
     align-items: center;
@@ -393,7 +393,7 @@ body {
     width: 100%;
     padding-block: 12px;
     z-index: 33;
-    padding-block: 2.5rem;
+    padding-block: 2rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -402,7 +402,7 @@ body {
 .header.active {
     position: fixed;
     box-shadow: 0 10px 50px 0 rgba(46, 55, 220, 0.178);
-    padding-block: 1.75rem;
+    padding-block: 1rem;
     background-color: var(--white);
 }
 
@@ -608,7 +608,7 @@ body {
 @media screen and (max-width: 600px) {
     .logo img {
         height: auto;
-        width: 5rem;
+        width: 6.5rem;
     }
     .header.active {
         padding-block: 1.5rem;
@@ -617,7 +617,7 @@ body {
 
 @media screen and (max-width: 450px) {
     .logo img {
-        width: 4.3rem;
+        width: 5.3rem;
     }
     .header.active {
         padding-block: 1.45rem;
@@ -821,7 +821,7 @@ body {
 
 @media screen and (max-width: 500px) {
     .hero {
-        padding-top: 15rem;
+        padding-top: 12.5rem;
     }
 }
 
@@ -958,14 +958,11 @@ body {
         margin-top: 75px;
         margin-left: 250px;
         width: 20%;
-        
     }
     .about-shape-2 {
         margin-left: 0px;
         margin-top: 300px;
         z-index: 10;
-      
-      
     }
 }
 
@@ -984,10 +981,15 @@ body {
         left: auto;
         animation: bounce 2.5s infinite;
         z-index: 22;
-       
     }
     .about .about-content h2 {
         font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .about {
+        margin-block: 5rem !important;
     }
 }
 
@@ -1135,6 +1137,21 @@ body {
 @media screen and (max-width: 850px) {
     .service-section .card-body p {
         font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cards .card {
+        padding: 3rem 2.2rem;
+    }
+    .cards .card h3 {
+        font-size: 1.5rem;
+    }
+    .cards .card .content p {
+        font-size: 1.3rem !important;
+    }
+    .cards .card .btn {
+        font-size: 1.5rem;
     }
 }
 
@@ -1430,7 +1447,7 @@ body {
 
 .footer {
     background-repeat: no-repeat;
-    background-color:var(--eerie-black-2);
+    background-color: var(--eerie-black-2);
     color: var(--gray-x-11);
     font-size: var(--fs-5);
 }
@@ -1978,6 +1995,7 @@ li.card-meta-item {
     font-size: 2.5rem;
     line-height: 1.55;
     font-family: var(--heading-font);
+    margin-bottom: 0;
 }
 
 .about .about-content h2:last-of-type {
@@ -2154,6 +2172,7 @@ section.news_details {
     text-transform: capitalize;
     font-weight: 700;
     font-size: 2.3rem;
+    margin-bottom: 3rem;
 }
 
 .news_details .description p {

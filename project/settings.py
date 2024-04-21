@@ -18,6 +18,21 @@ SECRET_KEY = 'django-insecure-j8z0w-k4p7)3hh^j@rxnnt2@t69im=k952^fpazj#!5f+h(xv5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
+CSRF_COOKIE_SECURE = True
+
+SESSION_COOKIE_SECURE = True
+
+
+SECURE_HSTS_SECONDS = 15780000
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+
 ALLOWED_HOSTS = [
     '*',
 ]
@@ -249,3 +264,10 @@ cloudinary.config(
     api_key="642133494324994",
     api_secret="Rhtetx9QDpz6QOoQOnmGdQE8aMI"
 )
+
+# =============== cache =======================
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.dummy.DummyCache",
+    }
+}

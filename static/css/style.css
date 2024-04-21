@@ -309,7 +309,7 @@ body {
 
 .btn:hover::before {
     color: var(--black_80) !important;
-    height: 0%;
+    width: 0%;
 }
 
 .img-holder {

@@ -1049,7 +1049,7 @@ body {
 .service-section .card_section {
     border: none !important;
     background-color: transparent !important;
-    ;
+    width: 100%;
 }
 
 .service-section .section_img {

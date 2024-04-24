@@ -51,7 +51,7 @@
     margin-bottom: 3rem;
     font-size: 4rem;
     letter-spacing: 1.2px;
-    color: #1a1818;
+    color: var(--black_100);
     font-family: var(--heading-font);
     font-weight: 800;
 }
@@ -63,7 +63,7 @@
     align-items: center;
     text-align: left;
     height: 100%;
-    background-color: #fff;
+    background-color: var(--white);
     transition: all 0.5s linear;
     height: 100%;
     border-right: 2px solid #0000000d;
@@ -102,7 +102,7 @@
 
 .services_card .content h4 {
     font-weight: 700;
-    color: #000;
+    color: var(--black_100);
     margin-bottom: .5rem;
     font-size: 1.65rem;
     text-transform: capitalize;

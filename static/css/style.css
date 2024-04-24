@@ -155,7 +155,7 @@ html {
 }
 
 body {
-    background-color: var(--white);
+    /* background-color: var(--white); */
     color: var(--gray-web);
     font-size: 1.6rem;
     line-height: 1.75;
@@ -537,7 +537,7 @@ body {
     position: absolute;
     left: 0;
     top: 100%;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     border-top: 2.5px solid var(--kappel);
     animation: fade .5s linear;
     z-index: 33;
@@ -2063,7 +2063,6 @@ ul.card-meta-list {
 /* =============== about =========== */
 
 .breadcrumb-parent {
-    background-color: #F4F3F8;
     position: relative;
     padding-block-start: calc(var(--section-padding) + 80px);
     background-image: var(--opacity-linear);
@@ -2073,7 +2072,7 @@ ul.card-meta-list {
     font-weight: 800;
     margin-bottom: 15px;
     font-family: var(--heading-font);
-    color: #000;
+    color: var(--black_100);
     font-size: 2.5rem;
     text-transform: capitalize;
 }

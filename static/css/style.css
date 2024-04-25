@@ -155,7 +155,7 @@ html {
 }
 
 body {
-    /* background-color: var(--white); */
+    background-color: var(--white);
     color: var(--gray-web);
     font-size: 1.6rem;
     line-height: 1.75;
@@ -537,7 +537,7 @@ body {
     position: absolute;
     left: 0;
     top: 100%;
-    /* background-color: var(--white); */
+    background-color: var(--white);
     border-top: 2.5px solid var(--kappel);
     animation: fade .5s linear;
     z-index: 33;
